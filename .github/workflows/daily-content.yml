@@ -1,0 +1,45 @@
+name: Daily study content
+on:
+  schedule:
+    # 07:17 Asia/Shanghai. Scheduled runs can be delayed by GitHub.
+    - cron: '17 23 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: published-study-content
+  cancel-in-progress: false
+jobs:
+  update:
+    # Explicit opt-in prevents API spending before one-time configuration.
+    if: vars.AUTO_CONTENT_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run build:packages
+      - name: Generate checked incremental content
+        id: generate
+        env:
+          CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
+          CONTENT_API_BASE_URL: ${{ secrets.CONTENT_API_BASE_URL }}
+          CONTENT_MODEL: ${{ secrets.CONTENT_MODEL }}
+          CONTENT_DAILY_PER_MODULE: ${{ vars.CONTENT_DAILY_PER_MODULE || '5' }}
+        run: node scripts/update-content.mjs
+      - name: Save completed batches, including after partial failure
+        if: always() && steps.generate.outcome != 'skipped'
+        run: |
+          git config user.name 'gongkao-content-bot'
+          git config user.email 'gongkao-content-bot@users.noreply.github.com'
+          git add public/content/latest.json public/content/generation-state.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update checked study content'
+            git push origin HEAD:main
+          fi

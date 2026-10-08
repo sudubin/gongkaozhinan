@@ -1,0 +1,27 @@
+/* Android edge-to-edge and notched-screen protection. */
+:root {
+  /* Capacitor injects the first value on affected Android WebViews. */
+  --safe-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --safe-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+}
+
+html, body, #app { min-height: 100%; margin: 0; }
+body { min-height: 100dvh; }
+
+.app-shell {
+  /* Protect every screen, including sticky detail headers, on Android 15/Oppo. */
+  padding-top: var(--safe-top);
+}
+
+.root-content, .detail-content {
+  padding-bottom: calc(100px + var(--safe-bottom));
+}
+
+.root-content { padding-top: 24px; }
+
+.bottom-nav {
+  height: calc(72px + var(--safe-bottom));
+  padding-bottom: max(8px, var(--safe-bottom));
+}
+
+.keypad { padding-bottom: max(12px, var(--safe-bottom)); }
