@@ -31,7 +31,10 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-      - uses: android-actions/setup-android@v3
+      - uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools platforms;android-36'
+          log-accepted-android-sdk-licenses: false
       - run: npm ci --ignore-scripts --no-audit --no-fund
       - run: npm test
       - run: npm run android:sync
