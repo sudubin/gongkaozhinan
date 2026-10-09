@@ -1,8 +1,5 @@
-name: Daily study content
+name: Legacy open-source content (manual only)
 on:
-  schedule:
-    # 07:17 Asia/Shanghai. Scheduled runs can be delayed by GitHub.
-    - cron: '17 23 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -11,8 +8,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   update:
-    # Explicit opt-in prevents API spending before one-time configuration.
-    if: vars.AUTO_CONTENT_ENABLED == 'true'
+    # Preserved for maintenance; full-version deployment stops this daily job.
+    if: github.repository == 'sudubin/gongkaozhinan' && vars.LEGACY_OPEN_SOURCE_CONTENT_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

@@ -1,0 +1,56 @@
+name: Zhejiang full-version daily content
+on:
+  schedule:
+    # 07:17 Asia/Shanghai; GitHub may delay scheduled runs.
+    - cron: '17 23 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    # One bounded verification on deployment, not on generated data commits.
+    paths: ['.github/workflows/full-daily-content.yml']
+permissions:
+  contents: write
+concurrency:
+  group: published-study-content
+  cancel-in-progress: false
+jobs:
+  update:
+    # Owner requested activation. Setting AUTO_CONTENT_ENABLED=false pauses it.
+    # Forks never use this owner's API credits automatically.
+    if: github.repository == 'sudubin/gongkaozhinan' && github.ref == 'refs/heads/main' && vars.AUTO_CONTENT_ENABLED != 'false'
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run build:packages
+      - name: Verify preservation, integrity and API cost guards
+        run: node --test scripts/full-content/content.test.mjs
+      - name: Generate and publish full-version increments
+        env:
+          CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
+          CONTENT_API_BASE_URL: ${{ secrets.CONTENT_API_BASE_URL }}
+          CONTENT_MODEL: ${{ secrets.CONTENT_MODEL }}
+          CONTENT_DAILY_PER_MODULE: '5'
+          FULL_CONTENT_DIRECTORY: public/content/full
+          FULL_GIT_CHECKPOINTS: 'true'
+        run: node scripts/full-content/update-content.mjs
+      - name: Verify published full-version package
+        if: always()
+        run: |
+          node --input-type=module -e 'import {readFile} from "node:fs/promises"; import {verifiedPackage} from "./scripts/full-content/content-package.mjs"; const p=verifiedPackage(JSON.parse(await readFile("public/content/full/latest.json","utf8"))); console.log(JSON.stringify({releaseId:p.releaseId,cards:p.items.length,questions:p.questions.length}));'
+      - name: Retain public data for troubleshooting (no credentials)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-version-public-content
+          path: |
+            public/content/full/latest.json
+            public/content/full/generation-state.json
+          retention-days: 7
