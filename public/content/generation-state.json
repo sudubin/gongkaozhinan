@@ -1,6 +1,13 @@
 {
-  "date": "",
-  "counts": {},
-  "attempts": {},
-  "totalAdded": 0
+  "date": "2026-10-09",
+  "counts": {
+    "idiom": 4
+  },
+  "attempts": {
+    "affairs": 3,
+    "general": 3,
+    "idiom": 2,
+    "essay": 3
+  },
+  "totalAdded": 4
 }

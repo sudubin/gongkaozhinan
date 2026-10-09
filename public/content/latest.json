@@ -1,8 +1,8 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "seed-v1-100",
-  "createdAt": "2026-10-08",
-  "reviewedAt": "2026-10-08",
+  "releaseId": "daily-2026-10-09-02b74cface1839daed137347",
+  "createdAt": "2026-10-09",
+  "reviewedAt": "2026-10-09",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
   "items": [
     {
@@ -4004,6 +4004,203 @@
         "适用于基础研究、生态修复和能力培养。",
         "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
       ]
+    },
+    {
+      "pronunciation": "liàng lì ér xíng",
+      "definition": "量：估量。按照自己力量的大小去做，不要勉强。指做事要考虑自身能力或客观条件的限制。",
+      "collocations": [
+        "量力而行，尽力而为",
+        "坚持量力而行",
+        "量力而行地投资"
+      ],
+      "example": "地方政府在引进大型国际赛事时，应量力而行，充分评估财政承受能力和基础设施配套水平，避免盲目举债。",
+      "confusableWith": [
+        {
+          "term": "安分守己",
+          "difference": "“量力而行”强调做事要符合自身能力限度，是中性或褒义的策略选择；“安分守己”强调规矩老实，不做违法乱纪的事，侧重道德品行。"
+        }
+      ],
+      "stableId": "auto-idiom-c202363c103eef8402a7f621",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-c202363c103eef8402a7f621",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "量力而行",
+      "topic": "成语辨析与务实精神",
+      "keywords": [
+        "量力而行",
+        "理性办赛",
+        "风险控制"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-bb03ead4eb2c8c2d4506f8a3",
+          "title": "国务院办公厅关于发展体育赛事激发消费活力的意见_体育_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082492.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-09",
+      "generatedAt": "2026-10-09",
+      "reviewedAt": "2026-10-09",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "pronunciation": "tǒng chóu jiān gù",
+      "definition": "统筹：统一筹划；兼顾：照顾到各个方面。从整体出发，全面照顾到各个方面。",
+      "collocations": [
+        "统筹兼顾各方利益",
+        "坚持统筹兼顾",
+        "统筹兼顾发展与安全"
+      ],
+      "example": "在推进审计监督与其他各类监督贯通协同时，必须统筹兼顾，既要发挥各自优势，又要形成合力，避免重复检查增加基层负担。",
+      "confusableWith": [
+        {
+          "term": "面面俱到",
+          "difference": "“统筹兼顾”是积极的领导方法，强调科学规划和全面协调；“面面俱到”常含贬义，指虽然各方面都照顾到，但可能流于形式或重点不突出。"
+        }
+      ],
+      "stableId": "auto-idiom-f7fcd2c413cbd2fea2f887eb",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-f7fcd2c413cbd2fea2f887eb",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "统筹兼顾",
+      "topic": "成语辨析与系统思维",
+      "keywords": [
+        "统筹兼顾",
+        "协调发展",
+        "全局观"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-6a59c962a3adae018db22d77",
+          "title": "中共中央办公厅 国务院办公厅印发《文化遗产保护传承“十五五”规划》",
+          "url": "https://www.gov.cn/zhengce/202609/content_7082364.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-29",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        },
+        {
+          "id": "source-3d5b2cf34372ed658ccdecb6",
+          "title": "中华人民共和国审计法实施条例_审计_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7081972.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-24",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-29",
+      "validFrom": "2026-10-09",
+      "generatedAt": "2026-10-09",
+      "reviewedAt": "2026-10-09",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "pronunciation": "wěn zhōng qiú jìn",
+      "definition": "稳是大局和基础，进是方向和目标。在保持局势稳定的前提下寻求发展和进步。",
+      "collocations": [
+        "坚持稳中求进",
+        "稳中求进工作总基调",
+        "稳中求进、以进促稳"
+      ],
+      "example": "高校分类改革涉及面广、影响深远，必须坚持稳中求进，稳妥推进各项举措，合理引导预期，确保改革过程平稳有序。",
+      "confusableWith": [
+        {
+          "term": "急功近利",
+          "difference": "“稳中求进”强调稳健基础和长远发展，反对浮躁；“急功近利”指急于求成，贪图眼前的成效和利益，二者态度截然相反。"
+        }
+      ],
+      "stableId": "auto-idiom-1f037b69760e941039a3293e",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-1f037b69760e941039a3293e",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "稳中求进",
+      "topic": "成语辨析与工作基调",
+      "keywords": [
+        "稳中求进",
+        "改革节奏",
+        "总基调"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-3469cd4acd2bb13da1515e66",
+          "title": "中共中央办公厅 国务院办公厅印发《关于分类推进高校改革的意见》",
+          "url": "https://www.gov.cn/zhengce/202609/content_7081587.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-20",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-20",
+      "validFrom": "2026-10-09",
+      "generatedAt": "2026-10-09",
+      "reviewedAt": "2026-10-09",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "pronunciation": "yǒu dì fàng shǐ",
+      "definition": "的：箭靶子；矢：箭。放箭要对准靶子。比喻说话做事有针对性。",
+      "collocations": [
+        "有的放矢地开展工作",
+        "有的放矢地解决问题",
+        "有的放矢地提供服务"
+      ],
+      "example": "在优化房车租赁服务时，企业应有的放矢，针对不同客群（如亲子家庭、年轻情侣）推出定制化的车辆配置和旅游线路，提升用户体验。",
+      "confusableWith": [
+        {
+          "term": "无的放矢",
+          "difference": "“有的放矢”是有目标、有针对性；“无的放矢”是没有目标、盲目行动，二者互为反义词。"
+        }
+      ],
+      "stableId": "auto-idiom-5caf59784503ae98e67c41bd",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-5caf59784503ae98e67c41bd",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "有的放矢",
+      "topic": "成语辨析与精准施策",
+      "keywords": [
+        "有的放矢",
+        "精准服务",
+        "针对性"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-bb03ead4eb2c8c2d4506f8a3",
+          "title": "国务院办公厅关于发展体育赛事激发消费活力的意见_体育_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082492.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-09",
+      "generatedAt": "2026-10-09",
+      "reviewedAt": "2026-10-09",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -6481,7 +6678,140 @@
       "reviewedAt": "2026-10-08",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-idiom-c202363c103eef8402a7f621-practice",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-c202363c103eef8402a7f621",
+      "module": "idiom",
+      "prompt": "国务院办公厅在《关于发展体育赛事激发消费活力的意见》中强调，各地承办赛事要“充分评估、因地制宜、量力而行”。这里的“量力而行”主要警示我们要避免什么倾向？",
+      "options": [
+        {
+          "id": "A",
+          "text": "缺乏创新意识"
+        },
+        {
+          "id": "B",
+          "text": "超越自身能力的盲目扩张"
+        },
+        {
+          "id": "C",
+          "text": "忽视环境保护"
+        },
+        {
+          "id": "D",
+          "text": "过度依赖外资"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "“量力而行”意为估量自己的能力去做事。在办赛语境下，结合“充分评估”、“绿色简约”，旨在防止地方不顾财政和资源实际，盲目追求大规模、高规格赛事，即避免超越自身能力的盲目扩张。",
+      "sourceRefs": [
+        "source-bb03ead4eb2c8c2d4506f8a3"
+      ],
+      "reviewedAt": "2026-10-09",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-idiom-f7fcd2c413cbd2fea2f887eb-practice",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-f7fcd2c413cbd2fea2f887eb",
+      "module": "idiom",
+      "prompt": "《中华人民共和国审计法实施条例》提出要加强审计监督与纪检监察、巡视巡察等各类监督的“贯通协同”。实现这种协同最需要具备的思维是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "独断专行"
+        },
+        {
+          "id": "B",
+          "text": "统筹兼顾"
+        },
+        {
+          "id": "C",
+          "text": "本末倒置"
+        },
+        {
+          "id": "D",
+          "text": "画蛇添足"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料要求健全信息沟通、线索移交等机制，这需要从全局高度统一筹划并照顾到各个监督主体的特点和需求，即“统筹兼顾”。其他选项均不符合协作共赢的政策导向。",
+      "sourceRefs": [
+        "source-6a59c962a3adae018db22d77",
+        "source-3d5b2cf34372ed658ccdecb6"
+      ],
+      "reviewedAt": "2026-10-09",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-idiom-1f037b69760e941039a3293e-practice",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-1f037b69760e941039a3293e",
+      "module": "idiom",
+      "prompt": "中共中央办公厅、国务院办公厅印发的《关于分类推进高校改革的意见》明确指出，要坚持“稳中求进工作总基调”。这一基调在改革中的具体体现不包括以下哪项？",
+      "options": [
+        {
+          "id": "A",
+          "text": "稳妥推进改革"
+        },
+        {
+          "id": "B",
+          "text": "合理引导预期"
+        },
+        {
+          "id": "C",
+          "text": "大跃进式突破"
+        },
+        {
+          "id": "D",
+          "text": "营造良好氛围"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "材料原文提到“稳妥推进改革，合理引导预期，营造良好氛围”。“稳中求进”强调的是稳健、有序，而“大跃进式突破”违背了“稳”的基础，属于急躁冒进的表现，不符合题意。",
+      "sourceRefs": [
+        "source-3469cd4acd2bb13da1515e66"
+      ],
+      "reviewedAt": "2026-10-09",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-idiom-5caf59784503ae98e67c41bd-practice",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-5caf59784503ae98e67c41bd",
+      "module": "idiom",
+      "prompt": "《关于发展体育赛事激发消费活力的意见》中提到，企业要“深度挖掘市场需求偏好……满足个性化消费需求”。这种做法体现了下列哪个成语的精神？",
+      "options": [
+        {
+          "id": "A",
+          "text": "盲人摸象"
+        },
+        {
+          "id": "B",
+          "text": "有的放矢"
+        },
+        {
+          "id": "C",
+          "text": "缘木求鱼"
+        },
+        {
+          "id": "D",
+          "text": "刻舟求剑"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "“有的放矢”比喻说话做事有针对性。材料中强调挖掘需求、精准服务、满足个性化，正是为了对准市场需求的“靶子”，体现了有的放矢的精神。其他选项均为贬义或比喻方法不对头。",
+      "sourceRefs": [
+        "source-bb03ead4eb2c8c2d4506f8a3"
+      ],
+      "reviewedAt": "2026-10-09",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:6645ce0fb104154f461896d5e6a14451444ebfa6997e42d8fce87354ee3dc0f9"
+  "contentHash": "sha256:50269978349fbe48d3cb9327aed5a29d912bd9e6ccfcd4fb625ec56911de6520"
 }
