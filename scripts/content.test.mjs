@@ -4,7 +4,7 @@ import { validateContentPackage, canonicalJson } from "@gongkao/contracts";
 import { createHash } from "node:crypto";
 import { seedEntries, SEED_DATE } from "../data/seed.mjs";
 import { contentKey, createPackage, mergeEntries } from "./content-package.mjs";
-import { articleLinks, extractSource, isAllowedSource, localDay, normalizeGenerated, providerRequestOptions, runUpdate } from "./update-content.mjs";
+import { articleLinks, collectSources, extractSource, governmentArticleLinks, isAllowedSource, localDay, normalizeGenerated, providerRequestOptions, runUpdate, safeFailureCode } from "./update-content.mjs";
 
 const seed = seedEntries();
 const initial = () => createPackage(seed.items, seed.questions, "seed-v1-100", SEED_DATE);
@@ -49,6 +49,66 @@ test("extract body and reject old/future sources", () => {
   assert.equal(extractSource(html, source.url, SEED_DATE).publishedAt, SEED_DATE);
   assert.throws(() => extractSource(html, source.url, "2026-09-08"), /source_not_recent/);
   assert.throws(() => extractSource(html, source.url, "2026-12-08"), /source_not_recent/);
+});
+const policyUrl = "https://www.gov.cn/zhengce/content/202610/content_7082737.htm";
+const sourceHtml = (heading = "<h1>官方报道标题</h1>", date = SEED_DATE) => `<title>静态新闻标题</title>${heading}<meta name="PubDate" content="${date}"><!--TRS_Editor--><p>${"可核对的正文。".repeat(30)}</p><!--/TRS_Editor-->`;
+const textResponse = (url, text) => ({ ok: true, status: 200, url, text: async () => text });
+test("script-only and whitespace headings fall back to static title without executing scripts", () => {
+  for (const heading of ["<h1><script>throw new Error('must not execute');</script></h1>", "<h1> \n </h1>"]) {
+    const parsed = extractSource(sourceHtml(heading), source.url, SEED_DATE);
+    assert.equal(parsed.title, "静态新闻标题"); assert.equal(parsed.publishedAt, SEED_DATE);
+  }
+  assert.equal(extractSource(sourceHtml(), source.url, SEED_DATE).title, "官方报道标题");
+});
+test("government dynamic JSON list accepts policy articles, not footer or attacker links", () => {
+  const urls = [policyUrl, policyUrl, "https://www.gov.cn/home/2023-03/29/content_5748953.htm", "https://www.gov.cn.evil.example/zhengce/content/202610/content_1.htm", "https://zj.gov.cn/zhengce/content_1.htm", "http://www.gov.cn/zhengce/content_1.htm", source.url, null];
+  assert.deepEqual(governmentArticleLinks(JSON.stringify(urls.map(URL => ({ URL }))), "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json"), [policyUrl]);
+  assert.deepEqual(articleLinks(`<a href="/home/2023-03/29/content_5748953.htm">footer</a><a href="${policyUrl}">policy</a>`, "https://www.gov.cn/zhengce/zuixin/"), [policyUrl]);
+  for (const text of ["bad json", "{}", "null"]) assert.throws(() => governmentArticleLinks(text, "https://www.gov.cn/"), /source_index_invalid_json/);
+});
+test("source collection reads both publishers and fetches article bodies without API credentials", async () => {
+  const checks = []; const requested = [];
+  const sources = await collectSources(SEED_DATE, async (url, request) => {
+    requested.push(url); assert.equal(request.headers.authorization, undefined);
+    if (url === "https://www.stats.gov.cn/sj/zxfb/") return textResponse(url, `<a href="${source.url}">article</a>`);
+    if (url.endsWith("ZUIXINZHENGCE.json")) return textResponse(url, JSON.stringify([{ URL: policyUrl }]));
+    if (url === source.url) return textResponse(url, sourceHtml("<h1><script>document.write('动态标题');</script></h1>"));
+    if (url === policyUrl) return textResponse(url, sourceHtml());
+    throw new Error("unexpected_request");
+  }, check => checks.push(check));
+  assert.equal(sources.length, 2);
+  assert.deepEqual(sources.map(x => x.publisher), ["国家统计局", "中国政府网"]);
+  assert.ok(sources.every(x => x.body.length >= 150 && x.publishedAt === SEED_DATE));
+  assert.ok(requested.includes("https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json"));
+  assert.equal(checks.filter(x => x.stage === "index" && x.links === 1).length, 2);
+});
+test("one unavailable source index does not discard another publisher", async () => {
+  const checks = [];
+  const sources = await collectSources(SEED_DATE, async url => {
+    if (url === "https://www.stats.gov.cn/sj/zxfb/") return { ok: false, status: 403 };
+    if (url.endsWith("ZUIXINZHENGCE.json")) return textResponse(url, JSON.stringify([{ URL: policyUrl }]));
+    return textResponse(url, sourceHtml());
+  }, check => checks.push(check));
+  assert.equal(sources.length, 1); assert.equal(sources[0].url, policyUrl);
+  assert.ok(checks.some(x => x.code === "source_http_403"));
+});
+test("source failure diagnostics never echo arbitrary errors or credentials", async () => {
+  const checks = []; const secret = "test_secret_do_not_log";
+  await assert.rejects(() => collectSources(SEED_DATE, async () => { throw new Error(secret); }, check => checks.push(check)), /no_recent_official_sources/);
+  assert.ok(checks.every(x => x.code === "source_fetch_failed"));
+  assert.ok(!JSON.stringify(checks).includes(secret));
+  assert.equal(safeFailureCode(new Error(secret)), "update_failed");
+  assert.equal(safeFailureCode(new Error("provider_http_401")), "provider_http_401");
+  assert.equal(safeFailureCode(new Error("no_recent_official_sources")), "no_recent_official_sources");
+});
+test("old and future articles are still rejected after dynamic-index parsing", async () => {
+  const checks = [];
+  await assert.rejects(() => collectSources(SEED_DATE, async url => {
+    if (url === "https://www.stats.gov.cn/sj/zxfb/") return textResponse(url, `<a href="${source.url}">article</a>`);
+    if (url.endsWith("ZUIXINZHENGCE.json")) return textResponse(url, JSON.stringify([{ URL: policyUrl }]));
+    return textResponse(url, sourceHtml(undefined, url === source.url ? "2026-07-01" : "2030-01-01"));
+  }, check => checks.push(check)), /no_recent_official_sources/);
+  assert.equal(checks.filter(x => x.code === "source_not_recent").length, 2);
 });
 test("local day uses Shanghai, not UTC", () => assert.equal(localDay(new Date("2026-10-07T23:30:00Z")), SEED_DATE));
 test("model IDs, metadata and fake source URLs cannot override trusted fields", () => {
@@ -129,4 +189,13 @@ test("truncated response never replaces valid feed", async () => {
 });
 test("invalid config is rejected before paid API or file reads", async () => {
   await assert.rejects(() => runUpdate({ config: { ...config, baseUrl: "http://provider.example" }, read: () => { throw new Error("must not read"); } }), /missing_provider_configuration/);
+  await assert.rejects(() => runUpdate({ config: { ...config, baseUrl: "" }, read: () => { throw new Error("must not read"); } }), /missing_provider_configuration/);
+});
+test("no usable official sources leaves existing content and attempt counts untouched, with no paid call", async () => {
+  const store = memoryStore(); const oldContent = store.files.get("latest.json"); const oldState = store.files.get("generation-state.json"); let paidCalls = 0;
+  await assert.rejects(() => runUpdate({ ...store, config, today: SEED_DATE, fetcher: async url => {
+    if (url.endsWith("/chat/completions")) { paidCalls++; throw new Error("must not call paid API"); }
+    return { ok: false, status: 503 };
+  } }), /no_recent_official_sources/);
+  assert.equal(paidCalls, 0); assert.equal(store.files.get("latest.json"), oldContent); assert.equal(store.files.get("generation-state.json"), oldState);
 });

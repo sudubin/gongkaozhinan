@@ -6,7 +6,10 @@ import { createPackage, contentKey, mergeEntries } from "./content-package.mjs";
 const feedPath = new URL("../public/content/latest.json", import.meta.url);
 const statePath = new URL("../public/content/generation-state.json", import.meta.url);
 export const MODULES = ["affairs", "general", "idiom", "essay"];
-const INDEXES = ["https://www.stats.gov.cn/sj/zxfb/", "https://www.gov.cn/zhengce/zuixin/"];
+const INDEXES = [
+  { url: "https://www.stats.gov.cn/sj/zxfb/", format: "html" },
+  { url: "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json", format: "json" },
+];
 export const localDay = (now = new Date()) => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
 export const hashId = text => createHash("sha256").update(text).digest("hex").slice(0, 24);
 const decode = text => text.replace(/&nbsp;|&#160;/gi, " ").replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'").replace(/&lt;/gi, "<").replace(/&gt;/gi, ">");
@@ -15,13 +18,34 @@ export function isAllowedSource(url) {
   const parsed = new URL(url);
   return parsed.protocol === "https:" && ["www.gov.cn", "www.stats.gov.cn"].includes(parsed.hostname) && !parsed.username && !parsed.password;
 }
+function articleUrl(href, baseUrl) {
+  try {
+    if (typeof href !== "string") return null;
+    const url = new URL(decode(href), baseUrl);
+    if (!isAllowedSource(url.href)) return null;
+    // Exclude government-site footer links such as /home/.../content_*.htm.
+    const article = url.hostname === "www.gov.cn"
+      ? /^\/zhengce\/(?:[^/]+\/)*content_\d+\.html?$/.test(url.pathname)
+      : /^\/sj\/zxfb\/(?:[^/]+\/)*t\d{8}_\d+\.html?$/.test(url.pathname);
+    return article ? url.href : null;
+  } catch { return null; }
+}
 export function articleLinks(html, baseUrl) {
-  return [...new Set([...html.matchAll(/href\s*=\s*["']([^"']+)["']/gi)].flatMap(([, href]) => {
-    try { const url = new URL(decode(href), baseUrl); return isAllowedSource(url.href) && /(?:content_\d+|t\d{8}_\d+)\.html?$/.test(url.pathname) ? [url.href] : []; } catch { return []; }
-  }))].slice(0, 8);
+  return [...new Set([...html.matchAll(/href\s*=\s*["']([^"']+)["']/gi)]
+    .map(([, href]) => articleUrl(href, baseUrl)).filter(Boolean))].slice(0, 8);
+}
+export function governmentArticleLinks(text, baseUrl) {
+  let entries;
+  try { entries = JSON.parse(text); } catch { throw new Error("source_index_invalid_json"); }
+  if (!Array.isArray(entries)) throw new Error("source_index_invalid_json");
+  return [...new Set(entries.map(entry => articleUrl(entry?.URL, baseUrl))
+    .filter(url => url && new URL(url).hostname === "www.gov.cn"))].slice(0, 8);
 }
 export function extractSource(html, url, today) {
-  const title = plainText(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? "");
+  // Statistics pages populate h1 using JavaScript. Never execute source scripts;
+  // an empty text heading must fall back to the static document title.
+  const title = plainText(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "")
+    || plainText(html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? "");
   const dateMeta = html.match(/<meta\b[^>]*name=["'](?:PubDate|publishdate|Date)["'][^>]*content=["']([^"']+)/i)?.[1];
   const bodyHtml = html.match(/<!--\s*TRS_Editor\s*-->([\s\S]*?)<!--\s*\/TRS_Editor\s*-->/i)?.[1]
     ?? html.match(/<div\b[^>]*class=["'][^"']*TRS_Editor[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)?.[1];
@@ -37,16 +61,44 @@ export function extractSource(html, url, today) {
 }
 async function fetchText(url, fetcher) {
   if (!isAllowedSource(url)) throw new Error("source_not_allowed");
-  const response = await fetcher(url, { signal: AbortSignal.timeout(20000), headers: { "user-agent": "GongkaoGuide/1.0 (public study summary)", accept: "text/html" } });
-  if (!response.ok || !isAllowedSource(response.url || url)) throw new Error("source_unavailable");
-  return response.text();
+  let response;
+  try {
+    response = await fetcher(url, { signal: AbortSignal.timeout(20000), headers: { "user-agent": "GongkaoGuide/1.0 (public study summary)", accept: "application/json,text/html;q=0.9" } });
+  } catch (error) { throw new Error(["TimeoutError", "AbortError"].includes(error?.name) ? "source_timeout" : "source_fetch_failed"); }
+  if (!response.ok) throw new Error(`source_http_${response.status}`);
+  if (!isAllowedSource(response.url || url)) throw new Error("source_not_allowed");
+  try { return await response.text(); } catch { throw new Error("source_read_failed"); }
 }
-export async function collectSources(today, fetcher = fetch) {
-  const indexes = await Promise.allSettled(INDEXES.map(async url => articleLinks(await fetchText(url, fetcher), url)));
-  const urls = [...new Set(indexes.flatMap(result => result.status === "fulfilled" ? result.value : []))];
+const SAFE_FAILURE_CODES = new Set([
+  "missing_provider_configuration", "daily_limit_must_be_1_to_25", "existing_feed_integrity_failed",
+  "source_not_allowed", "source_timeout", "source_fetch_failed", "source_read_failed", "source_index_invalid_json",
+  "source_body_missing", "source_date_missing", "source_not_recent", "no_recent_official_sources",
+  "provider_output_truncated", "provider_empty_response", "provider_invalid_json",
+  "invalid_entries", "invalid_item", "excluded_module", "unknown_source", "evidence_not_found",
+  "invalid_confusable", "invalid_event_date", "invalid_question_count", "invalid_question", "fake_exam_claim",
+  ...["summary", "concept", "explanation", "pronunciation", "definition", "example"].map(field => `missing_${field}`),
+  ...["examPoints", "collocations", "facts", "expressions", "scenarios", "aiSuggestions"].map(field => `invalid_${field}`),
+]);
+export function safeFailureCode(error, fallback = "update_failed") {
+  const code = error instanceof Error ? error.message : "";
+  return SAFE_FAILURE_CODES.has(code) || /^(?:source|provider)_http_\d{3}$/.test(code) ? code : fallback;
+}
+export async function collectSources(today, fetcher = fetch, report = () => {}) {
+  const indexes = await Promise.allSettled(INDEXES.map(async ({ url, format }) => {
+    const text = await fetchText(url, fetcher);
+    return format === "json" ? governmentArticleLinks(text, url) : articleLinks(text, url);
+  }));
+  indexes.forEach((result, index) => report({ stage: "index", host: new URL(INDEXES[index].url).hostname,
+    ...(result.status === "fulfilled" ? { links: result.value.length } : { code: safeFailureCode(result.reason, "source_fetch_failed") }) }));
+  const groups = indexes.map(result => result.status === "fulfilled" ? result.value : []);
+  // Interleave the two publishers so statistics do not crowd out policies.
+  const urls = [...new Set(Array.from({ length: 8 }, (_, index) => groups.flatMap(group => group[index] ? [group[index]] : [])).flat())];
   const results = [];
   // Bounded concurrency avoids hammering source sites.
   for (let offset = 0; offset < urls.length; offset += 2) results.push(...await Promise.allSettled(urls.slice(offset, offset + 2).map(async url => extractSource(await fetchText(url, fetcher), url, today))));
+  results.forEach((result, index) => {
+    if (result.status === "rejected") report({ stage: "article", host: new URL(urls[index]).hostname, code: safeFailureCode(result.reason, "source_fetch_failed") });
+  });
   const sources = results.flatMap(result => result.status === "fulfilled" ? [result.value] : []);
   if (!sources.length) throw new Error("no_recent_official_sources");
   return sources.slice(0, 8);
@@ -114,8 +166,9 @@ async function complete(config, module, count, sources, existing, today, fetcher
   try { value = JSON.parse(text.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "")); } catch { throw new Error("provider_invalid_json"); }
   return normalizeGenerated(value, module, sources, today, config.model, count);
 }
-export async function runUpdate({ config, today = localDay(), fetcher = fetch, read = readFile, write = writeFile, move = rename, sources: givenSources } = {}) {
-  const parsed = new URL(config?.baseUrl ?? "");
+export async function runUpdate({ config, today = localDay(), fetcher = fetch, read = readFile, write = writeFile, move = rename, sources: givenSources, report = () => {} } = {}) {
+  let parsed;
+  try { parsed = new URL(config?.baseUrl ?? ""); } catch { throw new Error("missing_provider_configuration"); }
   if (parsed.protocol !== "https:" || parsed.username || parsed.password || !config.apiKey || !config.model) throw new Error("missing_provider_configuration");
   const target = config.dailyPerModule ?? 5;
   if (!Number.isInteger(target) || target < 1 || target > 25) throw new Error("daily_limit_must_be_1_to_25");
@@ -126,7 +179,8 @@ export async function runUpdate({ config, today = localDay(), fetcher = fetch, r
   try { state = JSON.parse(await read(statePath, "utf8")); } catch { state = null; }
   if (state?.date !== today) state = { date: today, counts: {}, attempts: {}, totalAdded: 0 };
   if (MODULES.every(module => (state.counts[module] ?? 0) >= target)) return { added: 0, failures: [], alreadyComplete: true };
-  const sources = givenSources ?? await collectSources(today, fetcher);
+  const sources = givenSources ?? await collectSources(today, fetcher, report);
+  report({ stage: "sources", count: sources.length });
   const failures = [];
   let added = 0;
   for (const module of MODULES) {
@@ -149,8 +203,8 @@ export async function runUpdate({ config, today = localDay(), fetcher = fetch, r
         added += next.added; state.counts[module] = (state.counts[module] ?? 0) + next.added; state.totalAdded += next.added;
         await saveState();
       } catch (error) {
-        const code = error instanceof Error ? error.message : "generation_failed";
-        failures.push({ module, code: /^[a-zA-Z0-9_]+$/.test(code) ? code : "validation_failed" });
+        const code = safeFailureCode(error, "generation_failed");
+        failures.push({ module, code });
         if (code === "provider_http_401" || code === "provider_http_403") break;
       }
     }
@@ -159,8 +213,8 @@ export async function runUpdate({ config, today = localDay(), fetcher = fetch, r
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try {
-    const result = await runUpdate({ config: { baseUrl: (process.env.CONTENT_API_BASE_URL ?? "").replace(/\/$/, ""), apiKey: process.env.CONTENT_API_KEY, model: process.env.CONTENT_MODEL, dailyPerModule: Number(process.env.CONTENT_DAILY_PER_MODULE || 5) } });
+    const result = await runUpdate({ config: { baseUrl: (process.env.CONTENT_API_BASE_URL ?? "").replace(/\/$/, ""), apiKey: process.env.CONTENT_API_KEY, model: process.env.CONTENT_MODEL, dailyPerModule: Number(process.env.CONTENT_DAILY_PER_MODULE || 5) }, report: check => console.log(JSON.stringify({ sourceCheck: check })) });
     console.log(JSON.stringify(result));
     if (result.failures.length || (!result.added && !result.alreadyComplete)) process.exitCode = 1;
-  } catch { console.error("自动更新失败：请检查加密 API 配置、官方来源连通性及已有内容包；旧内容不会被清空。"); process.exitCode = 1; }
+  } catch (error) { console.error(`自动更新失败（${safeFailureCode(error)}）：请检查加密 API 配置、官方来源连通性及已有内容包；旧内容不会被清空。`); process.exitCode = 1; }
 }
