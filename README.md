@@ -1,8 +1,25 @@
-# 公考指南（开源版）
+# 公考指南
 
-一个面向公务员考试备考的 Android 学习工具，提供全国时政、常识、成语、申论和速算训练。此仓库仅包含通用开源版本，不含地方专项内容。
+一个面向公务员考试备考的 Android 学习工具。本仓库保留通用开源版的源码和安装包，同时新增浙江完整版的版本下载；完整版源码暂不在本仓库公开。
 
-## 界面预览
+## 版本下载
+
+| 版本 | 内容与安装方式 | 下载 |
+| --- | --- | --- |
+| 浙江完整版 1.1（新增测试版） | 保留浙江省情、浙江时政；内置 106 条学习卡和 81 道原创练习。包名 `cn.gongkao.guide`，与原浙江版本签名相同，可作为原版升级包。 | [下载完整版 APK](https://github.com/sudubin/gongkaozhinan/releases/download/v1.1-full/gongkao-guide-zhejiang-full-1.1.apk) · [版本说明](docs/releases/v1.1-full.md) |
+| 通用开源版 1.0（保留） | 全国时政、常识、成语、申论和速算；内置 100 条学习卡和 75 道原创练习。独立包名 `cn.gongkao.guide.opensource`，可与完整版共存。 | [下载开源版 APK](https://github.com/sudubin/gongkaozhinan/releases/download/v1.0-open-source/gongkao-guide-open-source.apk) · [版本说明](docs/releases/v1.0-open-source.md) |
+
+两个安装包均为测试 APK，Android 7.0 及以上可安装；学习记录各自保存在本机，不会因安装另一个版本自动迁移。升级或卸载前建议先导出学习备份。也可从仓库的 [下载文件目录](downloads/) 获取安装包。
+
+**完整版状态：** 学习功能和本地增量同步已实现，但每日云端生成/分发尚未上线，会员和收费也尚未接通。安装包没有内置维护者的 API key；公开下载不代表已具备付费使用限制。开源版原有源码、内容库和更新任务此次均未覆盖。
+
+## 浙江完整版界面
+
+| 浙江学习首页 | 完整版更新设置 |
+| --- | --- |
+| <img src="docs/images/zhejiang-full-home.png" alt="浙江完整版学习首页，保留浙江时政和浙江特色省情" width="300" /> | <img src="docs/images/zhejiang-full-updates.png" alt="完整版自动同步设置，明确提示云端服务尚未配置" width="300" /> |
+
+## 开源版界面预览
 
 | 学习首页 | 全国时政 |
 | --- | --- |
@@ -55,7 +72,7 @@ npm run android:apk
 
 无需在本机安装打包工具也可使用 [GitHub 云端打包](https://github.com/sudubin/gongkaozhinan/actions/workflows/android-apk.yml)：源码更新后自动构建，也可手动运行。成功后从对应运行记录的 Artifacts 下载 `gongkao-guide-open-source-debug-apk`，解压得到 APK；下载需登录 GitHub，产物保留 90 天。当前为调试安装包，不是正式签名发行版；不同云端构建的签名可能变化，跨构建升级前请备份学习记录。
 
-仓库根目录为最新完整源码。早期上传的源码压缩包保留作历史备份，不代表当前版本。
+仓库根目录仍为开源版源码，不是浙江完整版的完整源码。早期上传的开源源码压缩包保留作历史备份，不代表当前版本。GitHub 发布页自动生成的 Source code 压缩包同样是此仓库的开源源码，不含未公开的完整版源码。
 
 ## 项目范围
 
@@ -63,4 +80,4 @@ npm run android:apk
 
 ## 开源协议
 
-本项目采用 [MIT License](LICENSE)。
+本仓库的开源版源码继续采用 [MIT License](LICENSE)，原许可文件保持不变。完整版 APK 内保留其复用部分的 `OPEN-SOURCE-NOTICES.txt`；这次没有上传完整版源码，也没有新增商业授权或收费条款。

@@ -1,0 +1,2 @@
+9c085b4f2a000c489de4d6006412f5ea9ee69e89f7f2e8a41c23801172d1e990  downloads/zhejiang-full/1.1/gongkao-guide-zhejiang-full-1.1.apk
+517853f2ecdcb84991cfe21c7e9ba226747f224c3df09aa91f49c66dd78d440c  downloads/open-source/1.0/gongkao-guide-open-source.apk

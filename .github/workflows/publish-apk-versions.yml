@@ -1,0 +1,73 @@
+name: Publish full and open-source APK versions
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-apk-versions.yml'
+      - 'downloads/**'
+      - 'docs/releases/v1.1-full.md'
+      - 'docs/releases/v1.0-open-source.md'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: gongkao-apk-versions-1-1
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.repository == 'sudubin/gongkaozhinan' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check the exact prebuilt APKs before publication
+        run: |
+          sha256sum --check downloads/SHA256SUMS.txt
+          (cd downloads/zhejiang-full/1.1 && sha256sum --check SHA256SUMS.txt)
+          (cd downloads/open-source/1.0 && sha256sum --check SHA256SUMS.txt)
+      - name: Publish both versions without replacing existing assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          publish_version() {
+            local gongkao_tag="$1" gongkao_title="$2" gongkao_notes="$3" gongkao_apk="$4" gongkao_sums="$5" gongkao_latest="$6"
+            if ! gh release view "$gongkao_tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+              local gongkao_existing_tag_sha
+              if gongkao_existing_tag_sha="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$gongkao_tag" --jq '.object.sha' 2>/dev/null)"; then
+                if [ "$gongkao_existing_tag_sha" != "$GITHUB_SHA" ]; then
+                  echo '::error::An existing tag points to another revision. Refusing to reuse it.'
+                  return 1
+                fi
+              fi
+              gh release create "$gongkao_tag" "$gongkao_apk" "$gongkao_sums" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title "$gongkao_title" --notes-file "$gongkao_notes" --latest="$gongkao_latest"
+              return
+            fi
+            local gongkao_existing_title
+            gongkao_existing_title="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$gongkao_tag" --jq '.name')"
+            if [ "$gongkao_existing_title" != "$gongkao_title" ]; then
+              echo '::error::An existing release has a different title. Refusing to modify it.'
+              return 1
+            fi
+            local gongkao_file gongkao_name gongkao_present gongkao_check_dir gongkao_local_hash gongkao_remote_hash
+            for gongkao_file in "$gongkao_apk" "$gongkao_sums"; do
+              gongkao_name="$(basename "$gongkao_file")"
+              gongkao_present="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$gongkao_tag" --jq ".assets | any(.name == \"$gongkao_name\")")"
+              if [ "$gongkao_present" = 'true' ]; then
+                gongkao_check_dir="$(mktemp -d "$RUNNER_TEMP/gongkao-release-check.XXXXXX")"
+                gh release download "$gongkao_tag" --repo "$GITHUB_REPOSITORY" --pattern "$gongkao_name" --dir "$gongkao_check_dir"
+                gongkao_local_hash="$(sha256sum "$gongkao_file" | cut -d ' ' -f 1)"
+                gongkao_remote_hash="$(sha256sum "$gongkao_check_dir/$gongkao_name" | cut -d ' ' -f 1)"
+                if [ "$gongkao_local_hash" != "$gongkao_remote_hash" ]; then
+                  echo '::error::An existing release asset has different bytes. Refusing to overwrite it.'
+                  return 1
+                fi
+              else
+                gh release upload "$gongkao_tag" "$gongkao_file" --repo "$GITHUB_REPOSITORY"
+              fi
+            done
+          }
+          publish_version 'v1.0-open-source' '公考指南开源版 1.0（保留版）' 'docs/releases/v1.0-open-source.md' 'downloads/open-source/1.0/gongkao-guide-open-source.apk' 'downloads/open-source/1.0/SHA256SUMS.txt' 'false'
+          publish_version 'v1.1-full' '公考指南浙江完整版 1.1（测试 APK）' 'docs/releases/v1.1-full.md' 'downloads/zhejiang-full/1.1/gongkao-guide-zhejiang-full-1.1.apk' 'downloads/zhejiang-full/1.1/SHA256SUMS.txt' 'true'
