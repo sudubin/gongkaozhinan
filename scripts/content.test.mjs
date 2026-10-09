@@ -4,7 +4,7 @@ import { validateContentPackage, canonicalJson } from "@gongkao/contracts";
 import { createHash } from "node:crypto";
 import { seedEntries, SEED_DATE } from "../data/seed.mjs";
 import { contentKey, createPackage, mergeEntries } from "./content-package.mjs";
-import { articleLinks, collectSources, extractSource, governmentArticleLinks, isAllowedSource, localDay, normalizeGenerated, providerRequestOptions, runUpdate, safeFailureCode } from "./update-content.mjs";
+import { articleLinks, collectSources, evidenceChoices, extractSource, governmentArticleLinks, isAllowedSource, localDay, normalizeGenerated, providerRequestOptions, runUpdate, safeFailureCode } from "./update-content.mjs";
 
 const seed = seedEntries();
 const initial = () => createPackage(seed.items, seed.questions, "seed-v1-100", SEED_DATE);
@@ -116,6 +116,30 @@ test("model IDs, metadata and fake source URLs cannot override trusted fields", 
   const result = normalizeGenerated({ entries: [entry] }, "general", [source], SEED_DATE, "test-model", 5)[0];
   assert.match(result.item.stableId, /^auto-general-/); assert.equal(result.item.revision, 1); assert.equal(result.item.sourceRefs[0].url, source.url);
 });
+test("evidence choices are short exact source substrings with unique IDs", () => {
+  const longSource = { ...source, id: "long-source", body: `${"事实材料".repeat(50)}。下一句材料。` };
+  const choices = evidenceChoices([longSource, source]);
+  assert.equal(new Set(choices.map(x => x.id)).size, choices.length);
+  for (const choice of choices) {
+    assert.ok(choice.text.length > 0 && choice.text.length <= 64);
+    assert.ok([longSource, source].find(s => s.id === choice.sourceId).body.includes(choice.text));
+  }
+});
+test("valid evidence ID stores the original quote, never model-written evidence", () => {
+  const entry = generated("general"); const choice = evidenceChoices([source])[0];
+  entry.item.evidenceId = choice.id; entry.item.evidenceExcerpt = "模型改写的内容不得保存";
+  const normalized = normalizeGenerated({ entries: [entry] }, "general", [source], SEED_DATE, "test-model", 5)[0].item;
+  assert.equal(normalized.sourceRefs[0].evidenceExcerpt, choice.text);
+  assert.ok(source.body.includes(normalized.sourceRefs[0].evidenceExcerpt));
+  assert.equal(Object.hasOwn(normalized, "evidenceId"), false);
+});
+test("invented evidence IDs and evidence from an unreferenced source are rejected", () => {
+  const entry = generated("general"); entry.item.evidenceId = "invented";
+  assert.throws(() => normalizeGenerated({ entries: [entry] }, "general", [source], SEED_DATE, "test-model", 5), /invalid_evidence_id/);
+  const otherSource = { ...source, id: "source-2", url: policyUrl, body: "第二份独立材料的事实。" };
+  entry.item.evidenceId = evidenceChoices([source, otherSource]).find(x => x.sourceId === otherSource.id).id;
+  assert.throws(() => normalizeGenerated({ entries: [entry] }, "general", [source, otherSource], SEED_DATE, "test-model", 5), /evidence_source_mismatch/);
+});
 for (const [name, change] of [
   ["unknown source", e => { e.item.sourceIds = ["fabricated"]; }],
   ["missing evidence", e => { e.item.evidenceExcerpt = "原文没有的数字"; }],
@@ -166,6 +190,26 @@ test("Bailian update actually sends JSON options and preserves validation", asyn
     assert.ok(body.messages.some(message => /JSON/i.test(message.content)));
     assert.equal(body.max_tokens, 8000);
     return fakeProvider(url, request);
+  } });
+  assert.equal(calls, 4); assert.equal(result.added, 4); assert.equal(result.failures.length, 0);
+  assert.equal(validateContentPackage(JSON.parse(store.files.get("latest.json"))).ok, true);
+});
+test("actual requests use module-specific typed templates, essay has no questions, factual cards select trusted evidence IDs", async () => {
+  const store = memoryStore(); let calls = 0;
+  const result = await runUpdate({ ...store, config, today: SEED_DATE, sources: [source], fetcher: async (url, request) => {
+    calls++;
+    const text = JSON.parse(request.body).messages[1].content;
+    const module = /生成 (\w+) 模块/.exec(text)[1];
+    const template = JSON.parse(text.match(/OUTPUT_SCHEMA_BEGIN\n([\s\S]*?)\nOUTPUT_SCHEMA_END/)[1]).entries[0];
+    const data = JSON.parse(text.match(/SOURCE_BEGIN[^\n]*\n([\s\S]*?)\nSOURCE_END/)[1]);
+    assert.equal(template.questions.length, module === "essay" ? 0 : 1);
+    if (module === "essay") for (const field of ["facts", "expressions", "scenarios", "aiSuggestions"]) assert.ok(Array.isArray(template.item[field]) && template.item[field].every(x => typeof x === "string"));
+    const entry = generated(module);
+    if (["affairs", "general"].includes(module)) {
+      assert.equal(template.item.evidenceId, "E1"); assert.equal(data.evidenceChoices[0].sourceId, source.id);
+      entry.item.evidenceId = data.evidenceChoices[0].id; delete entry.item.evidenceExcerpt;
+    } else assert.equal(data.evidenceChoices.length, 0);
+    return { ok: true, json: async () => ({ choices: [{ finish_reason: "stop", message: { content: JSON.stringify({ entries: [entry] }) } }] }) };
   } });
   assert.equal(calls, 4); assert.equal(result.added, 4); assert.equal(result.failures.length, 0);
   assert.equal(validateContentPackage(JSON.parse(store.files.get("latest.json"))).ok, true);
