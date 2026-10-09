@@ -6,6 +6,7 @@ on:
       - '.github/workflows/publish-apk-versions.yml'
       - 'downloads/**'
       - 'docs/releases/v1.1-full.md'
+      - 'docs/releases/v1.2-full.md'
       - 'docs/releases/v1.0-open-source.md'
   workflow_dispatch:
 permissions:
@@ -26,6 +27,7 @@ jobs:
         run: |
           sha256sum --check downloads/SHA256SUMS.txt
           (cd downloads/zhejiang-full/1.1 && sha256sum --check SHA256SUMS.txt)
+          (cd downloads/zhejiang-full/1.2 && sha256sum --check SHA256SUMS.txt)
           (cd downloads/open-source/1.0 && sha256sum --check SHA256SUMS.txt)
       - name: Publish both versions without replacing existing assets
         env:
@@ -70,4 +72,5 @@ jobs:
             done
           }
           publish_version 'v1.0-open-source' '公考指南开源版 1.0（保留版）' 'docs/releases/v1.0-open-source.md' 'downloads/open-source/1.0/gongkao-guide-open-source.apk' 'downloads/open-source/1.0/SHA256SUMS.txt' 'false'
-          publish_version 'v1.1-full' '公考指南浙江完整版 1.1（测试 APK）' 'docs/releases/v1.1-full.md' 'downloads/zhejiang-full/1.1/gongkao-guide-zhejiang-full-1.1.apk' 'downloads/zhejiang-full/1.1/SHA256SUMS.txt' 'true'
+          publish_version 'v1.1-full' '公考指南浙江完整版 1.1（测试 APK）' 'docs/releases/v1.1-full.md' 'downloads/zhejiang-full/1.1/gongkao-guide-zhejiang-full-1.1.apk' 'downloads/zhejiang-full/1.1/SHA256SUMS.txt' 'false'
+          publish_version 'v1.2-full' '公考指南浙江完整版 1.2（自动内容更新）' 'docs/releases/v1.2-full.md' 'downloads/zhejiang-full/1.2/gongkao-guide-zhejiang-full-1.2.apk' 'downloads/zhejiang-full/1.2/SHA256SUMS.txt' 'true'

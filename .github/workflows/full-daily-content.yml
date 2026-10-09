@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    # Bounded deployment verification; official fetch has a TLS-checked IPv4 fallback.
+    # Bounded deployment verification; Zhejiang has an authoritative news-portal fallback.
     paths: ['.github/workflows/full-daily-content.yml']
 permissions:
   contents: write

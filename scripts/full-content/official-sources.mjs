@@ -6,13 +6,15 @@ const INDEXES = [
   { url: "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json", format: "json" },
   { url: "https://www.stats.gov.cn/sj/zxfb/", format: "html" },
   { url: "https://www.zj.gov.cn/col/col1554467/index.html", format: "zhejiang" },
+  { url: "https://www.zjol.com.cn/", format: "html" },
 ];
 export const hashId = text => createHash("sha256").update(text).digest("hex").slice(0, 24);
 export const localDay = (now = new Date()) => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
 const decode = text => text.replace(/&nbsp;|&#160;/gi, " ").replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'").replace(/&lt;/gi, "<").replace(/&gt;/gi, ">");
 export const plainText = html => decode(html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, " ").replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim();
+export const isRegionalSource = value => ["www.zj.gov.cn", "zjnews.zjol.com.cn"].includes(new URL(value).hostname);
 export function isAllowedSource(value) {
-  try { const url = new URL(value); return url.protocol === "https:" && ["www.gov.cn", "www.stats.gov.cn", "www.zj.gov.cn"].includes(url.hostname) && !url.username && !url.password; }
+  try { const url = new URL(value); return url.protocol === "https:" && ["www.gov.cn", "www.stats.gov.cn", "www.zj.gov.cn", "www.zjol.com.cn", "zjnews.zjol.com.cn"].includes(url.hostname) && !url.username && !url.password; }
   catch { return false; }
 }
 function articleUrl(value, base) {
@@ -24,8 +26,9 @@ function articleUrl(value, base) {
       "www.gov.cn": /^\/zhengce\/(?:[^/]+\/)*content_\d+\.html?$/,
       "www.stats.gov.cn": /^\/sj\/zxfb\/(?:[^/]+\/)*t\d{8}_\d+\.html?$/,
       "www.zj.gov.cn": /^\/col\/col1554467\/art\/20\d{2}\/art_[a-f\d]{32}\.html$/,
+      "zjnews.zjol.com.cn": /^\/(?:zjnews|gaoceng_developments)\/(?:[^/]+\/)*t20\d{6}_\d+\.shtml$/,
     };
-    return patterns[url.hostname].test(url.pathname) ? url.href : null;
+    return patterns[url.hostname]?.test(url.pathname) ? url.href : null;
   } catch { return null; }
 }
 export function articleLinks(html, base) {
@@ -63,11 +66,13 @@ function elementBody(html, startPattern) {
 }
 export function extractSource(html, url, today) {
   if (!isAllowedSource(url)) throw new Error("source_not_allowed");
+  const host = new URL(url).hostname;
   const metas = [...html.matchAll(/<meta\b[^>]*>/gi)].map(match => attributes(match[0]));
   const meta = name => metas.find(attrs => attrs.name?.toLowerCase() === name.toLowerCase())?.content;
   const title = meta("ArticleTitle") || plainText(html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "") || plainText(html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? "");
   const bodyHtml = html.match(/<!--\s*TRS_Editor\s*-->([\s\S]*?)<!--\s*\/TRS_Editor\s*-->/i)?.[1]
     ?? elementBody(html, /<div\b[^>]*id=["']zoom["'][^>]*>/i)
+    ?? (host === "zjnews.zjol.com.cn" ? elementBody(html, /<div\b[^>]*class=["']artCon["'][^>]*>/i) : null)
     ?? elementBody(html, /<div\b[^>]*class=["'][^"']*TRS_Editor[^"']*["'][^>]*>/i);
   if (!bodyHtml) throw new Error("source_body_missing");
   const body = plainText(bodyHtml);
@@ -76,8 +81,8 @@ export function extractSource(html, url, today) {
   const publishedAt = `${date[1]}-${date[2].padStart(2, "0")}-${date[3].padStart(2, "0")}`;
   const age = (Date.parse(today) - Date.parse(publishedAt)) / 86400000;
   if (!title || body.length < 150 || !Number.isFinite(age) || age < 0 || age > 31) throw new Error("source_not_recent");
-  const host = new URL(url).hostname;
-  return { id: `source-${hashId(url)}`, title, url, publisher: { "www.gov.cn": "中国政府网", "www.stats.gov.cn": "国家统计局", "www.zj.gov.cn": "浙江省人民政府" }[host], scope: host === "www.zj.gov.cn" ? "zhejiang" : "national", publishedAt, verifiedAt: today,
+  if (host === "zjnews.zjol.com.cn" && !body.includes("浙江")) throw new Error("source_region_mismatch");
+  return { id: `source-${hashId(url)}`, title, url, publisher: { "www.gov.cn": "中国政府网", "www.stats.gov.cn": "国家统计局", "www.zj.gov.cn": "浙江省人民政府", "zjnews.zjol.com.cn": "浙江在线（浙江省委省政府新闻门户）" }[host], scope: isRegionalSource(url) ? "zhejiang" : "national", publishedAt, verifiedAt: today,
     rightsNote: "来源原文仅用于核对，发布原创学习摘要。", body: body.slice(0, 12000) };
 }
 // curl uses the runner's existing CA store and IPv4 path. TLS verification
@@ -131,5 +136,5 @@ export async function collectSources(today, fetcher = fetch, report = () => {}) 
   const sources = results.flatMap(result => result.status === "fulfilled" ? [result.value] : []);
   if (!sources.length) throw new Error("no_recent_official_sources");
   // Separate quotas prevent one publisher from displacing Zhejiang material.
-  return ["national", "zhejiang"].flatMap(scope => sources.filter(source => source.scope === scope).slice(0, 8));
+  return ["national", "zhejiang"].flatMap(scope => sources.filter(source => source.scope === scope).sort((a, b) => Number(new URL(a.url).hostname !== "www.zj.gov.cn") - Number(new URL(b.url).hostname !== "www.zj.gov.cn")).slice(0, 8));
 }

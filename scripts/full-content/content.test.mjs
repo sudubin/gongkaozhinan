@@ -101,6 +101,16 @@ test("official network fallback retains TLS, host checks and no credentials", as
   await assert.rejects(() => curlOfficialText("https://evil.example/", () => { throw Error("must not run"); }), /source_not_allowed/);
   assert.equal(await fetchText(regional.url, async () => { throw Error("fetch failed"); }, async url => { assert.equal(url, regional.url); return sourceHtml; }), sourceHtml);
 });
+test("Zhejiang news portal fallback is provincial, dated and limited to article body", () => {
+  const url = "https://zjnews.zjol.com.cn/zjnews/202610/t20261009_31954810.shtml";
+  const html = `<h1>浙江公共服务报道</h1><span>${today} 09:44</span><div class="artCon"><p>${"浙江完善公共服务，便利群众出行。".repeat(20)}</p></div><footer>不能引用的页脚</footer>`;
+  const source = extractSource(html, url, today);
+  assert.equal(source.scope, "zhejiang"); assert.ok(source.publisher.startsWith("浙江在线"));
+  assert.equal(source.publishedAt, today); assert.ok(!source.body.includes("页脚"));
+  assert.deepEqual(articleLinks(`<a href="${url}">报道</a><a href="https://evil.zjol.com.cn/t20261009_1.shtml">排除</a>`, "https://www.zjol.com.cn/"), [url]);
+  assert.equal(normalizeGenerated({ entries: [generated("zhejiang", source)] }, "zhejiang", [source], today, "test", 1, "zhejiang")[0].item.region, "zhejiang");
+  assert.throws(() => extractSource(html.replaceAll("浙江", "其他"), url, today), /source_region_mismatch/);
+});
 test("regional normalization trusts evidence and strips fake exam metadata", () => {
   for (const module of ["affairs", "zhejiang"]) {
     const entry = generated(module, regional); entry.item.examEvidence = [{ eventKey: "fake" }]; entry.item.editorRecommended = true;
