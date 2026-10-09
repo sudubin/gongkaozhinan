@@ -70,6 +70,10 @@ jobs:
                 gh release upload "$gongkao_tag" "$gongkao_file" --repo "$GITHUB_REPOSITORY"
               fi
             done
+            # Update this task's new release notes honestly, without replacing assets.
+            if [ "$gongkao_tag" = 'v1.2-full' ]; then
+              gh release edit "$gongkao_tag" --repo "$GITHUB_REPOSITORY" --notes-file "$gongkao_notes" --latest="$gongkao_latest"
+            fi
           }
           publish_version 'v1.0-open-source' '公考指南开源版 1.0（保留版）' 'docs/releases/v1.0-open-source.md' 'downloads/open-source/1.0/gongkao-guide-open-source.apk' 'downloads/open-source/1.0/SHA256SUMS.txt' 'false'
           publish_version 'v1.1-full' '公考指南浙江完整版 1.1（测试 APK）' 'docs/releases/v1.1-full.md' 'downloads/zhejiang-full/1.1/gongkao-guide-zhejiang-full-1.1.apk' 'downloads/zhejiang-full/1.1/SHA256SUMS.txt' 'false'
