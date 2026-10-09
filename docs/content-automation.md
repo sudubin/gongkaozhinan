@@ -27,6 +27,16 @@
 
 在 Repository variables 中添加 `AUTO_CONTENT_ENABLED`，值为 `true`。可选变量 `CONTENT_DAILY_PER_MODULE` 默认为 `5`，允许 `1` 至 `25`。更大目标仍受每日调用次数和输出长度约束，并不保证每天凑满。
 
+### 百炼 Qwen3.7 Flash
+
+- `CONTENT_MODEL` 填 `qwen3.7-flash`（注意连字符）。
+- `CONTENT_API_BASE_URL` 使用与密钥同地域的 OpenAI 兼容地址。例如北京地域为 `https://{WorkspaceId}.cn-beijing.maas.aliyuncs.com/compatible-mode/v1`；替换为自己的业务空间 ID，不能原样填占位符，也不要追加 `/chat/completions`。
+- `CONTENT_API_KEY` 填该地域的百炼密钥，仅放在 Repository secrets。
+- 脚本对百炼官方地址上的这个型号及其日期快照启用 JSON Object 输出，并设置 `enable_thinking=false`。这减少思考过程的额外等待与消耗，但不能保证事实正确，现有来源、证据和结构校验仍执行。
+- 这里只修改云端生成请求，不需要重新安装 App。未配置密钥并完成真实运行前，不能宣称日更已接通。
+
+依据：[百炼接口与地域说明](https://help.aliyun.com/zh/model-studio/compatibility-of-openai-with-dashscope)、[深度思考参数](https://help.aliyun.com/zh/model-studio/deep-thinking)、[结构化输出](https://help.aliyun.com/zh/model-studio/qwen-structured-output)。
+
 在 Actions 中允许运行工作流，保证 `GITHUB_TOKEN` 可写仓库内容，且分支规则允许机器人提交内容包。首次可手动运行 **Daily study content** 验证连接，此后无需每日操作。
 
 计划时间是北京时间每天 07:17，但 GitHub 调度可能延迟；公共仓库长期没有活动时，GitHub 也可能暂停计划任务。不能把计划时间当作严格准点保证。详见 [GitHub 官方计划任务说明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。

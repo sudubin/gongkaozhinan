@@ -4,7 +4,7 @@ import { validateContentPackage, canonicalJson } from "@gongkao/contracts";
 import { createHash } from "node:crypto";
 import { seedEntries, SEED_DATE } from "../data/seed.mjs";
 import { contentKey, createPackage, mergeEntries } from "./content-package.mjs";
-import { articleLinks, extractSource, isAllowedSource, localDay, normalizeGenerated, runUpdate } from "./update-content.mjs";
+import { articleLinks, extractSource, isAllowedSource, localDay, normalizeGenerated, providerRequestOptions, runUpdate } from "./update-content.mjs";
 
 const seed = seedEntries();
 const initial = () => createPackage(seed.items, seed.questions, "seed-v1-100", SEED_DATE);
@@ -76,11 +76,40 @@ function memoryStore() {
   return { files, read: async url => { const value = files.get(name(url)); if (!value) throw new Error("missing"); return value; }, write: async (url, content) => { files.set(name(url), content); }, move: async (from, to) => { files.set(name(to), files.get(name(from))); files.delete(name(from)); } };
 }
 const config = { baseUrl: "https://provider.example/v1", apiKey: "test-key-not-real", model: "test-model", dailyPerModule: 1 };
+test("Bailian Qwen3.7 Flash uses non-thinking JSON output", () => {
+  for (const model of ["qwen3.7-flash", "qwen3.7-flash-2026-07-15"]) {
+    for (const baseUrl of ["https://ws-example.cn-beijing.maas.aliyuncs.com/compatible-mode/v1", "https://dashscope.aliyuncs.com/compatible-mode/v1"]) {
+      assert.deepEqual(providerRequestOptions({ baseUrl, model }), { enable_thinking: false, response_format: { type: "json_object" } });
+    }
+  }
+});
+test("Bailian extensions are not sent to other hosts or models", () => {
+  for (const baseUrl of ["https://provider.example/v1", "https://dashscope.aliyuncs.com.evil.example/v1", "https://ws-example.cn-beijing.maas.aliyuncs.com.evil.example/v1"]) {
+    assert.deepEqual(providerRequestOptions({ baseUrl, model: "qwen3.7-flash" }), {});
+  }
+  assert.deepEqual(providerRequestOptions({ baseUrl: "https://dashscope.aliyuncs.com/compatible-mode/v1", model: "other-model" }), {});
+});
 const fakeProvider = async (url, request) => {
   const text = JSON.parse(request.body).messages[1].content;
   const module = /生成 (\w+) 模块/.exec(text)[1];
   return { ok: true, json: async () => ({ choices: [{ finish_reason: "stop", message: { content: JSON.stringify({ entries: [generated(module)] }) } }] }) };
 };
+test("Bailian update actually sends JSON options and preserves validation", async () => {
+  const store = memoryStore(); let calls = 0;
+  const baseUrl = "https://ws-example.cn-beijing.maas.aliyuncs.com/compatible-mode/v1";
+  const result = await runUpdate({ ...store, config: { ...config, baseUrl, model: "qwen3.7-flash" }, today: SEED_DATE, sources: [source], fetcher: async (url, request) => {
+    calls++;
+    assert.equal(url, `${baseUrl}/chat/completions`);
+    const body = JSON.parse(request.body);
+    assert.equal(body.model, "qwen3.7-flash"); assert.equal(body.enable_thinking, false);
+    assert.deepEqual(body.response_format, { type: "json_object" });
+    assert.ok(body.messages.some(message => /JSON/i.test(message.content)));
+    assert.equal(body.max_tokens, 8000);
+    return fakeProvider(url, request);
+  } });
+  assert.equal(calls, 4); assert.equal(result.added, 4); assert.equal(result.failures.length, 0);
+  assert.equal(validateContentPackage(JSON.parse(store.files.get("latest.json"))).ok, true);
+});
 test("update saves batches and a repeat run incurs no API calls", async () => {
   const store = memoryStore(); const result = await runUpdate({ ...store, config, today: SEED_DATE, sources: [source], fetcher: fakeProvider });
   assert.equal(result.added, 4); assert.equal(result.failures.length, 0); assert.equal(JSON.parse(store.files.get("latest.json")).items.length, 104);
