@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    # One bounded verification on deployment; publish only byte-checked files.
+    # Bounded deployment verification; support static/dynamic official indexes.
     paths: ['.github/workflows/full-daily-content.yml']
 permissions:
   contents: write

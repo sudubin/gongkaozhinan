@@ -78,6 +78,17 @@ test("dynamic Zhejiang list and article fetches never receive provider credentia
   });
   assert.equal(sources.length, 1); assert.equal(sources[0].scope, "zhejiang");
 });
+test("static Zhejiang index needs no dynamic loader and safe failures disclose no payload", async () => {
+  const checks = [];
+  const sources = await collectSources(today, async (url) => {
+    if (url === "https://www.zj.gov.cn/col/col1554467/index.html") return { ok: true, url, text: async () => `<a href="${regional.url}">新闻</a>` };
+    if (url === regional.url) return { ok: true, url, text: async () => sourceHtml };
+    throw Error("private-response-do-not-log");
+  }, value => checks.push(value));
+  assert.equal(sources[0].scope, "zhejiang");
+  assert.ok(checks.some(value => value.code === "source_fetch_failed"));
+  assert.ok(!JSON.stringify(checks).includes("private-response"));
+});
 test("regional normalization trusts evidence and strips fake exam metadata", () => {
   for (const module of ["affairs", "zhejiang"]) {
     const entry = generated(module, regional); entry.item.examEvidence = [{ eventKey: "fake" }]; entry.item.editorRecommended = true;

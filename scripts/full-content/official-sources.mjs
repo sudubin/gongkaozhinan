@@ -91,13 +91,21 @@ export async function collectSources(today, fetcher = fetch, report = () => {}) 
   const indexes = await Promise.allSettled(INDEXES.map(async ({ url, format }) => {
     let text = await fetchText(url, fetcher);
     if (format === "zhejiang") {
-      const value = JSON.parse(await fetchText(zhejiangListRequest(text, url), fetcher));
+      const direct = articleLinks(text, url);
+      if (direct.length) return direct;
+      let value;
+      try { value = JSON.parse(await fetchText(zhejiangListRequest(text, url), fetcher)); }
+      catch (error) { if (error instanceof SyntaxError) throw new Error("source_index_invalid_json"); throw error; }
       if (value.success !== true || typeof value.data?.html !== "string") throw new Error("source_index_invalid_json");
       text = value.data.html;
     }
     return format === "json" ? governmentArticleLinks(text, url) : articleLinks(text, url);
   }));
-  indexes.forEach((result, index) => report({ stage: "index", host: new URL(INDEXES[index].url).hostname, ...(result.status === "fulfilled" ? { links: result.value.length } : { code: "source_index_unavailable" }) }));
+  indexes.forEach((result, index) => {
+    const error = result.reason?.message ?? "";
+    const safeCode = /^source_(?:http_\d{3}|timeout|fetch_failed|read_failed|not_allowed|index_(?:missing_loader|invalid_json))$/.test(error) ? error : "source_index_unavailable";
+    report({ stage: "index", host: new URL(INDEXES[index].url).hostname, ...(result.status === "fulfilled" ? { links: result.value.length } : { code: safeCode }) });
+  });
   const groups = indexes.map(result => result.status === "fulfilled" ? result.value : []);
   const urls = [...new Set(Array.from({ length: 8 }, (_, index) => groups.flatMap(group => group[index] ? [group[index]] : [])).flat())];
   const results = [];
