@@ -1,4 +1,6 @@
 import { createHash } from "node:crypto";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 
 const INDEXES = [
   { url: "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json", format: "json" },
@@ -78,11 +80,27 @@ export function extractSource(html, url, today) {
   return { id: `source-${hashId(url)}`, title, url, publisher: { "www.gov.cn": "中国政府网", "www.stats.gov.cn": "国家统计局", "www.zj.gov.cn": "浙江省人民政府" }[host], scope: host === "www.zj.gov.cn" ? "zhejiang" : "national", publishedAt, verifiedAt: today,
     rightsNote: "来源原文仅用于核对，发布原创学习摘要。", body: body.slice(0, 12000) };
 }
-export async function fetchText(url, fetcher = fetch) {
+// curl uses the runner's existing CA store and IPv4 path. TLS verification
+// remains enabled; only public official hosts are accepted, never API keys.
+export async function curlOfficialText(url, execute = promisify(execFile)) {
+  if (!isAllowedSource(url)) throw new Error("source_not_allowed");
+  let result;
+  try {
+    result = await execute("curl", ["--ipv4", "--fail", "--silent", "--show-error", "--connect-timeout", "10", "--max-time", "25", "--proto", "=https", "--proto-redir", "=https", "--location", "--max-redirs", "3", "--user-agent", "GongkaoGuide/1.2 (study summary)", "--write-out", "\\nGONGKAO_FINAL_URL:%{url_effective}", url], { encoding: "utf8", maxBuffer: 2 * 1024 * 1024, timeout: 30000 });
+  } catch { throw new Error("source_network_unavailable"); }
+  const marker = "\nGONGKAO_FINAL_URL:";
+  const at = result.stdout.lastIndexOf(marker);
+  if (at < 0 || !isAllowedSource(result.stdout.slice(at + marker.length).trim())) throw new Error("source_not_allowed");
+  return result.stdout.slice(0, at);
+}
+export async function fetchText(url, fetcher = fetch, fallback = fetcher === fetch ? curlOfficialText : null) {
   if (!isAllowedSource(url)) throw new Error("source_not_allowed");
   let response;
   try { response = await fetcher(url, { signal: AbortSignal.timeout(20000), headers: { "user-agent": "GongkaoGuide/1.1 (study summary)", accept: "application/json,text/html;q=0.9" } }); }
-  catch (error) { throw new Error(["TimeoutError", "AbortError"].includes(error?.name) ? "source_timeout" : "source_fetch_failed"); }
+  catch (error) {
+    if (fallback) return fallback(url);
+    throw new Error(["TimeoutError", "AbortError"].includes(error?.name) ? "source_timeout" : "source_fetch_failed");
+  }
   if (!response.ok) throw new Error(`source_http_${response.status}`);
   if (!isAllowedSource(response.url || url)) throw new Error("source_not_allowed");
   return response.text();
@@ -103,7 +121,7 @@ export async function collectSources(today, fetcher = fetch, report = () => {}) 
   }));
   indexes.forEach((result, index) => {
     const error = result.reason?.message ?? "";
-    const safeCode = /^source_(?:http_\d{3}|timeout|fetch_failed|read_failed|not_allowed|index_(?:missing_loader|invalid_json))$/.test(error) ? error : "source_index_unavailable";
+    const safeCode = /^source_(?:http_\d{3}|timeout|fetch_failed|network_unavailable|read_failed|not_allowed|index_(?:missing_loader|invalid_json))$/.test(error) ? error : "source_index_unavailable";
     report({ stage: "index", host: new URL(INDEXES[index].url).hostname, ...(result.status === "fulfilled" ? { links: result.value.length } : { code: safeCode }) });
   });
   const groups = indexes.map(result => result.status === "fulfilled" ? result.value : []);

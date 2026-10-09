@@ -23,7 +23,7 @@ export const JOBS = [
 ];
 const SAFE_FAILURE_CODES = new Set([
   "missing_provider_configuration", "daily_limit_must_be_1_to_15", "existing_feed_integrity_failed", "cloud_checkpoint_failed", "invalid_checkpoint_paths",
-  "source_not_allowed", "source_timeout", "source_fetch_failed", "source_read_failed", "source_index_invalid_json",
+  "source_not_allowed", "source_timeout", "source_fetch_failed", "source_network_unavailable", "source_read_failed", "source_index_invalid_json",
   "source_body_missing", "source_date_missing", "source_not_recent", "no_recent_official_sources",
   "provider_output_truncated", "provider_empty_response", "provider_invalid_json",
   "invalid_entries", "invalid_item", "excluded_module", "unknown_source", "evidence_not_found", "invalid_evidence_id", "evidence_source_mismatch",

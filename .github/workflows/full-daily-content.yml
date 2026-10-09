@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    # Bounded deployment verification; support static/dynamic official indexes.
+    # Bounded deployment verification; official fetch has a TLS-checked IPv4 fallback.
     paths: ['.github/workflows/full-daily-content.yml']
 permissions:
   contents: write
@@ -40,6 +40,7 @@ jobs:
           CONTENT_DAILY_PER_MODULE: '5'
           FULL_CONTENT_DIRECTORY: public/content/full
           FULL_GIT_CHECKPOINTS: 'true'
+          NODE_OPTIONS: '--dns-result-order=ipv4first'
         run: node scripts/full-content/update-content.mjs
       - name: Verify published full-version package
         if: always()

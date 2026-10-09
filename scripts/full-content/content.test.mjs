@@ -4,7 +4,7 @@ import { fullSeedEntries, FULL_SEED_DATE as today } from "../../data/full-seed.m
 import { createPackage, mergeEntries, verifiedPackage } from "./content-package.mjs";
 import { bootstrapFullContent } from "./bootstrap-content.mjs";
 import { gitCheckpoint } from "./git-checkpoint.mjs";
-import { articleLinks, collectSources, extractSource, isAllowedSource, localDay, zhejiangListRequest } from "./official-sources.mjs";
+import { articleLinks, collectSources, curlOfficialText, extractSource, fetchText, isAllowedSource, localDay, zhejiangListRequest } from "./official-sources.mjs";
 import { contentPaths, evidenceChoices, JOBS, normalizeGenerated, providerRequestOptions, runUpdate, safeFailureCode } from "./update-content.mjs";
 import { publicationConfig, publishContent } from "./publish-content.mjs";
 
@@ -88,6 +88,18 @@ test("static Zhejiang index needs no dynamic loader and safe failures disclose n
   assert.equal(sources[0].scope, "zhejiang");
   assert.ok(checks.some(value => value.code === "source_fetch_failed"));
   assert.ok(!JSON.stringify(checks).includes("private-response"));
+});
+test("official network fallback retains TLS, host checks and no credentials", async () => {
+  const html = await curlOfficialText(regional.url, async (program, args) => {
+    assert.equal(program, "curl"); assert.ok(args.includes("--ipv4"));
+    assert.ok(!args.includes("--insecure")); assert.ok(!args.includes("-k"));
+    assert.ok(!args.some(arg => /authorization|test-key/.test(arg)));
+    return { stdout: `${sourceHtml}\nGONGKAO_FINAL_URL:${regional.url}` };
+  });
+  assert.equal(html, sourceHtml);
+  await assert.rejects(() => curlOfficialText(regional.url, async () => ({ stdout: "data\nGONGKAO_FINAL_URL:https://evil.example/" })), /source_not_allowed/);
+  await assert.rejects(() => curlOfficialText("https://evil.example/", () => { throw Error("must not run"); }), /source_not_allowed/);
+  assert.equal(await fetchText(regional.url, async () => { throw Error("fetch failed"); }, async url => { assert.equal(url, regional.url); return sourceHtml; }), sourceHtml);
 });
 test("regional normalization trusts evidence and strips fake exam metadata", () => {
   for (const module of ["affairs", "zhejiang"]) {
