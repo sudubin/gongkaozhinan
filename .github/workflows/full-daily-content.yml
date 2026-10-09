@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    # One bounded verification on deployment, not on generated data commits.
+    # One bounded verification on deployment; publish only byte-checked files.
     paths: ['.github/workflows/full-daily-content.yml']
 permissions:
   contents: write

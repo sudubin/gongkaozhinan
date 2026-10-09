@@ -2771,7 +2771,1393 @@
     },
     {
       "stableId": "seed-v1-idiom-024",
-      "revisio…15067 tokens truncated…有针对性。",
+      "revision": 1,
+      "knowledgeId": "seed-v1-idiom-024",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "雪中送炭",
+      "topic": "用法辨析",
+      "keywords": [
+        "雪中送炭",
+        "用法辨析"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "pronunciation": "xuě zhōng sòng tàn",
+      "definition": "在他人急需或困难时提供帮助。",
+      "collocations": [
+        "困难时雪中送炭"
+      ],
+      "example": "为受灾群众及时提供生活物资，是雪中送炭。",
+      "confusableWith": [
+        {
+          "term": "锦上添花",
+          "difference": "前者解急难，后者在已有好处上增添好处。"
+        }
+      ]
+    },
+    {
+      "stableId": "seed-v1-idiom-025",
+      "revision": 1,
+      "knowledgeId": "seed-v1-idiom-025",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "锦上添花",
+      "topic": "用法辨析",
+      "keywords": [
+        "锦上添花",
+        "用法辨析"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "pronunciation": "jǐn shàng tiān huā",
+      "definition": "在原有美好基础上再增添好处。",
+      "collocations": [
+        "完善细节锦上添花"
+      ],
+      "example": "成熟的方案再优化展示方式，可以锦上添花。",
+      "confusableWith": [
+        {
+          "term": "雪中送炭",
+          "difference": "前者侧重进一步增益，后者侧重急需援助。"
+        }
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-001",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-001",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "基层治理：表达与展开",
+      "topic": "基层治理",
+      "keywords": [
+        "基层治理：表达与展开",
+        "基层治理"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "治理的温度，体现在把群众的具体困难变成部门的具体行动。",
+        "基层治理不能只停留在发现问题，还要形成收集诉求、协同办理、反馈结果的闭环，让每一项回应都有责任主体和落实路径。"
+      ],
+      "scenarios": [
+        "基层治理",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "替换为社区服务、物业协商等题目材料中的具体问题。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-002",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-002",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "公共服务：表达与展开",
+      "topic": "公共服务",
+      "keywords": [
+        "公共服务：表达与展开",
+        "公共服务"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "公共服务的质量，既要看覆盖范围，也要看群众使用是否方便。",
+        "改善公共服务，应从供给者视角走向使用者视角，通过优化流程、补齐短板和加强协同，减少群众获取服务的时间成本。"
+      ],
+      "scenarios": [
+        "公共服务",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "结合办事距离、等待时间、流程环节展开。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-003",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-003",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "数字治理：表达与展开",
+      "topic": "数字治理",
+      "keywords": [
+        "数字治理：表达与展开",
+        "数字治理"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "技术赋能的落点，不是增加一个入口，而是减少一道障碍。",
+        "数字化建设应服务于问题解决，打通数据与业务壁垒，并为不便使用数字设备的人保留可及的服务方式。"
+      ],
+      "scenarios": [
+        "数字治理",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "适用于政务平台、适老化、数据共享主题。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-004",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-004",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "依法行政：表达与展开",
+      "topic": "依法行政",
+      "keywords": [
+        "依法行政：表达与展开",
+        "依法行政"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "规则清晰、程序规范，才能让治理既有力度又有可预期性。",
+        "推进依法行政，需要明确权责边界、规范实施程序、加强监督反馈，以制度保障公共权力运行的稳定性与公正性。"
+      ],
+      "scenarios": [
+        "依法行政",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "只根据材料分析，不添加未经核实的法条号。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-005",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-005",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "营商环境：表达与展开",
+      "topic": "营商环境",
+      "keywords": [
+        "营商环境：表达与展开",
+        "营商环境"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "好的营商环境，体现在规则稳定、办事高效和权益有保障。",
+        "优化营商环境不能止于口号，应通过减少重复办理、提升政策透明度和畅通诉求渠道，让经营主体感受到制度性成本的下降。"
+      ],
+      "scenarios": [
+        "营商环境",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "围绕材料中的审批、融资或执法问题展开。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-006",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-006",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "创新发展：表达与展开",
+      "topic": "创新发展",
+      "keywords": [
+        "创新发展：表达与展开",
+        "创新发展"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "创新不仅要回答能否突破，也要回答成果如何转化为实际价值。",
+        "促进创新，应衔接基础研究、技术攻关与应用场景，完善人才、资金和制度支持，使创新链与产业需求形成有效互动。"
+      ],
+      "scenarios": [
+        "创新发展",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "使用题目给出的技术或产业案例作论据。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-007",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-007",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "人才培养：表达与展开",
+      "topic": "人才培养",
+      "keywords": [
+        "人才培养：表达与展开",
+        "人才培养"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "人才成长既需要展示能力的舞台，也需要持续学习的空间。",
+        "培养人才应把教育培训与实践需求结合，通过多层次培养、合理评价和畅通发展路径，让不同类型的人才各展所长。"
+      ],
+      "scenarios": [
+        "人才培养",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "适用于技能人才、基层干部、青年成长。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-008",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-008",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "就业服务：表达与展开",
+      "topic": "就业服务",
+      "keywords": [
+        "就业服务：表达与展开",
+        "就业服务"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "就业服务要把岗位信息送到人，更要把能力提升落到人。",
+        "促进就业，应结合重点群体特点，完善岗位对接、技能培训与权益保障，提高服务的针对性和持续性。"
+      ],
+      "scenarios": [
+        "就业服务",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "区分毕业生、转岗人员等不同对象。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-009",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-009",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "乡村发展：表达与展开",
+      "topic": "乡村发展",
+      "keywords": [
+        "乡村发展：表达与展开",
+        "乡村发展"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "乡村发展的潜力，要在本地资源与市场需求的连接中释放。",
+        "推动乡村发展，应因地制宜培育产业，补齐基础设施与公共服务短板，并建立稳定利益联结，增强发展的内生动力。"
+      ],
+      "scenarios": [
+        "乡村发展",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "不能把某地经验直接复制为所有地区的标准。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-010",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-010",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "城乡融合：表达与展开",
+      "topic": "城乡融合",
+      "keywords": [
+        "城乡融合：表达与展开",
+        "城乡融合"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "城乡融合不是抹去差异，而是让资源流动更顺畅、服务机会更均衡。",
+        "促进城乡融合，应从交通联通、要素流动和公共服务衔接入手，减少制度与空间障碍，形成优势互补的发展格局。"
+      ],
+      "scenarios": [
+        "城乡融合",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "结合材料中的交通、教育或产业联系。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-011",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-011",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "绿色发展：表达与展开",
+      "topic": "绿色发展",
+      "keywords": [
+        "绿色发展：表达与展开",
+        "绿色发展"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "绿色转型要把生态约束转化为改进方式、提升效率的动力。",
+        "推动绿色发展，应统筹生产方式与生活方式调整，以节约资源、减少污染和保护生态的实际行动，提升发展的可持续性。"
+      ],
+      "scenarios": [
+        "绿色发展",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "没有材料数据时不要编造减排比例。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-012",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-012",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "生态保护：表达与展开",
+      "topic": "生态保护",
+      "keywords": [
+        "生态保护：表达与展开",
+        "生态保护"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "生态保护的成效，要在长期修复和持续维护中检验。",
+        "保护生态不能只关注一次性整治，还应完善监测、维护与责任机制，防止治理成果因后续管理缺位而反复。"
+      ],
+      "scenarios": [
+        "生态保护",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "适用于河流修复、森林保护和环境治理。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-013",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-013",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "文化传承：表达与展开",
+      "topic": "文化传承",
+      "keywords": [
+        "文化传承：表达与展开",
+        "文化传承"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "文化传承既要守住内涵，也要找到与当代生活连接的方式。",
+        "传承文化，应在尊重原有价值的基础上创新表达，通过教育、展示与生活应用增强参与感，使传统资源形成持续生命力。"
+      ],
+      "scenarios": [
+        "文化传承",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "适用于非遗、阅读、公共文化服务。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-014",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-014",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "城市更新：表达与展开",
+      "topic": "城市更新",
+      "keywords": [
+        "城市更新：表达与展开",
+        "城市更新"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "城市更新不只是空间翻新，更是生活品质与治理能力的提升。",
+        "推进城市更新，应围绕居民需求改善设施、完善服务、优化公共空间，并协调建设过程中的多方利益。"
+      ],
+      "scenarios": [
+        "城市更新",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "把设施更新与居民参与分别论述。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-015",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-015",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "养老服务：表达与展开",
+      "topic": "养老服务",
+      "keywords": [
+        "养老服务：表达与展开",
+        "养老服务"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "养老服务既需要覆盖基本需求，也需要回应生活中的细致难题。",
+        "完善养老服务，应关注照护、出行和社会参与等需求，推动家庭、社区与专业机构协同，提高服务的可及性。"
+      ],
+      "scenarios": [
+        "养老服务",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "依据材料明确对象，不编造医疗建议。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-016",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-016",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "青年发展：表达与展开",
+      "topic": "青年发展",
+      "keywords": [
+        "青年发展：表达与展开",
+        "青年发展"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "青年成长需要个人努力，也需要公平可及的发展机会。",
+        "支持青年发展，应完善学习、就业和社会参与的支持体系，让个人潜能与社会需要更好结合。"
+      ],
+      "scenarios": [
+        "青年发展",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "适用于青年就业、职业选择与社会实践。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-017",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-017",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "教育公平：表达与展开",
+      "topic": "教育公平",
+      "keywords": [
+        "教育公平：表达与展开",
+        "教育公平"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "教育公平既关乎入学机会，也关乎持续获得优质教育的可能。",
+        "促进教育公平，应补齐薄弱环节，改善师资与资源配置，并结合不同学生的实际需要提高支持的精准度。"
+      ],
+      "scenarios": [
+        "教育公平",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "区分资源均衡与因材施教。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-018",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-018",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "风险防范：表达与展开",
+      "topic": "风险防范",
+      "keywords": [
+        "风险防范：表达与展开",
+        "风险防范"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "风险防范要把关口前移，将早发现与早处置连接起来。",
+        "应对风险，应建立识别、预警、响应和复盘机制，明确责任分工并加强协同，避免小问题演变为大隐患。"
+      ],
+      "scenarios": [
+        "风险防范",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "适用于安全生产、防汛与公共应急。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-019",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-019",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "政策落实：表达与展开",
+      "topic": "政策落实",
+      "keywords": [
+        "政策落实：表达与展开",
+        "政策落实"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "政策的价值，需要通过可执行的安排转化为可感知的效果。",
+        "落实政策，应把目标分解为具体任务，明确责任、时限和反馈方式，及时解决执行中的堵点。"
+      ],
+      "scenarios": [
+        "政策落实",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "避免只重复政策标题，要写清落实路径。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-020",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-020",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "减负增效：表达与展开",
+      "topic": "减负增效",
+      "keywords": [
+        "减负增效：表达与展开",
+        "减负增效"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "减负的目的，是让更多时间和精力回到真正需要解决的问题上。",
+        "推进减负，应减少重复报送和低效流程，并优化考核方式，以实际问题解决情况检验工作成效。"
+      ],
+      "scenarios": [
+        "减负增效",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "用材料里的具体负担说明改革必要性。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-021",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-021",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "协同治理：表达与展开",
+      "topic": "协同治理",
+      "keywords": [
+        "协同治理：表达与展开",
+        "协同治理"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "协同不是简单增加参与者，而是形成分工清晰、信息互通的合作。",
+        "解决跨领域问题，需要明确牵头与配合责任，建立信息共享和协调机制，避免责任空转与重复投入。"
+      ],
+      "scenarios": [
+        "协同治理",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "适用于部门协作和多主体治理。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-022",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-022",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "群众参与：表达与展开",
+      "topic": "群众参与",
+      "keywords": [
+        "群众参与：表达与展开",
+        "群众参与"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "群众参与既能提供问题线索，也能增强方案的适用性与认同感。",
+        "完善参与机制，应提供方便的表达渠道，解释意见处理过程，并及时反馈结果，使参与从一次表达变成持续互动。"
+      ],
+      "scenarios": [
+        "群众参与",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "不要把参与等同于对所有意见无条件采纳。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-023",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-023",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "调查研究：表达与展开",
+      "topic": "调查研究",
+      "keywords": [
+        "调查研究：表达与展开",
+        "调查研究"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "调查研究要从真实问题出发，带着可验证的线索寻找解决办法。",
+        "开展调查，应结合不同对象与场景获取信息，交叉核对事实，防止仅凭个别印象作出普遍判断。"
+      ],
+      "scenarios": [
+        "调查研究",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "可与样本偏差、实地走访相联系。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-024",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-024",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "实干担当：表达与展开",
+      "topic": "实干担当",
+      "keywords": [
+        "实干担当：表达与展开",
+        "实干担当"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "担当要体现为面对困难不回避、解决问题有办法、落实责任有结果。",
+        "推动工作，应立足实际确定目标，以务实举措破解难题，并及时评估效果、调整方法，避免以表面热闹代替实际成效。"
+      ],
+      "scenarios": [
+        "实干担当",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "写具体行动，减少抽象口号。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "stableId": "seed-v1-essay-025",
+      "revision": 1,
+      "knowledgeId": "seed-v1-essay-025",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "长期建设：表达与展开",
+      "topic": "长期建设",
+      "keywords": [
+        "长期建设：表达与展开",
+        "长期建设"
+      ],
+      "sourceRefs": [
+        {
+          "id": "gongkao-original-seed-v1",
+          "title": "公考指南原创基础学习卡（AI 辅助整理）",
+          "url": "https://github.com/sudubin/gongkaozhinan/blob/main/data/seed.mjs",
+          "publisher": "公考指南开源项目",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-08",
+          "rightsNote": "原创学习说明、例句和练习，MIT；非真题，建议结合教材复核。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-08",
+      "reviewedAt": "2026-10-08",
+      "rightsNote": "AI 辅助原创学习卡，已作结构检查；非真题，非逐条人工审校。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false,
+      "facts": [
+        "本卡为原创写作示范，不作为现实事件或政策原文的证据。"
+      ],
+      "expressions": [
+        "长期任务需要连续投入，也需要阶段检验和及时改进。",
+        "面对需要持续推进的工作，应保持方向稳定、安排合理节奏，以阶段成果检验方法，使积累逐步转化为整体提升。"
+      ],
+      "scenarios": [
+        "长期建设",
+        "议论文分论点与对策展开"
+      ],
+      "aiSuggestions": [
+        "适用于基础研究、生态修复和能力培养。",
+        "结合题目材料改写；示范句不是名人名言，不应冒充引用。"
+      ]
+    },
+    {
+      "pronunciation": "liàng lì ér xíng",
+      "definition": "量：估量。按照自己力量的大小去做，不要勉强。指做事要考虑自身能力或客观条件的限制。",
+      "collocations": [
+        "量力而行，尽力而为",
+        "坚持量力而行",
+        "量力而行地投资"
+      ],
+      "example": "地方政府在引进大型国际赛事时，应量力而行，充分评估财政承受能力和基础设施配套水平，避免盲目举债。",
+      "confusableWith": [
+        {
+          "term": "安分守己",
+          "difference": "“量力而行”强调做事要符合自身能力限度，是中性或褒义的策略选择；“安分守己”强调规矩老实，不做违法乱纪的事，侧重道德品行。"
+        }
+      ],
+      "stableId": "auto-idiom-c202363c103eef8402a7f621",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-c202363c103eef8402a7f621",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "量力而行",
+      "topic": "成语辨析与务实精神",
+      "keywords": [
+        "量力而行",
+        "理性办赛",
+        "风险控制"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-bb03ead4eb2c8c2d4506f8a3",
+          "title": "国务院办公厅关于发展体育赛事激发消费活力的意见_体育_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082492.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-09",
+      "generatedAt": "2026-10-09",
+      "reviewedAt": "2026-10-09",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "pronunciation": "tǒng chóu jiān gù",
+      "definition": "统筹：统一筹划；兼顾：照顾到各个方面。从整体出发，全面照顾到各个方面。",
+      "collocations": [
+        "统筹兼顾各方利益",
+        "坚持统筹兼顾",
+        "统筹兼顾发展与安全"
+      ],
+      "example": "在推进审计监督与其他各类监督贯通协同时，必须统筹兼顾，既要发挥各自优势，又要形成合力，避免重复检查增加基层负担。",
+      "confusableWith": [
+        {
+          "term": "面面俱到",
+          "difference": "“统筹兼顾”是积极的领导方法，强调科学规划和全面协调；“面面俱到”常含贬义，指虽然各方面都照顾到，但可能流于形式或重点不突出。"
+        }
+      ],
+      "stableId": "auto-idiom-f7fcd2c413cbd2fea2f887eb",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-f7fcd2c413cbd2fea2f887eb",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "统筹兼顾",
+      "topic": "成语辨析与系统思维",
+      "keywords": [
+        "统筹兼顾",
+        "协调发展",
+        "全局观"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-6a59c962a3adae018db22d77",
+          "title": "中共中央办公厅 国务院办公厅印发《文化遗产保护传承“十五五”规划》",
+          "url": "https://www.gov.cn/zhengce/202609/content_7082364.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-29",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        },
+        {
+          "id": "source-3d5b2cf34372ed658ccdecb6",
+          "title": "中华人民共和国审计法实施条例_审计_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7081972.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-24",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-29",
+      "validFrom": "2026-10-09",
+      "generatedAt": "2026-10-09",
+      "reviewedAt": "2026-10-09",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "pronunciation": "wěn zhōng qiú jìn",
+      "definition": "稳是大局和基础，进是方向和目标。在保持局势稳定的前提下寻求发展和进步。",
+      "collocations": [
+        "坚持稳中求进",
+        "稳中求进工作总基调",
+        "稳中求进、以进促稳"
+      ],
+      "example": "高校分类改革涉及面广、影响深远，必须坚持稳中求进，稳妥推进各项举措，合理引导预期，确保改革过程平稳有序。",
+      "confusableWith": [
+        {
+          "term": "急功近利",
+          "difference": "“稳中求进”强调稳健基础和长远发展，反对浮躁；“急功近利”指急于求成，贪图眼前的成效和利益，二者态度截然相反。"
+        }
+      ],
+      "stableId": "auto-idiom-1f037b69760e941039a3293e",
+      "revision": 1,
+      "knowledgeId": "auto-idiom-1f037b69760e941039a3293e",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "稳中求进",
+      "topic": "成语辨析与工作基调",
+      "keywords": [
+        "稳中求进",
+        "改革节奏",
+        "总基调"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-3469cd4acd2bb13da1515e66",
+          "title": "中共中央办公厅 国务院办公厅印发《关于分类推进高校改革的意见》",
+          "url": "https://www.gov.cn/zhengce/202609/content_7081587.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-20",
+          "verifiedAt": "2026-10-09",
+          "rightsNote": "来源原文仅用于事实核对，发布的是原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-20",
+      "validFrom": "2026-10-09",
+      "generatedAt": "2026-10-09",
+      "reviewedAt": "2026-10-09",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "pronunciation": "yǒu dì fàng shǐ",
+      "definition": "的：箭靶子；矢：箭。放箭要对准靶子。比喻说话做事有针对性。",
       "collocations": [
         "有的放矢地开展工作",
         "有的放矢地解决问题",
