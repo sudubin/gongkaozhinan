@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-10-bc8e0103af803dd3d2c8b126",
+  "releaseId": "daily-2026-10-10-86166a9bad505203fd24cd7c",
   "createdAt": "2026-10-10",
   "reviewedAt": "2026-10-10",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -4626,6 +4626,186 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "concept": "新质生产力",
+      "explanation": "以科技创新为引领，以全要素生产率大幅提升为核心标志，推动技术革命性突破、生产要素创新性配置、产业深度转型升级的生产力。",
+      "stableId": "auto-full-general-a174ab607f81fa1ee10ab964",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-a174ab607f81fa1ee10ab964",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "新质生产力",
+      "topic": "经济政策",
+      "keywords": [
+        "新质生产力",
+        "高质量发展",
+        "全要素生产率"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ac8db81f43693ddaab0c44f4",
+          "title": "中共中央 国务院关于发展新质生产力的意见",
+          "url": "https://www.gov.cn/zhengce/202610/content_7082820.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "、改革和发展、自主和开放的关系，统筹发展和安全，以科技创新为引领，以全要素生产率大幅提升为核心标志，推动技术革命性突破、生产要素"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "采购经理指数",
+      "explanation": "通过对企业采购经理的月度调查结果统计汇总编制的指数，涵盖采购、生产、流通等环节，是监测宏观经济走势的先行性指数。",
+      "stableId": "auto-full-general-6dd6c5130ef81fb0ba7edce4",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-6dd6c5130ef81fb0ba7edce4",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "采购经理指数（PMI）",
+      "topic": "经济指标",
+      "keywords": [
+        "PMI",
+        "采购经理指数",
+        "先行性指数"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-e5c6d60f81bc7347e782eae3",
+          "title": "2026年9月中国采购经理指数运行情况",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "国家统计局服务业调查中心 中国物流与采购联合会 一、中国制造业采购经理指数运行情况 9 月份，制造业采购经理指数（ PMI ）为"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "赛事经济",
+      "explanation": "通过发展体育赛事，丰富优质赛事供给，在扩大内需、提振消费等方面发挥积极作用，培育经济增长新动能的经济形态。",
+      "stableId": "auto-full-general-bf283e0581092c88e0b7ccce",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-bf283e0581092c88e0b7ccce",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "体育赛事激发消费活力",
+      "topic": "社会治理",
+      "keywords": [
+        "体育赛事",
+        "消费活力",
+        "文旅融合"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-bb03ead4eb2c8c2d4506f8a3",
+          "title": "国务院办公厅关于发展体育赛事激发消费活力的意见_体育_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082492.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "构： 为推动体育赛事发展，激发消费活力，培育经济增长新动能，提高人民生活品质，经国务院同意，现提出如下意见。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "利润总额",
+      "explanation": "指企业在生产经营过程中各种收入扣除各种耗费后的盈余，反映企业在报告期内实现的盈亏总额。",
+      "stableId": "auto-full-general-9d41c88ac09a0e0dda4efa51",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-9d41c88ac09a0e0dda4efa51",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "规模以上工业企业利润",
+      "topic": "经济运行",
+      "keywords": [
+        "工业企业",
+        "利润总额",
+        "营业收入利润率"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-1ad72b87c5a80310a199b0ff",
+          "title": "2026年1—8月份全国规模以上工业企业利润增长15.7%",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-09-28",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "1 — 8 月份，全国规模以上工业企业实现利润总额 52719.8 亿元，同比增长 15.7% （按可比口径计算，详见附注二）。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-28",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "医疗康复护理服务体系",
+      "explanation": "功能完备、上下联动、中西医结合、高效可及的服务体系，旨在满足全人群、全方位、全生命周期健康需求。",
+      "stableId": "auto-full-general-9ff2fbd38a2ecfc557af2e56",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-9ff2fbd38a2ecfc557af2e56",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "医疗康复护理扩容提升",
+      "topic": "公共服务",
+      "keywords": [
+        "医疗康复",
+        "护理服务",
+        "老龄化"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-f9608b2e513622bc4edf45c4",
+          "title": "国务院关于《医疗康复护理扩容提升工程实施方案》的批复_卫生_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082378.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-29",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "与健康发展道路，坚定不移贯彻新时代卫生与健康工作方针，实施健康优先发展战略和积极应对人口老龄化国家战略，聚焦“扩容、提质、均衡、"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-29",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -7599,7 +7779,172 @@
       "reviewedAt": "2026-10-10",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-a174ab607f81fa1ee10ab964-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-a174ab607f81fa1ee10ab964",
+      "module": "general",
+      "prompt": "根据《中共中央 国务院关于发展新质生产力的意见》，新质生产力的核心标志是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "劳动者数量的大幅增加"
+        },
+        {
+          "id": "B",
+          "text": "全要素生产率的大幅提升"
+        },
+        {
+          "id": "C",
+          "text": "传统产业的简单规模扩张"
+        },
+        {
+          "id": "D",
+          "text": "资本投入的无限增加"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料指出，新质生产力“以全要素生产率大幅提升为核心标志”。",
+      "sourceRefs": [
+        "source-ac8db81f43693ddaab0c44f4"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-6dd6c5130ef81fb0ba7edce4-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-6dd6c5130ef81fb0ba7edce4",
+      "module": "general",
+      "prompt": "关于中国制造业采购经理指数（PMI），下列说法正确的是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "PMI高于50%反映经济总体较上月收缩"
+        },
+        {
+          "id": "B",
+          "text": "PMI低于50%反映经济总体较上月扩张"
+        },
+        {
+          "id": "C",
+          "text": "PMI是国际上通用的监测宏观经济走势的先行性指数之一"
+        },
+        {
+          "id": "D",
+          "text": "PMI仅反映制造业领域的情况，不包含非制造业"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "材料附注指出，PMI是“国际上通用的监测宏观经济走势的先行性指数之一”，且涵盖制造业和非制造业领域。PMI高于50%反映扩张，低于50%反映收缩。",
+      "sourceRefs": [
+        "source-e5c6d60f81bc7347e782eae3"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-bf283e0581092c88e0b7ccce-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-bf283e0581092c88e0b7ccce",
+      "module": "general",
+      "prompt": "国务院办公厅提出发展体育赛事激发消费活力的主要目的是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "减少政府财政支出"
+        },
+        {
+          "id": "B",
+          "text": "培育经济增长新动能，提高人民生活品质"
+        },
+        {
+          "id": "C",
+          "text": "限制境外资本进入国内体育市场"
+        },
+        {
+          "id": "D",
+          "text": "取消所有业余体育赛事活动"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "文件指出，发展体育赛事旨在“激发消费活力，培育经济增长新动能，提高人民生活品质”。",
+      "sourceRefs": [
+        "source-bb03ead4eb2c8c2d4506f8a3"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-9d41c88ac09a0e0dda4efa51-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-9d41c88ac09a0e0dda4efa51",
+      "module": "general",
+      "prompt": "2026年1—8月份，全国规模以上工业企业实现利润总额同比增长：",
+      "options": [
+        {
+          "id": "A",
+          "text": "1.1%"
+        },
+        {
+          "id": "B",
+          "text": "6.6%"
+        },
+        {
+          "id": "C",
+          "text": "15.7%"
+        },
+        {
+          "id": "D",
+          "text": "20.4%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "材料显示，1—8月份，全国规模以上工业企业实现利润总额52719.8亿元，同比增长15.7%。",
+      "sourceRefs": [
+        "source-1ad72b87c5a80310a199b0ff"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-9ff2fbd38a2ecfc557af2e56-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-9ff2fbd38a2ecfc557af2e56",
+      "module": "general",
+      "prompt": "《医疗康复护理扩容提升工程实施方案》聚焦的核心要求是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "扩容、提质、均衡、连续"
+        },
+        {
+          "id": "B",
+          "text": "市场化、私有化、国际化、数字化"
+        },
+        {
+          "id": "C",
+          "text": "集中化、规模化、标准化、单一化"
+        },
+        {
+          "id": "D",
+          "text": "高端化、精英化、专业化、封闭化"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "方案实施聚焦“扩容、提质、均衡、连续”，以基层为重点统筹增加资源供给。",
+      "sourceRefs": [
+        "source-f9608b2e513622bc4edf45c4"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:2505c852329e4eb28b468bfa1474a5f7d1bdd35ac95fd49933d507ea19e2f60a"
+  "contentHash": "sha256:9572b8606095e9bb9b0398b02d521cf11831ba01c650ec20301c86d1691b1a54"
 }

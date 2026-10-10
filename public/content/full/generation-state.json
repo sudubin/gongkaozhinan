@@ -1,11 +1,12 @@
 {
   "date": "2026-10-10",
   "counts": {
-    "affairs": 5
+    "affairs": 5,
+    "general": 5
   },
   "attempts": {
     "affairs": 1,
     "general": 2
   },
-  "totalAdded": 5
+  "totalAdded": 10
 }
