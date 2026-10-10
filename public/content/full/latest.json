@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-10-7e41394531dcef910aad23c4",
+  "releaseId": "daily-2026-10-10-5f303352b7f7be903c446a15",
   "createdAt": "2026-10-10",
   "reviewedAt": "2026-10-10",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -4851,6 +4851,241 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "facts": [
+        "论述逻辑遵循“目标引领-技术突破-主体强化-转化应用”的递进结构。首先确立以全要素生产率提升为核心标志，随后从原创性颠覆性创新和关键核心技术两个维度阐述科技支撑，接着明确企业在创新中的主体地位，最后落脚于科技成果向现实生产力的转化，形成闭环。"
+      ],
+      "expressions": [
+        "坚持目标导向和自由探索并重，通过有组织的基础研究解决技术科学和工程科学薄弱问题。",
+        "建立用户考核评价成果的机制，强化企业成果转化主体地位，解决技术开发与成果转化脱节问题。",
+        "以人工智能引领科研范式变革，助力提升科研效率，推动技术与市场高效对接。"
+      ],
+      "scenarios": [
+        "适用于分析高质量发展路径、科技体制改革、产业链现代化等主题的综合论述题或大作文。"
+      ],
+      "aiSuggestions": [
+        "在写作中注意区分“基础研究”与“应用基础研究”的不同侧重，强调新型举国体制在关键核心技术攻关中的作用。"
+      ],
+      "stableId": "auto-full-essay-b5b162220ff41f8934bfbfd9",
+      "revision": 1,
+      "knowledgeId": "auto-full-essay-b5b162220ff41f8934bfbfd9",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "新质生产力：创新与产业的深度融合",
+      "topic": "创新发展",
+      "keywords": [
+        "新质生产力",
+        "科技创新",
+        "产业融合"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ac8db81f43693ddaab0c44f4",
+          "title": "中共中央 国务院关于发展新质生产力的意见",
+          "url": "https://www.gov.cn/zhengce/202610/content_7082820.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "facts": [
+        "采用“供给优化-场景拓展-基础夯实-保障强化”的结构展开。先通过丰富竞技、职业及业余赛事供给来扩大基数，再深化赛事与文旅、商务、科技的融合以延伸价值链，进而完善场地设施与人才标准等基础要素，最后通过优化服务管理和安全保障确保可持续发展。"
+      ],
+      "expressions": [
+        "构建层次清晰、衔接有序的职业赛事体系，促进职业赛事与业余赛事衔接互通，畅通人才流动渠道。",
+        "以体育为载体促进各民族交往交流交融，推出体育赛事题材电影、微短剧等文化产品，推广体育赛事文化。",
+        "引导商业综合体、商圈因地制宜引入赛事活动，鼓励商家推出赛事票根专属优惠，激活二次消费。"
+      ],
+      "scenarios": [
+        "适用于探讨扩大内需、促进消费升级、文体旅融合发展以及城市品牌建设等话题。"
+      ],
+      "aiSuggestions": [
+        "重点把握“赛事+”的跨界融合思维，强调体育赛事不仅是竞技活动，更是带动相关产业发展的引擎。"
+      ],
+      "stableId": "auto-full-essay-04afb951830ae9cfefb33fde",
+      "revision": 1,
+      "knowledgeId": "auto-full-essay-04afb951830ae9cfefb33fde",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "体育赛事：激发消费活力的新动能",
+      "topic": "公共服务",
+      "keywords": [
+        "体育赛事",
+        "消费活力",
+        "文旅融合"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-bb03ead4eb2c8c2d4506f8a3",
+          "title": "国务院办公厅关于发展体育赛事激发消费活力的意见_体育_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082492.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "facts": [
+        "行文逻辑体现“预防为主、防治结合”的方针，按照“源头防控-过程干预-康复赋能”的时间轴展开。从出生缺陷和发育障碍的源头抓起，到疾病致残的全链条防控，再到伤害致残的重点领域治理，最后通过康复服务提升和赋能行动实现提质增效，构建全方位防控网络。"
+      ],
+      "expressions": [
+        "实行预防为主、防治结合的方针，推进关口前移、早期干预，强化全人群、全生命周期残疾预防理念。",
+        "健全政府主导、部门协作、社会参与的工作机制，有效减少和控制残疾发生发展。",
+        "实施残疾预防科普行动、出生缺陷和发育障碍致残源头防控行动，实现重点领域主要致残因素得到有效控制。"
+      ],
+      "scenarios": [
+        "适用于涉及民生福祉、公共卫生体系建设、人口长期均衡发展及社会治理创新的论述。"
+      ],
+      "aiSuggestions": [
+        "突出“全生命周期”概念，强调残疾预防不仅是医疗问题，更是涉及教育、社保等多部门协同的社会系统工程。"
+      ],
+      "stableId": "auto-full-essay-508148c9d28b0a9cfc0b5001",
+      "revision": 1,
+      "knowledgeId": "auto-full-essay-508148c9d28b0a9cfc0b5001",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "残疾预防：全生命周期的健康守护",
+      "topic": "社会保障",
+      "keywords": [
+        "残疾预防",
+        "健康中国",
+        "关口前移"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-61c6a546069285d1c55e9b5e",
+          "title": "国务院关于《国家残疾预防行动计划（2026—2030年）》的批复_优抚安置_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202610/content_7082737.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "facts": [
+        "数据呈现逻辑侧重于“总量增长-结构对比-效益指标-风险关注”。先展示利润总额整体高速增长态势，再按所有制和行业进行结构性拆解，揭示不同板块的差异；接着通过利润率、成本、周转天数等效益指标评估运行质量，最后关注应收账款和存货变化以提示潜在风险。"
+      ],
+      "expressions": [
+        "计算机、通信和其他电子设备制造业利润大幅增长，有色金属冶炼和压延加工业增长显著，显示高技术制造业活力增强。",
+        "每百元营业收入中的成本同比减少，营业收入利润率同比提高，表明工业企业降本增效成果显现。",
+        "产成品存货周转天数增加，应收账款平均回收期延长，需警惕库存积压和资金回笼压力。"
+      ],
+      "scenarios": [
+        "适用于宏观经济形势分析、产业结构调整、企业经营管理及经济运行监测类题目。"
+      ],
+      "aiSuggestions": [
+        "在分析时不仅要看到利润增长的亮点，更要结合行业分化情况，指出传统行业面临的挑战和高技术行业的引领作用。"
+      ],
+      "stableId": "auto-full-essay-5758195ef0ae118c383948f7",
+      "revision": 1,
+      "knowledgeId": "auto-full-essay-5758195ef0ae118c383948f7",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "工业经济：效益改善与结构分化",
+      "topic": "经济发展",
+      "keywords": [
+        "工业企业利润",
+        "经济效益",
+        "行业分化"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-1ad72b87c5a80310a199b0ff",
+          "title": "2026年1—8月份全国规模以上工业企业利润增长15.7%",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-09-28",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-28",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "facts": [
+        "围绕“战略定位-核心任务-实施路径”展开。首先将医疗康复护理扩容提升置于积极应对人口老龄化和健康优先发展战略的高度，明确“扩容、提质、均衡、连续”的核心要求，随后强调以基层为重点统筹资源供给，最终目标是构建功能完备、上下联动、高效可及的服务体系。"
+      ],
+      "expressions": [
+        "聚焦“扩容、提质、均衡、连续”，以基层为重点统筹增加医疗康复护理资源供给。",
+        "加快构建功能完备、上下联动、中西医结合、高效可及的医疗康复护理服务体系。",
+        "更好满足全人群、全方位、全生命周期健康需求，提升服务能力水平。"
+      ],
+      "scenarios": [
+        "适用于讨论养老服务、医疗卫生体制改革、基本公共服务均等化及应对人口老龄化策略。"
+      ],
+      "aiSuggestions": [
+        "紧扣“基层”和“全生命周期”两个关键词，强调医疗康复资源下沉和服务连续性的重要性。"
+      ],
+      "stableId": "auto-full-essay-cf38f6d4cf8640bfe8722130",
+      "revision": 1,
+      "knowledgeId": "auto-full-essay-cf38f6d4cf8640bfe8722130",
+      "module": "essay",
+      "region": "not-applicable",
+      "title": "医疗康复：扩容提质与均衡可及",
+      "topic": "公共服务",
+      "keywords": [
+        "医疗康复护理",
+        "老龄化",
+        "资源供给"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-f9608b2e513622bc4edf45c4",
+          "title": "国务院关于《医疗康复护理扩容提升工程实施方案》的批复_卫生_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082378.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-29",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-29",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -8024,5 +8259,5 @@
       "label": "practice"
     }
   ],
-  "contentHash": "sha256:19e8a162c76346422d730a4cb766d75163a1c3596ec5925a9a14ea5aa0b86cfa"
+  "contentHash": "sha256:555da42803b27db547a590622c4d9e2c43df7c2e7b62180bba42c80d11a684d6"
 }
