@@ -4,7 +4,8 @@
     "affairs": 5
   },
   "attempts": {
-    "affairs": 1
+    "affairs": 1,
+    "general": 1
   },
   "totalAdded": 5
 }
