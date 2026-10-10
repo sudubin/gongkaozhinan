@@ -6,7 +6,8 @@
   },
   "attempts": {
     "affairs": 1,
-    "general": 2
+    "general": 2,
+    "idiom": 1
   },
   "totalAdded": 10
 }
