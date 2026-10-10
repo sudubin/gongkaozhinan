@@ -5,7 +5,8 @@
     "general": 5,
     "idiom": 1,
     "essay": 5,
-    "zhejiang-affairs": 5
+    "zhejiang-affairs": 5,
+    "zhejiang": 5
   },
   "attempts": {
     "affairs": 1,
@@ -15,5 +16,5 @@
     "zhejiang-affairs": 2,
     "zhejiang": 1
   },
-  "totalAdded": 21
+  "totalAdded": 26
 }
