@@ -4,7 +4,7 @@ import { fullSeedEntries, FULL_SEED_DATE as today } from "../../data/full-seed.m
 import { createPackage, mergeEntries, verifiedPackage } from "./content-package.mjs";
 import { bootstrapFullContent } from "./bootstrap-content.mjs";
 import { gitCheckpoint } from "./git-checkpoint.mjs";
-import { articleLinks, collectSources, curlOfficialText, extractSource, fetchText, isAllowedSource, localDay, zhejiangListRequest } from "./official-sources.mjs";
+import { articleLinks, collectSources, curlOfficialText, extractSource, fetchText, isAllowedSource, localDay, xinhuaZhejiangLinks, zhejiangListRequest } from "./official-sources.mjs";
 import { contentPaths, evidenceChoices, JOBS, normalizeGenerated, providerRequestOptions, runUpdate, safeFailureCode } from "./update-content.mjs";
 import { publicationConfig, publishContent } from "./publish-content.mjs";
 
@@ -121,6 +121,34 @@ test("regional normalization trusts evidence and strips fake exam metadata", () 
     assert.throws(() => normalizeGenerated({ entries: [generated(module, national)] }, module, [national], today, "test", 1, "zhejiang"), /source_region_mismatch/);
   }
 });
+const xinhuaUrl = "https://csj.news.cn/20261009/4f7bb01c829e4490bf385b3484e45f03/c.html";
+const xinhuaHtml = `<meta name="publishdate" content="${today}"><h1><span>浙江公共服务报道</span></h1><span id="detailContent"><p><span>&emsp;${"浙江完善家庭医生服务，便利群众就医。".repeat(20)}</span></p><div><span>末段事实</span></div></span><footer>排除的页脚</footer>`;
+test("Xinhua mixed-province index selects only Zhejiang headlines and allowed article paths", () => {
+  const index = `<a href="${xinhuaUrl}"><span>浙江公共服务</span></a><a href="${xinhuaUrl}">重复浙江</a><a href="/20261009/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/c.html">江苏服务</a><a href="https://evil.example/20261009/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/c.html">浙江假链接</a><a href="/ad.html">浙江广告</a>`;
+  assert.deepEqual(xinhuaZhejiangLinks(index, "https://csj.news.cn/"), [xinhuaUrl]);
+  assert.equal(isAllowedSource("https://csj.news.cn.evil.example/"), false);
+});
+test("Xinhua nested spans retain the complete article, original date and real publisher", () => {
+  const source = extractSource(xinhuaHtml, xinhuaUrl, today);
+  assert.equal(source.scope, "zhejiang"); assert.equal(source.publisher, "新华网长三角频道");
+  assert.equal(source.publishedAt, today); assert.ok(source.body.includes("末段事实"));
+  assert.ok(!source.body.includes("页脚")); assert.ok(!source.body.includes("&emsp;"));
+  const normalized = normalizeGenerated({ entries: [generated("zhejiang", source)] }, "zhejiang", [source], today, "test", 1, "zhejiang");
+  assert.equal(normalized[0].item.sourceRefs[0].publisher, source.publisher);
+  assert.throws(() => extractSource(xinhuaHtml.replace("浙江公共服务报道", "江苏公共服务报道"), xinhuaUrl, today), /source_region_mismatch/);
+  assert.throws(() => extractSource(xinhuaHtml.replaceAll("浙江完善", "江苏完善"), xinhuaUrl, today), /source_region_mismatch/);
+  assert.throws(() => extractSource(xinhuaHtml, xinhuaUrl, "2026-12-01"), /source_not_recent/);
+  assert.throws(() => extractSource(xinhuaHtml, xinhuaUrl, "2026-10-01"), /source_not_recent/);
+});
+test("Xinhua fallback supplies Zhejiang when both existing regional publishers fail", async () => {
+  const sources = await collectSources(today, async (url, request) => {
+    assert.equal(request.headers.authorization, undefined);
+    if (url === "https://csj.news.cn/") return { ok: true, url, text: async () => `<a href="${xinhuaUrl}">浙江公共服务报道</a>` };
+    if (url === xinhuaUrl) return { ok: true, url, text: async () => xinhuaHtml };
+    return { ok: false, status: 503 };
+  });
+  assert.equal(sources.length, 1); assert.equal(sources[0].scope, "zhejiang");
+});
 test("same-title national and Zhejiang affairs get different stable IDs", () => {
   const a = generated("affairs", national), b = generated("affairs", regional); b.item.title = a.item.title;
   const one = normalizeGenerated({ entries: [a] }, "affairs", [national], today, "test", 1, "national");
@@ -158,6 +186,17 @@ test("bad credentials stop all remaining paid attempts", async () => {
   const store = memoryStore(); let calls = 0;
   const result = await run(store, { fetcher: async () => { calls++; return { ok: false, status: 401 }; } });
   assert.equal(calls, 1); assert.equal(result.added, 0); assert.equal(result.failures[0].code, "provider_http_401");
+});
+test("a recovered retry stays in diagnostics without falsely failing completed jobs", async () => {
+  const store = memoryStore(); let calls = 0;
+  const result = await run(store, { fetcher: async (url, request) => {
+    if (++calls === 1) return { ok: true, json: async () => ({ choices: [{ finish_reason: "length", message: { content: "{}" } }] }) };
+    return fakeProvider(url, request);
+  } });
+  assert.equal(result.added, 6); assert.equal(result.alreadyComplete, true);
+  assert.deepEqual(result.failures, []);
+  assert.deepEqual(result.recoveredFailures, [{ module: "affairs", code: "provider_output_truncated" }]);
+  assert.equal(JSON.parse(store.files.get("generation-state.json")).attempts.affairs, 2);
 });
 test("truncated or malformed output leaves the old full feed intact", async () => {
   const store = memoryStore(); const old = store.files.get("latest.json");

@@ -7,14 +7,15 @@ const INDEXES = [
   { url: "https://www.stats.gov.cn/sj/zxfb/", format: "html" },
   { url: "https://www.zj.gov.cn/col/col1554467/index.html", format: "zhejiang" },
   { url: "https://www.zjol.com.cn/", format: "html" },
+  { url: "https://csj.news.cn/", format: "xinhua-zhejiang" },
 ];
 export const hashId = text => createHash("sha256").update(text).digest("hex").slice(0, 24);
 export const localDay = (now = new Date()) => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit" }).format(now);
-const decode = text => text.replace(/&nbsp;|&#160;/gi, " ").replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'").replace(/&lt;/gi, "<").replace(/&gt;/gi, ">");
+const decode = text => text.replace(/&nbsp;|&emsp;|&ensp;|&#160;/gi, " ").replace(/&amp;/gi, "&").replace(/&quot;/gi, '"').replace(/&#39;|&apos;/gi, "'").replace(/&lt;/gi, "<").replace(/&gt;/gi, ">");
 export const plainText = html => decode(html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, " ").replace(/<[^>]*>/g, " ")).replace(/\s+/g, " ").trim();
-export const isRegionalSource = value => ["www.zj.gov.cn", "zjnews.zjol.com.cn"].includes(new URL(value).hostname);
+export const isRegionalSource = value => ["www.zj.gov.cn", "zjnews.zjol.com.cn", "csj.news.cn"].includes(new URL(value).hostname);
 export function isAllowedSource(value) {
-  try { const url = new URL(value); return url.protocol === "https:" && ["www.gov.cn", "www.stats.gov.cn", "www.zj.gov.cn", "www.zjol.com.cn", "zjnews.zjol.com.cn"].includes(url.hostname) && !url.username && !url.password; }
+  try { const url = new URL(value); return url.protocol === "https:" && ["www.gov.cn", "www.stats.gov.cn", "www.zj.gov.cn", "www.zjol.com.cn", "zjnews.zjol.com.cn", "csj.news.cn"].includes(url.hostname) && !url.username && !url.password; }
   catch { return false; }
 }
 function articleUrl(value, base) {
@@ -27,12 +28,21 @@ function articleUrl(value, base) {
       "www.stats.gov.cn": /^\/sj\/zxfb\/(?:[^/]+\/)*t\d{8}_\d+\.html?$/,
       "www.zj.gov.cn": /^\/col\/col1554467\/art\/20\d{2}\/art_[a-f\d]{32}\.html$/,
       "zjnews.zjol.com.cn": /^\/(?:zjnews|gaoceng_developments)\/(?:[^/]+\/)*t20\d{6}_\d+\.shtml$/,
+      "csj.news.cn": /^\/20\d{6}\/[a-f\d]{32}\/c\.html$/,
     };
     return patterns[url.hostname]?.test(url.pathname) ? url.href : null;
   } catch { return null; }
 }
 export function articleLinks(html, base) {
   return [...new Set([...html.matchAll(/href\s*=\s*["']([^"']+)["']/gi)].map(([, href]) => articleUrl(href, base)).filter(Boolean))].slice(0, 8);
+}
+// This channel covers several provinces: filter the headline before fetching,
+// and require Zhejiang in both the fetched headline and body before publishing.
+export function xinhuaZhejiangLinks(html, base) {
+  return [...new Set([...html.matchAll(/<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)]
+    .filter(([, , title]) => plainText(title).includes("浙江"))
+    .map(([, href]) => articleUrl(href, base))
+    .filter(url => url && new URL(url).hostname === "csj.news.cn"))].slice(0, 8);
 }
 export function governmentArticleLinks(text, base) {
   let entries; try { entries = JSON.parse(text); } catch { throw new Error("source_index_invalid_json"); }
@@ -53,10 +63,10 @@ export function zhejiangListRequest(html, base) {
   }
   return url.href;
 }
-function elementBody(html, startPattern) {
+function elementBody(html, startPattern, tagName = "div") {
   const match = startPattern.exec(html); if (!match) return null;
   const start = match.index + match[0].length;
-  const tags = /<\/?div\b[^>]*>/gi; tags.lastIndex = start;
+  const tags = new RegExp(`<\\/?${tagName}\\b[^>]*>`, "gi"); tags.lastIndex = start;
   let depth = 1, tag;
   while ((tag = tags.exec(html))) {
     depth += /^<\//.test(tag[0]) ? -1 : 1;
@@ -73,6 +83,7 @@ export function extractSource(html, url, today) {
   const bodyHtml = html.match(/<!--\s*TRS_Editor\s*-->([\s\S]*?)<!--\s*\/TRS_Editor\s*-->/i)?.[1]
     ?? elementBody(html, /<div\b[^>]*id=["']zoom["'][^>]*>/i)
     ?? (host === "zjnews.zjol.com.cn" ? elementBody(html, /<div\b[^>]*class=["']artCon["'][^>]*>/i) : null)
+    ?? (host === "csj.news.cn" ? elementBody(html, /<span\b[^>]*id=["']detailContent["'][^>]*>/i, "span") : null)
     ?? elementBody(html, /<div\b[^>]*class=["'][^"']*TRS_Editor[^"']*["'][^>]*>/i);
   if (!bodyHtml) throw new Error("source_body_missing");
   const body = plainText(bodyHtml);
@@ -82,7 +93,8 @@ export function extractSource(html, url, today) {
   const age = (Date.parse(today) - Date.parse(publishedAt)) / 86400000;
   if (!title || body.length < 150 || !Number.isFinite(age) || age < 0 || age > 31) throw new Error("source_not_recent");
   if (host === "zjnews.zjol.com.cn" && !body.includes("浙江")) throw new Error("source_region_mismatch");
-  return { id: `source-${hashId(url)}`, title, url, publisher: { "www.gov.cn": "中国政府网", "www.stats.gov.cn": "国家统计局", "www.zj.gov.cn": "浙江省人民政府", "zjnews.zjol.com.cn": "浙江在线（浙江省委省政府新闻门户）" }[host], scope: isRegionalSource(url) ? "zhejiang" : "national", publishedAt, verifiedAt: today,
+  if (host === "csj.news.cn" && (!title.includes("浙江") || !body.includes("浙江"))) throw new Error("source_region_mismatch");
+  return { id: `source-${hashId(url)}`, title, url, publisher: { "www.gov.cn": "中国政府网", "www.stats.gov.cn": "国家统计局", "www.zj.gov.cn": "浙江省人民政府", "zjnews.zjol.com.cn": "浙江在线（浙江省委省政府新闻门户）", "csj.news.cn": "新华网长三角频道" }[host], scope: isRegionalSource(url) ? "zhejiang" : "national", publishedAt, verifiedAt: today,
     rightsNote: "来源原文仅用于核对，发布原创学习摘要。", body: body.slice(0, 12000) };
 }
 // curl uses the runner's existing CA store and IPv4 path. TLS verification
@@ -113,6 +125,7 @@ export async function fetchText(url, fetcher = fetch, fallback = fetcher === fet
 export async function collectSources(today, fetcher = fetch, report = () => {}) {
   const indexes = await Promise.allSettled(INDEXES.map(async ({ url, format }) => {
     let text = await fetchText(url, fetcher);
+    if (format === "xinhua-zhejiang") return xinhuaZhejiangLinks(text, url);
     if (format === "zhejiang") {
       const direct = articleLinks(text, url);
       if (direct.length) return direct;

@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    # Bounded deployment verification; Zhejiang has an authoritative news-portal fallback.
+    # Bounded deployment verification; include verified Zhejiang reports from Xinhua.
     paths: ['.github/workflows/full-daily-content.yml']
 permissions:
   contents: write
