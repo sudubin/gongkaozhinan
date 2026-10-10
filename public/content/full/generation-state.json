@@ -2,12 +2,13 @@
   "date": "2026-10-10",
   "counts": {
     "affairs": 5,
-    "general": 5
+    "general": 5,
+    "idiom": 1
   },
   "attempts": {
     "affairs": 1,
     "general": 2,
     "idiom": 1
   },
-  "totalAdded": 10
+  "totalAdded": 11
 }

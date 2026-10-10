@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-10-86166a9bad505203fd24cd7c",
+  "releaseId": "daily-2026-10-10-7e41394531dcef910aad23c4",
   "createdAt": "2026-10-10",
   "reviewedAt": "2026-10-10",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -4806,6 +4806,51 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "pronunciation": "xiān lì hòu pò",
+      "definition": "在破除旧体制或旧模式之前，先建立起新的体制或模式，确保平稳过渡，防止出现真空或断层。",
+      "collocations": [
+        "坚持先立后破",
+        "先立后破原则"
+      ],
+      "example": "能源转型是一项系统工程，必须遵循先立后破的原则，确保新旧动能平稳转换。",
+      "confusableWith": [
+        {
+          "term": "推陈出新",
+          "difference": "“先立后破”强调新旧交替的顺序和安全性，重在“稳”；“推陈出新”侧重于去掉旧的，创造新的，重在“新”。"
+        }
+      ],
+      "stableId": "auto-full-idiom-c3abf0c01aa8f4c2d2c2b83a",
+      "revision": 1,
+      "knowledgeId": "auto-full-idiom-c3abf0c01aa8f4c2d2c2b83a",
+      "module": "idiom",
+      "region": "not-applicable",
+      "title": "先立后破",
+      "topic": "改革方法论",
+      "keywords": [
+        "稳中求进",
+        "稳妥有序"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ac8db81f43693ddaab0c44f4",
+          "title": "中共中央 国务院关于发展新质生产力的意见",
+          "url": "https://www.gov.cn/zhengce/202610/content_7082820.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -7944,7 +7989,40 @@
       "reviewedAt": "2026-10-10",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-idiom-c3abf0c01aa8f4c2d2c2b83a-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-idiom-c3abf0c01aa8f4c2d2c2b83a",
+      "module": "idiom",
+      "prompt": "关于“先立后破”的理解，下列说法正确的是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "是指在建立新事物之前，彻底摧毁旧事物"
+        },
+        {
+          "id": "B",
+          "text": "是指在新事物尚未成熟时就急于打破旧秩序"
+        },
+        {
+          "id": "C",
+          "text": "是指在确立新机制后再逐步调整或废除旧机制，以确保稳定"
+        },
+        {
+          "id": "D",
+          "text": "是指只关注破旧，不关注立新"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "“先立后破”的核心在于次序和稳妥，即在“立”（建立新机制、新模式）的基础上再“破”（破除旧障碍），以防止脱实向虚或出现断层。A项违背了“先立”的前提；B项属于盲目激进；D项完全曲解了词义。",
+      "sourceRefs": [
+        "source-ac8db81f43693ddaab0c44f4"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:9572b8606095e9bb9b0398b02d521cf11831ba01c650ec20301c86d1691b1a54"
+  "contentHash": "sha256:19e8a162c76346422d730a4cb766d75163a1c3596ec5925a9a14ea5aa0b86cfa"
 }
