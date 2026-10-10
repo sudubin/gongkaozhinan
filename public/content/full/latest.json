@@ -1,8 +1,8 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "full-bootstrap-2026-10-09",
-  "createdAt": "2026-10-09",
-  "reviewedAt": "2026-10-09",
+  "releaseId": "daily-2026-10-10-bc8e0103af803dd3d2c8b126",
+  "createdAt": "2026-10-10",
+  "reviewedAt": "2026-10-10",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
   "items": [
     {
@@ -4426,6 +4426,206 @@
       "applicableYears": [
         2026
       ]
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "中共中央、国务院于2026年10月9日发布《关于发展新质生产力的意见》，指出发展新质生产力是推动高质量发展的内在要求和重要着力点。",
+      "examPoints": [
+        "新质生产力的战略定位",
+        "意见发布的时间与主体"
+      ],
+      "stableId": "auto-full-affairs-a7b50962183bf3b1a9d2f4e2",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-a7b50962183bf3b1a9d2f4e2",
+      "module": "affairs",
+      "region": "national",
+      "title": "中共中央 国务院关于发展新质生产力的意见",
+      "topic": "新质生产力",
+      "keywords": [
+        "新质生产力",
+        "科技创新",
+        "产业创新"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ac8db81f43693ddaab0c44f4",
+          "title": "中共中央 国务院关于发展新质生产力的意见",
+          "url": "https://www.gov.cn/zhengce/202610/content_7082820.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "新华社北京10月9日电 中共中央 国务院关于发展新质生产力的意见 发展新质生产力是推动高质量发展的内在要求和重要着力点。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-03",
+      "summary": "国务院批复同意《国家残疾预防行动计划（2026—2030年）》，要求各省将残疾预防工作作为“十五五”时期经济和社会发展的重要任务。",
+      "examPoints": [
+        "残疾预防行动计划目标",
+        "十五五期间重点任务"
+      ],
+      "stableId": "auto-full-affairs-cc56b3a9f55452f11e5edba2",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-cc56b3a9f55452f11e5edba2",
+      "module": "affairs",
+      "region": "national",
+      "title": "国家残疾预防行动计划（2026—2030年）获批",
+      "topic": "社会民生",
+      "keywords": [
+        "残疾预防",
+        "健康中国",
+        "十五五规划"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-61c6a546069285d1c55e9b5e",
+          "title": "国务院关于《国家残疾预防行动计划（2026—2030年）》的批复_优抚安置_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202610/content_7082737.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "现批复如下： 一、原则同意《国家残疾预防行动计划（2026—2030年）》（以下简称《行动计划》），请认真组织实施。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-09-25",
+      "summary": "国务院办公厅发布意见，旨在通过发展体育赛事激发消费活力，培育经济增长新动能，提高人民生活品质。",
+      "examPoints": [
+        "体育赛事政策导向",
+        "激发消费活力措施"
+      ],
+      "stableId": "auto-full-affairs-0653bd3c27bdb1f2d4144553",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-0653bd3c27bdb1f2d4144553",
+      "module": "affairs",
+      "region": "national",
+      "title": "国务院办公厅关于发展体育赛事激发消费活力的意见",
+      "topic": "体育消费",
+      "keywords": [
+        "体育赛事",
+        "激发消费活力",
+        "文体旅融合"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-bb03ead4eb2c8c2d4506f8a3",
+          "title": "国务院办公厅关于发展体育赛事激发消费活力的意见_体育_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082492.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "国务院办公厅关于发展体育赛事 激发消费活力的意见 国办发〔2026〕28号 各省、自治区、直辖市人民政府，国务院各部委、各直属机"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-09-30",
+      "summary": "国家统计局数据显示，2026年9月中国制造业采购经理指数（PMI）为50.1%，比上月上升0.3个百分点，升至扩张区间。",
+      "examPoints": [
+        "PMI指数含义",
+        "9月制造业运行态势"
+      ],
+      "stableId": "auto-full-affairs-aad82becb5278ada695e18d7",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-aad82becb5278ada695e18d7",
+      "module": "affairs",
+      "region": "national",
+      "title": "2026年9月制造业PMI回升至扩张区间",
+      "topic": "宏观经济",
+      "keywords": [
+        "PMI",
+        "制造业",
+        "景气指数"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-e5c6d60f81bc7347e782eae3",
+          "title": "2026年9月中国采购经理指数运行情况",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "国家统计局服务业调查中心 中国物流与采购联合会 一、中国制造业采购经理指数运行情况 9 月份，制造业采购经理指数（ PMI ）为"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-09-28",
+      "summary": "国务院批复同意《医疗康复护理扩容提升工程实施方案》，聚焦“扩容、提质、均衡、连续”，以基层为重点统筹增加资源供给。",
+      "examPoints": [
+        "医疗康复护理政策重点",
+        "积极应对人口老龄化"
+      ],
+      "stableId": "auto-full-affairs-3c16d9800d76892ae22497ce",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-3c16d9800d76892ae22497ce",
+      "module": "affairs",
+      "region": "national",
+      "title": "医疗康复护理扩容提升工程实施方案获批",
+      "topic": "医疗卫生",
+      "keywords": [
+        "医疗康复",
+        "护理服务",
+        "老龄化应对"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-f9608b2e513622bc4edf45c4",
+          "title": "国务院关于《医疗康复护理扩容提升工程实施方案》的批复_卫生_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082378.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-29",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "国务院关于《医疗康复护理 扩容提升工程实施方案》的批复 国函〔2026〕99号 国家卫生健康委、国家发展改革委： 你们《关于报送"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-29",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -7234,7 +7434,172 @@
       "reviewedAt": "2026-10-09",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-a7b50962183bf3b1a9d2f4e2-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-a7b50962183bf3b1a9d2f4e2",
+      "module": "affairs",
+      "prompt": "2026年10月9日，中共中央、国务院发布的文件中明确指出，推动高质量发展的内在要求和重要着力点是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "发展新质生产力"
+        },
+        {
+          "id": "B",
+          "text": "建设现代化产业体系"
+        },
+        {
+          "id": "C",
+          "text": "深化供给侧结构性改革"
+        },
+        {
+          "id": "D",
+          "text": "实施创新驱动发展战略"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "根据《中共中央 国务院关于发展新质生产力的意见》，发展新质生产力是推动高质量发展的内在要求和重要着力点。",
+      "sourceRefs": [
+        "source-ac8db81f43693ddaab0c44f4"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-cc56b3a9f55452f11e5edba2-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-cc56b3a9f55452f11e5edba2",
+      "module": "affairs",
+      "prompt": "根据国务院批复的《国家残疾预防行动计划（2026—2030年）》，各省、自治区、直辖市人民政府应将残疾预防工作作为本地区哪一时期的重要任务？",
+      "options": [
+        {
+          "id": "A",
+          "text": "“十四五”时期"
+        },
+        {
+          "id": "B",
+          "text": "“十五五”时期"
+        },
+        {
+          "id": "C",
+          "text": "2025—2029年"
+        },
+        {
+          "id": "D",
+          "text": "2026—2035年"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "文件明确要求各省把残疾预防工作作为本地区“十五五”时期经济和社会发展的重要任务。",
+      "sourceRefs": [
+        "source-61c6a546069285d1c55e9b5e"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-0653bd3c27bdb1f2d4144553-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-0653bd3c27bdb1f2d4144553",
+      "module": "affairs",
+      "prompt": "国务院办公厅发布《关于发展体育赛事激发消费活力的意见》的主要目的不包括：",
+      "options": [
+        {
+          "id": "A",
+          "text": "激发消费活力"
+        },
+        {
+          "id": "B",
+          "text": "培育经济增长新动能"
+        },
+        {
+          "id": "C",
+          "text": "提高人民生活品质"
+        },
+        {
+          "id": "D",
+          "text": "扩大出口贸易规模"
+        }
+      ],
+      "correctOptionId": "D",
+      "explanation": "该意见主要聚焦于国内体育赛事发展以激发消费活力和培育内需新动能，未提及扩大出口贸易。",
+      "sourceRefs": [
+        "source-bb03ead4eb2c8c2d4506f8a3"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-aad82becb5278ada695e18d7-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-aad82becb5278ada695e18d7",
+      "module": "affairs",
+      "prompt": "2026年9月份，中国制造业采购经理指数（PMI）为多少，表明制造业生产活动处于什么状态？",
+      "options": [
+        {
+          "id": "A",
+          "text": "50.1%；扩张区间"
+        },
+        {
+          "id": "B",
+          "text": "49.8%；收缩区间"
+        },
+        {
+          "id": "C",
+          "text": "50.1%；收缩区间"
+        },
+        {
+          "id": "D",
+          "text": "49.8%；扩张区间"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "9月制造业PMI为50.1%，高于临界点，升至扩张区间，表明制造业生产活动扩张加快。",
+      "sourceRefs": [
+        "source-e5c6d60f81bc7347e782eae3"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-3c16d9800d76892ae22497ce-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-3c16d9800d76892ae22497ce",
+      "module": "affairs",
+      "prompt": "《医疗康复护理扩容提升工程实施方案》的实施重点聚焦于：",
+      "options": [
+        {
+          "id": "A",
+          "text": "扩容、提质、均衡、连续"
+        },
+        {
+          "id": "B",
+          "text": "引进、消化、吸收、再创新"
+        },
+        {
+          "id": "C",
+          "text": "精简、高效、统一、规范"
+        },
+        {
+          "id": "D",
+          "text": "市场化、私有化、多元化、国际化"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "方案实施坚持聚焦“扩容、提质、均衡、连续”，以基层为重点统筹增加医疗康复护理资源供给。",
+      "sourceRefs": [
+        "source-f9608b2e513622bc4edf45c4"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:07b852b14e7528289b3848b9311b42f0120b6b8b2a009d6853725f70927233d0"
+  "contentHash": "sha256:2505c852329e4eb28b468bfa1474a5f7d1bdd35ac95fd49933d507ea19e2f60a"
 }
