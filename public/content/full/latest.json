@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-10-5f303352b7f7be903c446a15",
+  "releaseId": "daily-2026-10-10-097e27fa22b04b907c1b1312",
   "createdAt": "2026-10-10",
   "reviewedAt": "2026-10-10",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -5086,6 +5086,211 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "自2025年底起，浙江慈溪市开展家庭医生“健康敲门行动”，推动服务模式由被动转为主动。深化“医康养护助”改革，选派镇级医疗机构副院长兼任养老院副院长，促进医养资源融合。目前全市已建立320个团队，覆盖17个镇街，累计走访15万余户次。",
+      "examPoints": [
+        "基层医疗服务模式创新",
+        "医养结合政策实践"
+      ],
+      "stableId": "auto-full-affairs-666a4ac3915e4810a1e2fb17",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-666a4ac3915e4810a1e2fb17",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江慈溪：家庭医生“健康敲门行动”深化医养融合",
+      "topic": "民生保障与基层医疗改革",
+      "keywords": [
+        "慈溪",
+        "健康敲门行动",
+        "医康养护助",
+        "家庭医生"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-dfae5aaa11e5088eada32471",
+          "title": "浙江慈溪：健康敲门行动助力医疗服务全覆盖",
+          "url": "https://csj.news.cn/20261009/b9b301d516144fe5acd4d59793ceec5c/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "从2025年底开始，浙江省慈溪市开展家庭医生“健康敲门行动”，推动镇村两级基层医疗机构将服务模式从“坐等患者上门”转向“主动入户"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "为保障今冬供电安全，浙江电力利用国庆假期负荷低谷期打响迎峰度冬保供战。期间，±800千伏钱塘江换流站进行年度秋检，杭州临平500千伏变电站送出工程恢复施工，通过不停歇的检修与建设，提升电网网架强度。",
+      "examPoints": [
+        "电力基础设施维护",
+        "季节性能源保障策略"
+      ],
+      "stableId": "auto-full-affairs-759302c342768cc161f06f83",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-759302c342768cc161f06f83",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江杭州：利用国庆窗口期筑牢迎峰度冬电力防线",
+      "topic": "能源保供与基础设施建设",
+      "keywords": [
+        "杭州",
+        "迎峰度冬",
+        "电力保供",
+        "钱塘江换流站"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-2d3fb39c024dc180d1e517b0",
+          "title": "浙江杭州：假期攻坚不停歇 织密迎峰度冬“保供网”",
+          "url": "https://csj.news.cn/20261009/3f489582357646139c4583d798dbb7ad/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "为保障今冬供电安全可靠，浙江电力利用国庆假期负荷低谷窗口期打响迎峰度冬保供战，全力筑牢今冬明春电力保供防线。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "浙江大学图书馆构建实体与数字协同的知识宝库，拥有超700万册馆藏及800多个数据库。作为国家级古籍修复中心，融合传统技艺与现代科技（如拉曼光谱）抢救修复濒危文献。同时探索空间变革，打造集学习、交流于一体的师生“第三空间”。",
+      "examPoints": [
+        "文化遗产数字化保护",
+        "现代图书馆功能转型"
+      ],
+      "stableId": "auto-full-affairs-1d6d6e76138320c97aced9c7",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-1d6d6e76138320c97aced9c7",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江大学图书馆：科技赋能古籍保护与空间变革",
+      "topic": "文化传承与高校公共服务",
+      "keywords": [
+        "浙江大学",
+        "古籍修复",
+        "智慧图书馆",
+        "第三空间"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-a547d406e185d3a6f1d51e93",
+          "title": "浙江大学图书馆：从典籍宝库到未来图书馆",
+          "url": "https://csj.news.cn/20261009/3be84c48d2bf404597951c3bda507093/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "从1897年求是书院的一间藏书室启程，跨越一百二十余载，浙江大学图书馆已构建起实体与数字协同、古今文脉贯通的知识宝库。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "寒露时节，浙江诸暨市赵家镇柿子进入成熟期。当地依托大片柿子林发展特色产业，既带动村民增收，又吸引游客秋季观光，进而带动农家乐、民宿及土特产品销售，成为乡村振兴的重要抓手。",
+      "examPoints": [
+        "乡村特色产业培育",
+        "农文旅融合发展"
+      ],
+      "stableId": "auto-full-affairs-bc0ebd91bf49b04af214d9d3",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-bc0ebd91bf49b04af214d9d3",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江诸暨：柿子产业助力乡村振兴与文旅融合",
+      "topic": "特色农业与乡村旅游",
+      "keywords": [
+        "诸暨",
+        "赵家镇",
+        "柿子产业",
+        "乡村振兴"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-2bf5e1a7fa188175f70a5962",
+          "title": "浙江诸暨：乡村柿子迎丰收",
+          "url": "https://csj.news.cn/20261009/6c2ad80a48aa4201aa0037e53f51e954/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "寒露时节，浙江省诸暨市赵家镇柿子树进入成熟期，漫山遍野的柿子树上挂满成熟果实，与远处的山村民居相映，构成秋日山村景观。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "位于杭州市上城区的南宋德寿宫遗址博物馆，在原址上建有大型宫殿基址等遗迹展示。国庆假期期间，该博物馆接待大量游客参观游玩，成为公众感受南宋临安城文化魅力、体验宋韵的重要场所。",
+      "examPoints": [
+        "历史文化遗产活化利用",
+        "城市文化品牌建设"
+      ],
+      "stableId": "auto-full-affairs-22d05872d4d1fef16d497df6",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-22d05872d4d1fef16d497df6",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江杭州：南宋德寿宫遗址博物馆国庆假期受捧",
+      "topic": "历史文化遗址保护与利用",
+      "keywords": [
+        "杭州",
+        "德寿宫遗址",
+        "宋韵文化",
+        "文化旅游"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-20dc1d9a0e1e93521cd79494",
+          "title": "浙江杭州：游南宋德寿宫遗址品宋韵",
+          "url": "https://csj.news.cn/20261009/5417deb3b400441c965f5df63d7248ef/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-10",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "10月6日，游客在杭州南宋德寿宫遗址博物馆内参观。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-10",
+      "generatedAt": "2026-10-10",
+      "reviewedAt": "2026-10-10",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -8257,7 +8462,172 @@
       "reviewedAt": "2026-10-10",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-666a4ac3915e4810a1e2fb17-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-666a4ac3915e4810a1e2fb17",
+      "module": "affairs",
+      "prompt": "根据材料，浙江慈溪市在深化“医康养护助”改革中，采取的具体举措是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "选派镇级医疗机构分管副院长兼任养老院副院长"
+        },
+        {
+          "id": "B",
+          "text": "全面取消村卫生室坐等患者上门的传统模式"
+        },
+        {
+          "id": "C",
+          "text": "强制要求所有村民签订家庭医生服务协议"
+        },
+        {
+          "id": "D",
+          "text": "将家庭病床服务限制在养老机构内部"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料指出，慈溪市深化“医康养护助”改革，融合医养资源，具体做法是选派镇级医疗机构分管副院长兼任养老院副院长，推动家庭医生签约和家庭病床向养老机构延伸。",
+      "sourceRefs": [
+        "source-dfae5aaa11e5088eada32471"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-759302c342768cc161f06f83-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-759302c342768cc161f06f83",
+      "module": "affairs",
+      "prompt": "浙江电力在国庆假期期间开展迎峰度冬工作的主要目的是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "利用负荷低谷窗口期，全力筑牢今冬明春电力保供防线"
+        },
+        {
+          "id": "B",
+          "text": "应对全国冬季用电负荷连创新高带来的紧急停电风险"
+        },
+        {
+          "id": "C",
+          "text": "完成杭州临平变电站的全年电缆敷设任务"
+        },
+        {
+          "id": "D",
+          "text": "测试±800千伏钱塘江换流站的直流双极陪停检修技术"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料明确提到，浙江电力利用国庆假期负荷低谷窗口期打响迎峰度冬保供战，旨在保障今冬供电安全可靠，筑牢今冬明春电力保供防线。",
+      "sourceRefs": [
+        "source-2d3fb39c024dc180d1e517b0"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-1d6d6e76138320c97aced9c7-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-1d6d6e76138320c97aced9c7",
+      "module": "affairs",
+      "prompt": "关于浙江大学图书馆的功能定位与服务创新，下列说法正确的是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "致力于成为知识生产与创新的引擎，而非单纯的知识仓库"
+        },
+        {
+          "id": "B",
+          "text": "仅依靠传统手工工具进行古籍修复，未引入现代科技"
+        },
+        {
+          "id": "C",
+          "text": "阅览区书架设计高耸逼人，以最大化存储量为首要目标"
+        },
+        {
+          "id": "D",
+          "text": "盘点机器人仅在开馆期间协助学生查找图书位置"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料指出，浙大图书馆意识到未来不能只是知识仓库，更应成为知识生产与创新引擎。其采用低矮开放书架，盘点机器人在闭馆后工作，且修复工作融合了现代科技手段。",
+      "sourceRefs": [
+        "source-a547d406e185d3a6f1d51e93"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-bc0ebd91bf49b04af214d9d3-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-bc0ebd91bf49b04af214d9d3",
+      "module": "affairs",
+      "prompt": "浙江诸暨市赵家镇的柿子产业发展对当地经济的主要贡献在于：",
+      "options": [
+        {
+          "id": "A",
+          "text": "带动村民增收并促进农家乐、民宿等关联产业发展"
+        },
+        {
+          "id": "B",
+          "text": "成为南宋临安城宫苑遗址保护的核心资金来源"
+        },
+        {
+          "id": "C",
+          "text": "解决了全国冬季用电负荷连创新高的问题"
+        },
+        {
+          "id": "D",
+          "text": "推动了慈溪市家庭医生团队的全面覆盖"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料表明，赵家镇的大片柿子林带动了村民增收，吸引游客观光，并带动了农家乐、民宿及土特产品销售，是当地乡村振兴的一项特色产业。",
+      "sourceRefs": [
+        "source-2bf5e1a7fa188175f70a5962"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-22d05872d4d1fef16d497df6-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-22d05872d4d1fef16d497df6",
+      "module": "affairs",
+      "prompt": "南宋德寿宫遗址博物馆位于浙江省的哪个城市及区域？",
+      "options": [
+        {
+          "id": "A",
+          "text": "杭州市上城区"
+        },
+        {
+          "id": "B",
+          "text": "宁波市海曙区"
+        },
+        {
+          "id": "C",
+          "text": "温州市鹿城区"
+        },
+        {
+          "id": "D",
+          "text": "嘉兴市南湖区"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料明确指出，南宋德寿宫遗址位于浙江省杭州市上城区，是南宋临安城内一处重要的宫苑遗址。",
+      "sourceRefs": [
+        "source-20dc1d9a0e1e93521cd79494"
+      ],
+      "reviewedAt": "2026-10-10",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:555da42803b27db547a590622c4d9e2c43df7c2e7b62180bba42c80d11a684d6"
+  "contentHash": "sha256:980ffcd15e0b7ddeadc308b8ba473d6126962254807f64bfc3d33d02b71dea42"
 }
