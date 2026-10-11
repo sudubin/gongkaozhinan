@@ -1,8 +1,8 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-10-d63be587a7093d2fce52af37",
-  "createdAt": "2026-10-10",
-  "reviewedAt": "2026-10-10",
+  "releaseId": "daily-2026-10-11-b3f1963dc5827c599fa9da0d",
+  "createdAt": "2026-10-11",
+  "reviewedAt": "2026-10-11",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
   "items": [
     {
@@ -5511,6 +5511,86 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-09-25",
+      "summary": "国办发布意见，推动赛事品牌化、市场化发展，到2030年基本形成具有中国特色的现代化赛事体系，培育一批具有世界影响力的体育赛事。",
+      "examPoints": [
+        "发展目标",
+        "赛事体系建设"
+      ],
+      "stableId": "auto-full-affairs-e5abe5aafffbccc9f59655fc",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-e5abe5aafffbccc9f59655fc",
+      "module": "affairs",
+      "region": "national",
+      "title": "国务院办公厅印发体育赛事激发消费活力意见",
+      "topic": "体育产业",
+      "keywords": [
+        "体育赛事",
+        "消费活力",
+        "文体旅融合"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-bb03ead4eb2c8c2d4506f8a3",
+          "title": "国务院办公厅关于发展体育赛事激发消费活力的意见_体育_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202609/content_7082492.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "到2030年，基本形成具有中国特色的现代化赛事体系，培育一批具有世界影响力的体育赛事，产业协同能力显著提升，赛事消费活力有效激发"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-09-28",
+      "summary": "1—8月份，全国规模以上工业企业实现利润总额52719.8亿元，同比增长15.7%，营业收入利润率同比提高0.44个百分点。",
+      "examPoints": [
+        "工业运行数据",
+        "效益改善情况"
+      ],
+      "stableId": "auto-full-affairs-bb4cf625ad12e4f98247ed23",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-bb4cf625ad12e4f98247ed23",
+      "module": "affairs",
+      "region": "national",
+      "title": "2026年1—8月规上工业企业利润增长15.7%",
+      "topic": "工业经济",
+      "keywords": [
+        "工业企业",
+        "利润总额",
+        "经济效益"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-1ad72b87c5a80310a199b0ff",
+          "title": "2026年1—8月份全国规模以上工业企业利润增长15.7%",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-09-28",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "1 — 8 月份，全国规模以上工业企业实现利润总额 52719.8 亿元，同比增长 15.7% （按可比口径计算，详见附注二）。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-28",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -9012,7 +9092,73 @@
       "reviewedAt": "2026-10-10",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-e5abe5aafffbccc9f59655fc-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-e5abe5aafffbccc9f59655fc",
+      "module": "affairs",
+      "prompt": "根据《关于发展体育赛事激发消费活力的意见》，我国力争到2030年实现什么目标？",
+      "options": [
+        {
+          "id": "A",
+          "text": "建成全球最大体育市场"
+        },
+        {
+          "id": "B",
+          "text": "基本形成具有中国特色的现代化赛事体系"
+        },
+        {
+          "id": "C",
+          "text": "实现所有项目奥运金牌全覆盖"
+        },
+        {
+          "id": "D",
+          "text": "取消所有职业赛事限制"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "文件提出到2030年，基本形成具有中国特色的现代化赛事体系，培育一批具有世界影响力的体育赛事。",
+      "sourceRefs": [
+        "source-bb03ead4eb2c8c2d4506f8a3"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-bb4cf625ad12e4f98247ed23-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-bb4cf625ad12e4f98247ed23",
+      "module": "affairs",
+      "prompt": "2026年1—8月份，全国规模以上工业企业实现营业收入利润率是多少？",
+      "options": [
+        {
+          "id": "A",
+          "text": "4.22%"
+        },
+        {
+          "id": "B",
+          "text": "5.66%"
+        },
+        {
+          "id": "C",
+          "text": "6.10%"
+        },
+        {
+          "id": "D",
+          "text": "7.10%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料显示，1—8月份规模以上工业企业营业收入利润率为5.66%，同比提高0.44个百分点。",
+      "sourceRefs": [
+        "source-1ad72b87c5a80310a199b0ff"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:3d88254392459c841871a904b458c5d365650bafd10da7a395c5845a5225fc37"
+  "contentHash": "sha256:c6e6c166f285765dd1393f0f4834314a6716172517ff962b4e2074b530f7c39e"
 }
