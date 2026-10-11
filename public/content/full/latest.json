@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-11-373e60a19ee0af548ff2f4a9",
+  "releaseId": "daily-2026-10-11-5c689cfac67844675a57b16a",
   "createdAt": "2026-10-11",
   "reviewedAt": "2026-10-11",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -5711,6 +5711,135 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "category": "economy-coordination",
+      "keyPoint": "浙江义乌国际商贸城在金秋时节呈现购销两旺景象，来自世界各地的采购商看样品、询价格、谈订单。",
+      "confusions": [
+        "将局部市场繁荣误读为单一商品垄断",
+        "混淆采购商国籍与贸易流向"
+      ],
+      "stableId": "auto-full-zhejiang-c1ee78a0e2d9b46d4b936c18",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-c1ee78a0e2d9b46d4b936c18",
+      "module": "zhejiang",
+      "region": "zhejiang",
+      "applicableYears": [
+        2026
+      ],
+      "title": "义乌国际商贸城金秋采购热潮",
+      "topic": "外贸经济",
+      "keywords": [
+        "义乌",
+        "国际贸易",
+        "外商采购"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-3174e5a4f1b2f1a99e65a5c5",
+          "title": "浙江义乌：外商采购忙",
+          "url": "https://csj.news.cn/20261011/99d8528095c44eb8b2b416a7c64434a4/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-11",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "新华社发（时宽兵摄） 金秋时节，来自世界各地的采购商在浙江义乌看样品、询价格、谈订单，义乌国际商贸城里呈现购销两旺景象。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-11",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "category": "governance-livelihood",
+      "keyPoint": "浙江省慈溪市开展家庭医生“健康敲门行动”，推动基层医疗机构从“坐等患者上门”转向“主动入户访视”。",
+      "confusions": [
+        "被动医疗与主动服务的区别",
+        "家庭病床与普通门诊的区别"
+      ],
+      "stableId": "auto-full-zhejiang-4da3af90a74d34602f74debc",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-4da3af90a74d34602f74debc",
+      "module": "zhejiang",
+      "region": "zhejiang",
+      "applicableYears": [
+        2026
+      ],
+      "title": "慈溪“健康敲门行动”服务模式转型",
+      "topic": "基层治理",
+      "keywords": [
+        "慈溪",
+        "家庭医生",
+        "主动入户"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-dfae5aaa11e5088eada32471",
+          "title": "浙江慈溪：健康敲门行动助力医疗服务全覆盖",
+          "url": "https://csj.news.cn/20261009/b9b301d516144fe5acd4d59793ceec5c/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "从2025年底开始，浙江省慈溪市开展家庭医生“健康敲门行动”，推动镇村两级基层医疗机构将服务模式从“坐等患者上门”转向“主动入户"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "category": "economy-coordination",
+      "keyPoint": "浙江电力利用国庆假期负荷低谷窗口期打响迎峰度冬保供战，全力筑牢今冬明春电力保供防线。",
+      "confusions": [
+        "迎峰度夏与迎峰度冬的时间节点",
+        "日常检修与窗口期突击检修的区别"
+      ],
+      "stableId": "auto-full-zhejiang-fb3aec1e9b077a3d0834ddb1",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-fb3aec1e9b077a3d0834ddb1",
+      "module": "zhejiang",
+      "region": "zhejiang",
+      "applicableYears": [
+        2026
+      ],
+      "title": "浙江电力利用假期窗口期筑牢保供防线",
+      "topic": "能源保障",
+      "keywords": [
+        "浙江电力",
+        "迎峰度冬",
+        "电网检修"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-2d3fb39c024dc180d1e517b0",
+          "title": "浙江杭州：假期攻坚不停歇 织密迎峰度冬“保供网”",
+          "url": "https://csj.news.cn/20261009/3f489582357646139c4583d798dbb7ad/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "为保障今冬供电安全可靠，浙江电力利用国庆假期负荷低谷窗口期打响迎峰度冬保供战，全力筑牢今冬明春电力保供防线。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -9377,7 +9506,106 @@
       "reviewedAt": "2026-10-11",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-zhejiang-c1ee78a0e2d9b46d4b936c18-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-c1ee78a0e2d9b46d4b936c18",
+      "module": "zhejiang",
+      "prompt": "根据材料，金秋时节浙江义乌国际商贸城呈现出的主要景象是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "购销两旺，全球客商洽谈订单"
+        },
+        {
+          "id": "B",
+          "text": "库存积压，商家降价促销"
+        },
+        {
+          "id": "C",
+          "text": "仅限国内买家集中采购"
+        },
+        {
+          "id": "D",
+          "text": "主要进行线上直播销售"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料指出金秋时节来自世界各地的采购商在义乌看样品、询价格、谈订单，呈现购销两旺景象。",
+      "sourceRefs": [
+        "source-3174e5a4f1b2f1a99e65a5c5"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-zhejiang-4da3af90a74d34602f74debc-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-4da3af90a74d34602f74debc",
+      "module": "zhejiang",
+      "prompt": "慈溪市“健康敲门行动”的核心转变在于？",
+      "options": [
+        {
+          "id": "A",
+          "text": "从“坐等患者上门”转向“主动入户访视”"
+        },
+        {
+          "id": "B",
+          "text": "从“社区医院”转向“大型三甲医院”"
+        },
+        {
+          "id": "C",
+          "text": "从“药物治疗”转向“手术治疗”"
+        },
+        {
+          "id": "D",
+          "text": "从“免费体检”转向“收费诊疗”"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料明确说明该行动推动镇村两级基层医疗机构将服务模式从“坐等患者上门”转向“主动入户访视”。",
+      "sourceRefs": [
+        "source-dfae5aaa11e5088eada32471"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-zhejiang-fb3aec1e9b077a3d0834ddb1-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-fb3aec1e9b077a3d0834ddb1",
+      "module": "zhejiang",
+      "prompt": "浙江电力为何选择利用国庆假期开展迎峰度冬保供工作？",
+      "options": [
+        {
+          "id": "A",
+          "text": "利用负荷低谷窗口期进行检修和施工"
+        },
+        {
+          "id": "B",
+          "text": "假期期间电力需求达到全年最高峰"
+        },
+        {
+          "id": "C",
+          "text": "为了减少节假日期间的电费收入"
+        },
+        {
+          "id": "D",
+          "text": "全国冬季用电负荷连年下降"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料指出为保障供电安全可靠，浙江电力利用国庆假期负荷低谷窗口期打响迎峰度冬保供战。",
+      "sourceRefs": [
+        "source-2d3fb39c024dc180d1e517b0"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:4f04270be9b9410b4498c7a8496734cc7369263f3d16c7bc80fe47f317141c39"
+  "contentHash": "sha256:f106d36e446b7add2c8cbada2ad341b6260a9ddc9b26690b2dd01bab1df6741c"
 }
