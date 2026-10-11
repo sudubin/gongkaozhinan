@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-11-b3f1963dc5827c599fa9da0d",
+  "releaseId": "daily-2026-10-11-373e60a19ee0af548ff2f4a9",
   "createdAt": "2026-10-11",
   "reviewedAt": "2026-10-11",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -5591,6 +5591,126 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "金秋时节，来自世界各地的采购商在浙江义乌看样品、询价格、谈订单，义乌国际商贸城里呈现购销两旺景象。",
+      "examPoints": [
+        "浙江省外向型经济发展",
+        "义乌小商品市场国际化"
+      ],
+      "stableId": "auto-full-affairs-8c72ac26fce4bb4613bf9b8f",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-8c72ac26fce4bb4613bf9b8f",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江义乌：金秋时节外商采购忙",
+      "topic": "外贸经济",
+      "keywords": [
+        "义乌国际商贸城",
+        "外商采购",
+        "国际贸易"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-3174e5a4f1b2f1a99e65a5c5",
+          "title": "浙江义乌：外商采购忙",
+          "url": "https://csj.news.cn/20261011/99d8528095c44eb8b2b416a7c64434a4/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-11",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "新华社发（时宽兵摄） 金秋时节，来自世界各地的采购商在浙江义乌看样品、询价格、谈订单，义乌国际商贸城里呈现购销两旺景象。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-11",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "为保障今冬供电安全可靠，浙江电力利用国庆假期负荷低谷窗口期打响迎峰度冬保供战，全力筑牢今冬明春电力保供防线。",
+      "examPoints": [
+        "浙江省能源安全保障",
+        "重大节假日基础设施维护"
+      ],
+      "stableId": "auto-full-affairs-d4d8e2d30ecb6d0462c3ff34",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-d4d8e2d30ecb6d0462c3ff34",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江杭州：电力部门利用假期窗口期筑牢保供防线",
+      "topic": "能源保障",
+      "keywords": [
+        "迎峰度冬",
+        "电力检修",
+        "电网建设"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-2d3fb39c024dc180d1e517b0",
+          "title": "浙江杭州：假期攻坚不停歇 织密迎峰度冬“保供网”",
+          "url": "https://csj.news.cn/20261009/3f489582357646139c4583d798dbb7ad/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "为保障今冬供电安全可靠，浙江电力利用国庆假期负荷低谷窗口期打响迎峰度冬保供战，全力筑牢今冬明春电力保供防线。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-08",
+      "summary": "寒露时节，诸暨市赵家镇柿子进入成熟期，大片柿子林带动村民增收，吸引游客观光，成为当地乡村振兴的特色产业。",
+      "examPoints": [
+        "浙江省乡村特色产业",
+        "农文旅融合发展"
+      ],
+      "stableId": "auto-full-affairs-893a070f7c8a8a618d5ec6e0",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-893a070f7c8a8a618d5ec6e0",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江诸暨：柿子产业助力乡村振兴",
+      "topic": "乡村振兴",
+      "keywords": [
+        "特色农业",
+        "乡村旅游",
+        "农民增收"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-2bf5e1a7fa188175f70a5962",
+          "title": "浙江诸暨：乡村柿子迎丰收",
+          "url": "https://csj.news.cn/20261009/6c2ad80a48aa4201aa0037e53f51e954/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "大片的柿子林既带动了村民增收，也吸引游客前来秋季观光，带动农家乐、民宿及土特产品销售，成为当地乡村振兴的一项特色产业。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -9158,7 +9278,106 @@
       "reviewedAt": "2026-10-11",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-8c72ac26fce4bb4613bf9b8f-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-8c72ac26fce4bb4613bf9b8f",
+      "module": "affairs",
+      "prompt": "2026年10月9日，浙江义乌国际商贸城内呈现购销两旺景象，主要体现了当地哪一领域的活跃态势？",
+      "options": [
+        {
+          "id": "A",
+          "text": "国内农产品批发贸易"
+        },
+        {
+          "id": "B",
+          "text": "国际小商品采购与贸易"
+        },
+        {
+          "id": "C",
+          "text": "本地制造业内部流通"
+        },
+        {
+          "id": "D",
+          "text": "跨境电商直播销售"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料显示来自斯里兰卡、利比亚等多国采购商在义乌洽谈采购，体现国际小商品贸易活跃。",
+      "sourceRefs": [
+        "source-3174e5a4f1b2f1a99e65a5c5"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-d4d8e2d30ecb6d0462c3ff34-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-d4d8e2d30ecb6d0462c3ff34",
+      "module": "affairs",
+      "prompt": "浙江电力在2026年国庆假期期间开展的主要工作目的是什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "降低居民用电收费标准"
+        },
+        {
+          "id": "B",
+          "text": "应对全国夏季用电高峰"
+        },
+        {
+          "id": "C",
+          "text": "利用负荷低谷期进行检修以备战今冬明春"
+        },
+        {
+          "id": "D",
+          "text": "推广新能源发电替代火电"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "材料指出利用国庆假期负荷低谷窗口期打响迎峰度冬保供战，为今冬明春做准备。",
+      "sourceRefs": [
+        "source-2d3fb39c024dc180d1e517b0"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-893a070f7c8a8a618d5ec6e0-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-893a070f7c8a8a618d5ec6e0",
+      "module": "affairs",
+      "prompt": "浙江诸暨市赵家镇的柿子产业对当地发展起到了哪些积极作用？",
+      "options": [
+        {
+          "id": "A",
+          "text": "仅用于出口创汇"
+        },
+        {
+          "id": "B",
+          "text": "带动村民增收及吸引游客观光"
+        },
+        {
+          "id": "C",
+          "text": "主要用于工业原料加工"
+        },
+        {
+          "id": "D",
+          "text": "替代了其他所有农作物种植"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料明确提到柿子林带动村民增收，吸引游客前来秋季观光，带动农家乐等销售。",
+      "sourceRefs": [
+        "source-2bf5e1a7fa188175f70a5962"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:c6e6c166f285765dd1393f0f4834314a6716172517ff962b4e2074b530f7c39e"
+  "contentHash": "sha256:4f04270be9b9410b4498c7a8496734cc7369263f3d16c7bc80fe47f317141c39"
 }

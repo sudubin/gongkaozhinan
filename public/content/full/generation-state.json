@@ -1,11 +1,12 @@
 {
   "date": "2026-10-11",
   "counts": {
-    "affairs": 2
+    "affairs": 2,
+    "zhejiang-affairs": 3
   },
   "attempts": {
     "affairs": 2,
     "zhejiang-affairs": 1
   },
-  "totalAdded": 2
+  "totalAdded": 5
 }
