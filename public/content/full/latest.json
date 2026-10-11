@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-11-5c689cfac67844675a57b16a",
+  "releaseId": "daily-2026-10-11-168aeed3a94ff3ac688c23ec",
   "createdAt": "2026-10-11",
   "reviewedAt": "2026-10-11",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -5840,6 +5840,150 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "concept": "新质生产力",
+      "explanation": "根据材料，新质生产力以全要素生产率大幅提升为核心标志，推动技术革命性突破、生产要素创新性配置、产业深度转型升级。",
+      "stableId": "auto-full-general-cbf36ad44d1707463089a09a",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-cbf36ad44d1707463089a09a",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "新质生产力与全要素生产率",
+      "topic": "经济理论",
+      "keywords": [
+        "新质生产力",
+        "全要素生产率",
+        "高质量发展"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ac8db81f43693ddaab0c44f4",
+          "title": "中共中央 国务院关于发展新质生产力的意见",
+          "url": "https://www.gov.cn/zhengce/202610/content_7082820.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "、改革和发展、自主和开放的关系，统筹发展和安全，以科技创新为引领，以全要素生产率大幅提升为核心标志，推动技术革命性突破、生产要素"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "流通领域重要生产资料市场价格",
+      "explanation": "指重要生产资料经营企业的批发和销售价格，既包含出厂价格，也包含有经营企业的流通费用、利润和税费等。",
+      "stableId": "auto-full-general-9b91825f799dc50d29eb8321",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-9b91825f799dc50d29eb8321",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "流通领域重要生产资料价格监测",
+      "topic": "统计指标",
+      "keywords": [
+        "生产资料价格",
+        "批发价格",
+        "市场价格"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-fc6845edf94d84b44fdfa060",
+          "title": "2026年9月下旬流通领域重要生产资料市场价格变动情况",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "中国统计信息服务中心 卓创资讯 据对全国流通领域 9 大类 50 种重要生产资料市场价格的监测显示， 2026 年 9 月下旬与"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "残疾预防理念",
+      "explanation": "强化全人群、全生命周期残疾预防理念，推进关口前移、早期干预，有效减少和控制残疾发生发展。",
+      "stableId": "auto-full-general-4c11b03344f8f5d7ed1888b8",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-4c11b03344f8f5d7ed1888b8",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "国家残疾预防行动计划（2026—2030年）",
+      "topic": "社会治理",
+      "keywords": [
+        "残疾预防",
+        "全生命周期",
+        "早期干预"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-61c6a546069285d1c55e9b5e",
+          "title": "国务院关于《国家残疾预防行动计划（2026—2030年）》的批复_优抚安置_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202610/content_7082737.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "点，推进关口前移、早期干预，强化全人群、全生命周期残疾预防理念，紧紧围绕有效减少和控制残疾发生发展、保障人民群众生命安全和身体健"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "营业收入利润率",
+      "explanation": "反映企业盈利能力的指标，计算公式为利润总额除以营业收入乘以100%。1-8月全国规模以上工业企业该比率为5.66%。",
+      "stableId": "auto-full-general-d85ff7df3553d95bb719368e",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-d85ff7df3553d95bb719368e",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "规模以上工业企业经济效益",
+      "topic": "经济运行",
+      "keywords": [
+        "工业企业",
+        "利润总额",
+        "营业收入利润率"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-1ad72b87c5a80310a199b0ff",
+          "title": "2026年1—8月份全国规模以上工业企业利润增长15.7%",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260928_1965425.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-09-28",
+          "verifiedAt": "2026-10-11",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "长 6.1% ；营业收入利润率为 5.66% ，同比提高 0.44 个百分点。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-28",
+      "validFrom": "2026-10-11",
+      "generatedAt": "2026-10-11",
+      "reviewedAt": "2026-10-11",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -9605,7 +9749,139 @@
       "reviewedAt": "2026-10-11",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-cbf36ad44d1707463089a09a-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-cbf36ad44d1707463089a09a",
+      "module": "general",
+      "prompt": "根据《中共中央 国务院关于发展新质生产力的意见》，新质生产力的核心标志是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "劳动者数量大幅增加"
+        },
+        {
+          "id": "B",
+          "text": "全要素生产率大幅提升"
+        },
+        {
+          "id": "C",
+          "text": "传统制造业规模扩张"
+        },
+        {
+          "id": "D",
+          "text": "资源消耗强度降低"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料指出，新质生产力“以全要素生产率大幅提升为核心标志”，推动技术革命性突破等。",
+      "sourceRefs": [
+        "source-ac8db81f43693ddaab0c44f4"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-9b91825f799dc50d29eb8321-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-9b91825f799dc50d29eb8321",
+      "module": "general",
+      "prompt": "关于流通领域重要生产资料市场价格，下列说法正确的是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "仅包含产品的出厂价格"
+        },
+        {
+          "id": "B",
+          "text": "不包含经营企业的流通费用和税费"
+        },
+        {
+          "id": "C",
+          "text": "是指重要生产资料经营企业的批发和销售价格"
+        },
+        {
+          "id": "D",
+          "text": "与出厂价格的变动趋势在任何时间段都完全一致"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "材料附注说明，该价格是指经营企业的批发和销售价格，包含出厂价格及流通费用、利润和税费等，且两者变动趋势可能存在不完全一致的情况。",
+      "sourceRefs": [
+        "source-fc6845edf94d84b44fdfa060"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-4c11b03344f8f5d7ed1888b8-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-4c11b03344f8f5d7ed1888b8",
+      "module": "general",
+      "prompt": "《国家残疾预防行动计划（2026—2030年）》实施坚持的方针是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "治疗为主、防治结合"
+        },
+        {
+          "id": "B",
+          "text": "预防为主、防治结合"
+        },
+        {
+          "id": "C",
+          "text": "康复为主、预防为辅"
+        },
+        {
+          "id": "D",
+          "text": "社会救助为主、政府补贴为辅"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料明确指出，《行动计划》实施要实行“预防为主、防治结合”的方针。",
+      "sourceRefs": [
+        "source-61c6a546069285d1c55e9b5e"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-d85ff7df3553d95bb719368e-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-d85ff7df3553d95bb719368e",
+      "module": "general",
+      "prompt": "2026年1—8月份，全国规模以上工业企业营业收入利润率为：",
+      "options": [
+        {
+          "id": "A",
+          "text": "5.22%"
+        },
+        {
+          "id": "B",
+          "text": "5.66%"
+        },
+        {
+          "id": "C",
+          "text": "6.10%"
+        },
+        {
+          "id": "D",
+          "text": "15.70%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料数据显示，1—8月份规模以上工业企业营业收入利润率为5.66%，同比提高0.44个百分点。",
+      "sourceRefs": [
+        "source-1ad72b87c5a80310a199b0ff"
+      ],
+      "reviewedAt": "2026-10-11",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:f106d36e446b7add2c8cbada2ad341b6260a9ddc9b26690b2dd01bab1df6741c"
+  "contentHash": "sha256:78a6c05e9dc0578377137714f210628a83c5b194d918ead8e435bcba270408ec"
 }
