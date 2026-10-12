@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-12-ba08c2947c74c94d2ccc0c3d",
+  "releaseId": "daily-2026-10-12-998eca8834486ab9cbe9737b",
   "createdAt": "2026-10-12",
   "reviewedAt": "2026-10-12",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -6024,6 +6024,92 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "category": "governance-livelihood",
+      "keyPoint": "慈溪市深化“医康养护助”改革，选派镇级医疗机构分管副院长兼任养老院副院长，推动服务向养老机构延伸。",
+      "confusions": [
+        "家庭医生签约服务与普通门诊的区别",
+        "主动入户访视与被动就医的区别"
+      ],
+      "stableId": "auto-full-zhejiang-5caf9e0440a4b523522a8d40",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-5caf9e0440a4b523522a8d40",
+      "module": "zhejiang",
+      "region": "zhejiang",
+      "applicableYears": [
+        2026
+      ],
+      "title": "慈溪“健康敲门行动”深化医养融合",
+      "topic": "民生服务",
+      "keywords": [
+        "慈溪",
+        "家庭医生",
+        "医养结合"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-dfae5aaa11e5088eada32471",
+          "title": "浙江慈溪：健康敲门行动助力医疗服务全覆盖",
+          "url": "https://csj.news.cn/20261009/b9b301d516144fe5acd4d59793ceec5c/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-12",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "同时深化“医康养护助”改革，融合医养资源，选派镇级医疗机构分管副院长兼任养老院副院长，推动家庭医生签约、家庭病床向养老机构延伸。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-12",
+      "generatedAt": "2026-10-12",
+      "reviewedAt": "2026-10-12",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "category": "economy-coordination",
+      "keyPoint": "国网丽水供电公司通过充电桩运维、民宿用电排查等措施，以可靠电力守护梯田山水风光，赋能乡村生态文旅。",
+      "confusions": [
+        "城市电网与农村/景区电网维护重点的差异",
+        "常规巡检与应急保电的区别"
+      ],
+      "stableId": "auto-full-zhejiang-1d4f09d0aaa0a57dd72e451f",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-1d4f09d0aaa0a57dd72e451f",
+      "module": "zhejiang",
+      "region": "zhejiang",
+      "applicableYears": [
+        2026
+      ],
+      "title": "丽水电力保障梯田景区文旅发展",
+      "topic": "能源保障",
+      "keywords": [
+        "丽水",
+        "电力保供",
+        "乡村旅游"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ece70318e1067a909444c5e6",
+          "title": "浙江丽水：满格电力助乡村文旅释放假日活力",
+          "url": "https://csj.news.cn/20261004/1d8aa8b033b649c69006c46e5ec2e055/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-04",
+          "verifiedAt": "2026-10-12",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "巡检，以可靠电力守护梯田山水风光。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-04",
+      "validFrom": "2026-10-12",
+      "generatedAt": "2026-10-12",
+      "reviewedAt": "2026-10-12",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -9954,7 +10040,73 @@
       "reviewedAt": "2026-10-12",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-zhejiang-5caf9e0440a4b523522a8d40-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-5caf9e0440a4b523522a8d40",
+      "module": "zhejiang",
+      "prompt": "浙江省慈溪市在开展家庭医生“健康敲门行动”中，为深化“医康养护助”改革采取了哪项关键举措？",
+      "options": [
+        {
+          "id": "A",
+          "text": "选派镇级医疗机构分管副院长兼任养老院副院长"
+        },
+        {
+          "id": "B",
+          "text": "全面取消基层医疗机构挂号费用"
+        },
+        {
+          "id": "C",
+          "text": "强制要求所有老人入住公立养老院"
+        },
+        {
+          "id": "D",
+          "text": "停止开展上门走访服务"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "根据材料，慈溪市通过人事交叉任职（副院长兼任）的方式，推动家庭医生签约和家庭病床向养老机构延伸，实现医养资源融合。",
+      "sourceRefs": [
+        "source-dfae5aaa11e5088eada32471"
+      ],
+      "reviewedAt": "2026-10-12",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-zhejiang-1d4f09d0aaa0a57dd72e451f-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-1d4f09d0aaa0a57dd72e451f",
+      "module": "zhejiang",
+      "prompt": "在浙江丽水梯田景区双节假期期间，国网丽水供电公司的主要保电工作聚焦于哪些方面？",
+      "options": [
+        {
+          "id": "A",
+          "text": "景区新能源充电设施运维与民宿用电安全排查"
+        },
+        {
+          "id": "B",
+          "text": "大型火力发电厂的建设与维护"
+        },
+        {
+          "id": "C",
+          "text": "城市地铁线路的电力供应"
+        },
+        {
+          "id": "D",
+          "text": "沿海核电站的安全监管"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料提到供电公司聚焦景区新能源充电设施运维、民宿用电安全排查等，以保障游客出行和区域用电安全。",
+      "sourceRefs": [
+        "source-ece70318e1067a909444c5e6"
+      ],
+      "reviewedAt": "2026-10-12",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:6f86408e73a37406806d83350c1aecd7cb2251926a6b45cefeaab4dd2697f50f"
+  "contentHash": "sha256:0f1fb912651d3e65f0e4c4226c1e1589c8e6f03b6b3bc4c019ada3cae3e6e146"
 }
