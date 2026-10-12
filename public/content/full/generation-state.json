@@ -2,7 +2,8 @@
   "date": "2026-10-12",
   "counts": {
     "zhejiang-affairs": 1,
-    "zhejiang": 2
+    "zhejiang": 2,
+    "general": 1
   },
   "attempts": {
     "affairs": 1,
@@ -10,5 +11,5 @@
     "zhejiang": 2,
     "general": 1
   },
-  "totalAdded": 3
+  "totalAdded": 4
 }
