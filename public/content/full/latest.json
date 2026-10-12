@@ -1,8 +1,8 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-11-168aeed3a94ff3ac688c23ec",
-  "createdAt": "2026-10-11",
-  "reviewedAt": "2026-10-11",
+  "releaseId": "daily-2026-10-12-ba08c2947c74c94d2ccc0c3d",
+  "createdAt": "2026-10-12",
+  "reviewedAt": "2026-10-12",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
   "items": [
     {
@@ -5984,6 +5984,46 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-04",
+      "summary": "国网丽水供电公司提前部署，聚焦景区新能源充电设施运维、民宿用电安全排查等，以可靠电力守护梯田山水风光，保障双节假期旅游安全有序运行。",
+      "examPoints": [
+        "电力服务保障民生",
+        "乡村振兴与基础设施"
+      ],
+      "stableId": "auto-full-affairs-4ffefd2bcb12eac1cd249f9d",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-4ffefd2bcb12eac1cd249f9d",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江丽水：电力保障助力乡村文旅发展",
+      "topic": "浙江时政",
+      "keywords": [
+        "丽水",
+        "电力保供",
+        "乡村旅游"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ece70318e1067a909444c5e6",
+          "title": "浙江丽水：满格电力助乡村文旅释放假日活力",
+          "url": "https://csj.news.cn/20261004/1d8aa8b033b649c69006c46e5ec2e055/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-04",
+          "verifiedAt": "2026-10-12",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "巡检，以可靠电力守护梯田山水风光。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-04",
+      "validFrom": "2026-10-12",
+      "generatedAt": "2026-10-12",
+      "reviewedAt": "2026-10-12",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -9881,7 +9921,40 @@
       "reviewedAt": "2026-10-11",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-4ffefd2bcb12eac1cd249f9d-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-4ffefd2bcb12eac1cd249f9d",
+      "module": "affairs",
+      "prompt": "为保障梯田景区双节假期用电安全，国网丽水供电公司重点聚焦了哪些工作？",
+      "options": [
+        {
+          "id": "A",
+          "text": "仅维护主干道路路灯"
+        },
+        {
+          "id": "B",
+          "text": "聚焦景区新能源充电设施运维、民宿用电安全排查等"
+        },
+        {
+          "id": "C",
+          "text": "减少景区供电量以节约能源"
+        },
+        {
+          "id": "D",
+          "text": "停止充电桩运维服务"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料指出，国网丽水供电公司提前部署，聚焦景区新能源充电设施运维、民宿用电安全排查、主干道路路灯维护及沿线电网巡检。",
+      "sourceRefs": [
+        "source-ece70318e1067a909444c5e6"
+      ],
+      "reviewedAt": "2026-10-12",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:78a6c05e9dc0578377137714f210628a83c5b194d918ead8e435bcba270408ec"
+  "contentHash": "sha256:6f86408e73a37406806d83350c1aecd7cb2251926a6b45cefeaab4dd2697f50f"
 }
