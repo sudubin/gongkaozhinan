@@ -3,7 +3,8 @@
   "counts": {
     "affairs": 1,
     "zhejiang-affairs": 2,
-    "zhejiang": 2
+    "zhejiang": 2,
+    "general": 1
   },
   "attempts": {
     "affairs": 2,
@@ -11,5 +12,5 @@
     "zhejiang": 2,
     "general": 1
   },
-  "totalAdded": 5
+  "totalAdded": 6
 }

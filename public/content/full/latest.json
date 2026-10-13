@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-13-2239f7b97f0b33826fe72797",
+  "releaseId": "daily-2026-10-13-ac5880bd63a3af185f6739b8",
   "createdAt": "2026-10-13",
   "reviewedAt": "2026-10-13",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -6388,6 +6388,42 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "concept": "采购经理指数（PMI）",
+      "explanation": "通过对企业采购经理的月度调查结果统计汇总编制的指数，是国际上通用的监测宏观经济走势的先行性指数之一。",
+      "stableId": "auto-full-general-9cd522e14203a59d8f28c1c7",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-9cd522e14203a59d8f28c1c7",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "制造业采购经理指数（PMI）解读",
+      "topic": "宏观经济",
+      "keywords": [
+        "PMI",
+        "扩张区间",
+        "临界点"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-e5c6d60f81bc7347e782eae3",
+          "title": "2026年9月中国采购经理指数运行情况",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-13",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "国家统计局服务业调查中心 中国物流与采购联合会 一、中国制造业采购经理指数运行情况 9 月份，制造业采购经理指数（ PMI ）为"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-13",
+      "generatedAt": "2026-10-13",
+      "reviewedAt": "2026-10-13",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -10615,7 +10651,40 @@
       "reviewedAt": "2026-10-13",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-9cd522e14203a59d8f28c1c7-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-9cd522e14203a59d8f28c1c7",
+      "module": "general",
+      "prompt": "根据国家统计局数据，2026年9月中国制造业采购经理指数（PMI）为50.1%，这表明：",
+      "options": [
+        {
+          "id": "A",
+          "text": "制造业经济总体较上月收缩"
+        },
+        {
+          "id": "B",
+          "text": "制造业经济总体较上月扩张"
+        },
+        {
+          "id": "C",
+          "text": "非制造业景气水平明显回升"
+        },
+        {
+          "id": "D",
+          "text": "综合产出指数低于临界点"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料指出，PMI高于50%时，反映经济总体较上月扩张。9月制造业PMI为50.1%，升至扩张区间。",
+      "sourceRefs": [
+        "source-e5c6d60f81bc7347e782eae3"
+      ],
+      "reviewedAt": "2026-10-13",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:35ba8344cd01e91999915f19622496b4c57f708b6debb6885f47569bf4f159b1"
+  "contentHash": "sha256:fc6a883013c34a085dcb0d47f3a2dff94a48c6db6cba50b7cf34bc3100f78b74"
 }
