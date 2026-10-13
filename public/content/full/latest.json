@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-13-f4bbb956a13d8e3f8cba9198",
+  "releaseId": "daily-2026-10-13-6d8e5f2c5467061acfe0a775",
   "createdAt": "2026-10-13",
   "reviewedAt": "2026-10-13",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -6222,6 +6222,86 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "2026年10月9日，浙江义乌国际商贸城呈现购销两旺景象，来自世界各地的采购商看样品、谈订单。",
+      "examPoints": [
+        "浙江省外向型经济发展",
+        "义乌小商品市场活力"
+      ],
+      "stableId": "auto-full-affairs-b7907436ae2ed4d4655aeccb",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-b7907436ae2ed4d4655aeccb",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江义乌：金秋时节外商采购活跃",
+      "topic": "浙江时政",
+      "keywords": [
+        "义乌",
+        "外商采购",
+        "国际贸易"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-3174e5a4f1b2f1a99e65a5c5",
+          "title": "浙江义乌：外商采购忙",
+          "url": "https://csj.news.cn/20261011/99d8528095c44eb8b2b416a7c64434a4/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-11",
+          "verifiedAt": "2026-10-13",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "新华社发（时宽兵摄） 金秋时节，来自世界各地的采购商在浙江义乌看样品、询价格、谈订单，义乌国际商贸城里呈现购销两旺景象。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-11",
+      "validFrom": "2026-10-13",
+      "generatedAt": "2026-10-13",
+      "reviewedAt": "2026-10-13",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-04",
+      "summary": "双节期间，国网丽水供电公司提前部署，通过充电桩运维、民宿用电排查等措施保障梯田景区用电安全。",
+      "examPoints": [
+        "公共服务保障能力",
+        "绿色能源基础设施"
+      ],
+      "stableId": "auto-full-affairs-1af28dea4ca047e22c414228",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-1af28dea4ca047e22c414228",
+      "module": "affairs",
+      "region": "zhejiang",
+      "title": "浙江丽水：电力保障护航乡村文旅",
+      "topic": "浙江时政",
+      "keywords": [
+        "丽水",
+        "电力保供",
+        "乡村旅游"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ece70318e1067a909444c5e6",
+          "title": "浙江丽水：满格电力助乡村文旅释放假日活力",
+          "url": "https://csj.news.cn/20261004/1d8aa8b033b649c69006c46e5ec2e055/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-04",
+          "verifiedAt": "2026-10-13",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "为保障游客出行与区域用电安全，国网丽水供电公司提前部署，聚焦景区新能源充电设施运维、民宿用电安全排查、主干道路路灯维护及沿线电网"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-04",
+      "validFrom": "2026-10-13",
+      "generatedAt": "2026-10-13",
+      "reviewedAt": "2026-10-13",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -10317,7 +10397,73 @@
       "reviewedAt": "2026-10-13",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-b7907436ae2ed4d4655aeccb-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-b7907436ae2ed4d4655aeccb",
+      "module": "affairs",
+      "prompt": "2026年10月9日，浙江哪座城市国际商贸城呈现购销两旺景象，吸引全球客商洽谈订单？",
+      "options": [
+        {
+          "id": "A",
+          "text": "义乌"
+        },
+        {
+          "id": "B",
+          "text": "杭州"
+        },
+        {
+          "id": "C",
+          "text": "宁波"
+        },
+        {
+          "id": "D",
+          "text": "温州"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料显示，10月9日浙江义乌国际商贸城内呈现购销两旺景象，各国采购商在此洽谈业务。",
+      "sourceRefs": [
+        "source-3174e5a4f1b2f1a99e65a5c5"
+      ],
+      "reviewedAt": "2026-10-13",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-1af28dea4ca047e22c414228-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-1af28dea4ca047e22c414228",
+      "module": "affairs",
+      "prompt": "为保障梯田景区假日用电，国网丽水供电公司重点聚焦了哪些领域的电力保障工作？",
+      "options": [
+        {
+          "id": "A",
+          "text": "景区新能源充电设施运维与民宿用电安全排查"
+        },
+        {
+          "id": "B",
+          "text": "大型工业园区高压线路改造"
+        },
+        {
+          "id": "C",
+          "text": "城市地铁轨道交通供电系统升级"
+        },
+        {
+          "id": "D",
+          "text": "沿海核电站并网输电工程"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料指出，国网丽水供电公司聚焦景区新能源充电设施运维、民宿用电安全排查等保电工作。",
+      "sourceRefs": [
+        "source-ece70318e1067a909444c5e6"
+      ],
+      "reviewedAt": "2026-10-13",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:1355392670aa2ed45975c43804850908a293be087e15942a5fc5bbd27e8627c3"
+  "contentHash": "sha256:c31e20e40794b6c802e0052720733902083cbdc4c450ed7e94e89d454348cb27"
 }
