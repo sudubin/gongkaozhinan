@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-13-6d8e5f2c5467061acfe0a775",
+  "releaseId": "daily-2026-10-13-2239f7b97f0b33826fe72797",
   "createdAt": "2026-10-13",
   "reviewedAt": "2026-10-13",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -6302,6 +6302,92 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "category": "ideas-practice",
+      "keyPoint": "国家电网浙江电力（云和崇头）红船共产党员服务队对梯田景区停车场充电桩、配电线路开展“拉网式”隐患排查。",
+      "confusions": [
+        "将服务队职能扩大至行政监管",
+        "混淆常规巡检与“拉网式”排查的区别"
+      ],
+      "stableId": "auto-full-zhejiang-800db2c3225d9c6f87aa983a",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-800db2c3225d9c6f87aa983a",
+      "module": "zhejiang",
+      "region": "zhejiang",
+      "applicableYears": [
+        2026
+      ],
+      "title": "红船党员服务队深入景区排查隐患",
+      "topic": "基层党建",
+      "keywords": [
+        "红船共产党员服务队",
+        "隐患排查",
+        "志愿服务"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ece70318e1067a909444c5e6",
+          "title": "浙江丽水：满格电力助乡村文旅释放假日活力",
+          "url": "https://csj.news.cn/20261004/1d8aa8b033b649c69006c46e5ec2e055/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-04",
+          "verifiedAt": "2026-10-13",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "国家电网浙江电力（云和崇头）红船共产党员服务队对梯田景区停车场充电桩、配电线路开展“拉网式”隐患排查，细致检测充电枪、计量装置"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-04",
+      "validFrom": "2026-10-13",
+      "generatedAt": "2026-10-13",
+      "reviewedAt": "2026-10-13",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "category": "governance-livelihood",
+      "keyPoint": "在充电点位设立电力便民服务岗，现场为游客讲解充电操作和安全用电知识，快速处置充电故障，打通绿色出行电力保障“最后一米”。",
+      "confusions": [
+        "将便民服务等同于收费咨询",
+        "忽视现场应急处置的重要性"
+      ],
+      "stableId": "auto-full-zhejiang-b56f5fc2cd23650ac0367bd9",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-b56f5fc2cd23650ac0367bd9",
+      "module": "zhejiang",
+      "region": "zhejiang",
+      "applicableYears": [
+        2026
+      ],
+      "title": "电力便民服务打通绿色出行最后一米",
+      "topic": "公共服务",
+      "keywords": [
+        "便民服务",
+        "绿色出行",
+        "充电设施"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ece70318e1067a909444c5e6",
+          "title": "浙江丽水：满格电力助乡村文旅释放假日活力",
+          "url": "https://csj.news.cn/20261004/1d8aa8b033b649c69006c46e5ec2e055/c.html",
+          "publisher": "新华网长三角频道",
+          "publishedAt": "2026-10-04",
+          "verifiedAt": "2026-10-13",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "同时在充电点位设立电力便民服务岗，现场为游客讲解充电操作和安全用电知识，快速处置充电故障，打通绿色出行电力保障“最后一米”。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-04",
+      "validFrom": "2026-10-13",
+      "generatedAt": "2026-10-13",
+      "reviewedAt": "2026-10-13",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -10463,7 +10549,73 @@
       "reviewedAt": "2026-10-13",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-zhejiang-800db2c3225d9c6f87aa983a-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-800db2c3225d9c6f87aa983a",
+      "module": "zhejiang",
+      "prompt": "在丽水梯田景区保电工作中，“拉网式”隐患排查主要针对哪些设施？",
+      "options": [
+        {
+          "id": "A",
+          "text": "停车场充电桩和配电线路"
+        },
+        {
+          "id": "B",
+          "text": "景区售票系统和监控设备"
+        },
+        {
+          "id": "C",
+          "text": "游客休息区座椅和垃圾桶"
+        },
+        {
+          "id": "D",
+          "text": "周边农田灌溉水泵"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料指出红船共产党员服务队对梯田景区停车场充电桩、配电线路开展“拉网式”隐患排查。",
+      "sourceRefs": [
+        "source-ece70318e1067a909444c5e6"
+      ],
+      "reviewedAt": "2026-10-13",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-zhejiang-b56f5fc2cd23650ac0367bd9-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-zhejiang-b56f5fc2cd23650ac0367bd9",
+      "module": "zhejiang",
+      "prompt": "电力部门在充电点位设立便民服务岗的主要目的是什么？",
+      "options": [
+        {
+          "id": "A",
+          "text": "讲解充电操作并快速处置故障"
+        },
+        {
+          "id": "B",
+          "text": "推销新型电动汽车电池"
+        },
+        {
+          "id": "C",
+          "text": "收取停车场地服务费"
+        },
+        {
+          "id": "D",
+          "text": "管理景区交通秩序"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料说明便民服务岗用于现场讲解充电操作和安全用电知识，快速处置充电故障，保障绿色出行。",
+      "sourceRefs": [
+        "source-ece70318e1067a909444c5e6"
+      ],
+      "reviewedAt": "2026-10-13",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:c31e20e40794b6c802e0052720733902083cbdc4c450ed7e94e89d454348cb27"
+  "contentHash": "sha256:35ba8344cd01e91999915f19622496b4c57f708b6debb6885f47569bf4f159b1"
 }
