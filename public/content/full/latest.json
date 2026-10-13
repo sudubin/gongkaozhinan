@@ -1,8 +1,8 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-12-70823b645d6630eda46770bb",
-  "createdAt": "2026-10-12",
-  "reviewedAt": "2026-10-12",
+  "releaseId": "daily-2026-10-13-f4bbb956a13d8e3f8cba9198",
+  "createdAt": "2026-10-13",
+  "reviewedAt": "2026-10-13",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
   "items": [
     {
@@ -6182,6 +6182,46 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-09",
+      "summary": "中共中央、国务院于2026年10月9日发布《关于发展新质生产力的意见》，指出发展新质生产力是推动高质量发展的内在要求和重要着力点，旨在加快形成同新质生产力更相适应的生产关系。",
+      "examPoints": [
+        "新质生产力核心标志",
+        "全要素生产率"
+      ],
+      "stableId": "auto-full-affairs-4615a66122e51b3a12b0961c",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-4615a66122e51b3a12b0961c",
+      "module": "affairs",
+      "region": "national",
+      "title": "中共中央 国务院关于发展新质生产力的意见发布",
+      "topic": "新质生产力",
+      "keywords": [
+        "新质生产力",
+        "科技创新",
+        "产业创新"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ac8db81f43693ddaab0c44f4",
+          "title": "中共中央 国务院关于发展新质生产力的意见",
+          "url": "https://www.gov.cn/zhengce/202610/content_7082820.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-13",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "新华社北京10月9日电 中共中央 国务院关于发展新质生产力的意见 发展新质生产力是推动高质量发展的内在要求和重要着力点。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-13",
+      "generatedAt": "2026-10-13",
+      "reviewedAt": "2026-10-13",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -10244,7 +10284,40 @@
       "reviewedAt": "2026-10-12",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-4615a66122e51b3a12b0961c-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-4615a66122e51b3a12b0961c",
+      "module": "affairs",
+      "prompt": "根据《中共中央 国务院关于发展新质生产力的意见》，推动新质生产力发展的核心标志是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "全要素生产率大幅提升"
+        },
+        {
+          "id": "B",
+          "text": "GDP总量快速增长"
+        },
+        {
+          "id": "C",
+          "text": "劳动力数量大幅增加"
+        },
+        {
+          "id": "D",
+          "text": "传统产能规模扩张"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "《意见》明确指出，以全要素生产率大幅提升为核心标志，推动技术革命性突破、生产要素创新性配置、产业深度转型升级。",
+      "sourceRefs": [
+        "source-ac8db81f43693ddaab0c44f4"
+      ],
+      "reviewedAt": "2026-10-13",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:e951d5a9a60314ece09e947fb7ea2aa98009c5caac7e7d3cd41da31582cea01b"
+  "contentHash": "sha256:1355392670aa2ed45975c43804850908a293be087e15942a5fc5bbd27e8627c3"
 }
