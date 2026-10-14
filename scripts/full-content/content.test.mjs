@@ -1,11 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { fullSeedEntries, FULL_SEED_DATE as today } from "../../data/full-seed.mjs";
 import { createPackage, mergeEntries, verifiedPackage } from "./content-package.mjs";
 import { bootstrapFullContent } from "./bootstrap-content.mjs";
 import { gitCheckpoint } from "./git-checkpoint.mjs";
 import { articleLinks, collectSources, curlOfficialText, extractSource, fetchText, isAllowedSource, localDay, xinhuaZhejiangLinks, zhejiangListRequest } from "./official-sources.mjs";
-import { contentPaths, evidenceChoices, JOBS, normalizeGenerated, providerRequestOptions, runUpdate, safeFailureCode } from "./update-content.mjs";
+import { contentPaths, evidenceChoices, generationApprovalReason, JOBS, normalizeGenerated, providerRequestOptions, runUpdate, safeFailureCode } from "./update-content.mjs";
 import { publicationConfig, publishContent } from "./publish-content.mjs";
 
 const seed = fullSeedEntries();
@@ -34,7 +35,60 @@ const fakeProvider = async (url, request) => {
   const materials = JSON.parse(text.match(/SOURCE_BEGIN[^\n]*\n([\s\S]*?)\nSOURCE_END/)[1]);
   return { ok: true, json: async () => ({ choices: [{ finish_reason: "stop", message: { content: JSON.stringify({ entries: [generated(module, materials.sources[0])] }) } }] }) };
 };
-const run = (store, extra = {}) => runUpdate({ ...store, config, today, sources: [national, regional], fetcher: fakeProvider, ...extra });
+const approved = { event: "workflow_dispatch", confirmed: true, day: today };
+const run = (store, extra = {}) => runUpdate({ ...store, config, today, currentDay: () => today, approval: approved, sources: [national, regional], fetcher: fakeProvider, ...extra });
+
+test("no confirmation, push, schedule and expired confirmations skip every paid operation", async () => {
+  const cases = [undefined, { ...approved, confirmed: false }, { ...approved, confirmed: "true" }, { ...approved, event: "push" }, { ...approved, event: "schedule" }, { ...approved, day: "2026-10-08" }];
+  for (const approval of cases) {
+    const result = await runUpdate({ approval, today, currentDay: () => today, read: () => { throw Error("must not read"); }, write: () => { throw Error("must not write"); }, fetcher: () => { throw Error("must not spend or collect"); } });
+    assert.equal(result.skippedByApproval, true); assert.equal(result.added, 0);
+  }
+  assert.equal(generationApprovalReason(approved, today), null);
+  assert.equal(generationApprovalReason(approved, "2026-10-10"), "approval_expired");
+});
+test("a reservation crossing Shanghai midnight stops before the paid request", async () => {
+  const store = memoryStore(); let current = today, calls = 0;
+  const result = await run(store, { currentDay: () => current, onPersist: async () => { current = "2026-10-10"; }, fetcher: () => { calls++; throw Error("must not spend"); } });
+  assert.equal(result.skippedByApproval, true); assert.equal(result.approvalReason, "approval_expired");
+  assert.equal(calls, 0); assert.equal(JSON.parse(store.files.get("generation-state.json")).attempts.affairs, 1);
+});
+test("after a completed batch crosses midnight, no later module gets a paid request", async () => {
+  const store = memoryStore(); let current = today, checkpoints = 0, calls = 0;
+  const result = await run(store, { currentDay: () => current, onPersist: async () => { if (++checkpoints === 2) current = "2026-10-10"; }, fetcher: async (url, request) => { calls++; return fakeProvider(url, request); } });
+  assert.equal(result.added, 1); assert.equal(result.skippedByApproval, true); assert.equal(calls, 1);
+  assert.equal(JSON.parse(store.files.get("latest.json")).items.length, 107);
+});
+test("deployed workflow has no schedule and requires a same-day manual confirmation", () => {
+  const workflowUrl = new URL(import.meta.url.includes("gongkao-frontend-open-source/") ? "../../.github/workflows/full-daily-content.yml" : "../../gongkao-frontend-open-source/.github/workflows/full-daily-content.yml", import.meta.url);
+  const workflow = readFileSync(workflowUrl, "utf8");
+  assert.ok(!/^\s+(?:schedule|cron):/m.test(workflow));
+  assert.ok(workflow.includes("default: false"));
+  assert.ok(workflow.includes("context.eventName !== 'workflow_dispatch'"));
+  assert.ok(workflow.includes("day(run.created_at)"));
+  assert.ok(workflow.includes("if: steps.approval.outputs.approved == 'true'"));
+});
+test("GitHub confirmation uses original creation day, not the rerun day", async () => {
+  const url = new URL(import.meta.url.includes("gongkao-frontend-open-source/") ? "../../.github/workflows/full-daily-content.yml" : "../../gongkao-frontend-open-source/.github/workflows/full-daily-content.yml", import.meta.url);
+  const block = readFileSync(url, "utf8").match(/          script: \|\n([\s\S]*?)\n      - uses:/)[1];
+  const script = block.split("\n").map(line => line.slice(12)).join("\n");
+  const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
+  const execute = new AsyncFunction("core", "context", "github", "process", "Date", script);
+  class Clock extends Date { static now() { return Date.parse("2026-10-09T16:05:00Z"); } }
+  for (const [event, confirmed, created, expected] of [
+    ["push", "true", "2026-10-09T16:00:00Z", "false"],
+    ["workflow_dispatch", "false", "2026-10-09T16:00:00Z", "false"],
+    ["workflow_dispatch", "true", "2026-10-09T15:59:00Z", "false"],
+    ["workflow_dispatch", "true", "2026-10-09T16:00:00Z", "true"],
+  ]) {
+    const outputs = {}, summary = { addHeading() { return this; }, addRaw() { return this; }, async write() {} };
+    let reads = 0;
+    await execute({ setOutput: (key, value) => { outputs[key] = value; }, summary }, { eventName: event, repo: { owner: "test", repo: "test" }, runId: 1 }, { rest: { actions: { getWorkflowRun: async () => { reads++; return { data: { event: "workflow_dispatch", created_at: created } }; } } } }, { env: { CONFIRM_TODAY: confirmed } }, Clock);
+    assert.equal(outputs.approved, expected);
+    if (expected === "true") assert.equal(outputs.day, "2026-10-10");
+    if (event === "push" || confirmed === "false") assert.equal(reads, 0);
+  }
+});
 
 test("full seed includes 106 cards, 81 questions and both Zhejiang sections", () => {
   assert.equal(seed.items.length, 106); assert.equal(seed.questions.length, 81);
@@ -205,7 +259,7 @@ test("truncated or malformed output leaves the old full feed intact", async () =
   assert.equal(Object.values(JSON.parse(store.files.get("generation-state.json")).attempts).reduce((a, b) => a + b, 0), 18);
 });
 test("invalid configuration and tampered feed fail before paid requests", async () => {
-  await assert.rejects(() => runUpdate({ config: { ...config, baseUrl: "http://provider.example" }, read: () => { throw Error("must not read"); } }), /missing_provider_configuration/);
+  await assert.rejects(() => runUpdate({ config: { ...config, baseUrl: "http://provider.example" }, today, currentDay: () => today, approval: approved, read: () => { throw Error("must not read"); } }), /missing_provider_configuration/);
   const store = memoryStore(); store.files.set("latest.json", JSON.stringify({ ...initial(), contentHash: "bad" }));
   await assert.rejects(() => run(store, { fetcher: () => { throw Error("must not spend"); } }), /existing_feed_integrity_failed/);
   assert.equal(safeFailureCode(new Error("test_secret_do_not_log")), "update_failed");

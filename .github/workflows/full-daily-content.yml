@@ -1,26 +1,53 @@
-name: Zhejiang full-version daily content
+name: 浙江完整版：确认今天生成（消耗API额度）
 on:
-  schedule:
-    # 07:17 Asia/Shanghai; GitHub may delay scheduled runs.
-    - cron: '17 23 * * *'
   workflow_dispatch:
+    inputs:
+      confirm_today:
+        description: '确认今天使用API额度生成新内容（不勾选只检查，零模型调用）'
+        type: boolean
+        required: true
+        default: false
   push:
     branches: [main]
-    # Bounded deployment verification; include verified Zhejiang reports from Xinhua.
+    # Deployment checks are free of model calls: only manual confirmation can generate.
     paths: ['.github/workflows/full-daily-content.yml']
 permissions:
   contents: write
+  actions: read
 concurrency:
   group: published-study-content
   cancel-in-progress: false
 jobs:
   update:
-    # Owner requested activation. Setting AUTO_CONTENT_ENABLED=false pauses it.
-    # Forks never use this owner's API credits automatically.
+    # No schedule. Owner must explicitly confirm today's paid generation.
+    # AUTO_CONTENT_ENABLED=false remains an emergency pause; forks are excluded.
     if: github.repository == 'sudubin/gongkaozhinan' && github.ref == 'refs/heads/main' && vars.AUTO_CONTENT_ENABLED != 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 65
     steps:
+      - name: 验证当天确认（不调用模型）
+        id: approval
+        uses: actions/github-script@v8
+        env:
+          CONFIRM_TODAY: ${{ inputs.confirm_today == true && 'true' || 'false' }}
+        with:
+          script: |
+            core.setOutput('approved', 'false');
+            core.setOutput('day', '');
+            const day = value => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(value));
+            if (context.eventName !== 'workflow_dispatch' || process.env.CONFIRM_TODAY !== 'true') {
+              await core.summary.addHeading('本次仅检查已有内容').addRaw('未确认今天生成，不调用模型API、不修改内容和额度记录。').write();
+              return;
+            }
+            const { data: run } = await github.rest.actions.getWorkflowRun({ ...context.repo, run_id: context.runId });
+            const approvedDay = day(run.created_at);
+            if (run.event !== 'workflow_dispatch' || approvedDay !== day(Date.now())) {
+              await core.summary.addHeading('当天确认已过期').addRaw('旧任务跨天重跑不消耗API额度；如需生成，请重新点击Run workflow并勾选今天确认。').write();
+              return;
+            }
+            core.setOutput('approved', 'true');
+            core.setOutput('day', approvedDay);
+            await core.summary.addHeading('已确认当天生成').addRaw('仅本次当日运行可生成，仍保留当天累计数量和请求上限；不自动授权明天。').write();
       - uses: actions/checkout@v4
         with:
           ref: main
@@ -32,8 +59,13 @@ jobs:
       - run: npm run build:packages
       - name: Verify preservation, integrity and API cost guards
         run: node --test scripts/full-content/content.test.mjs
-      - name: Generate and publish full-version increments
+      - name: 验证未确认时零模型调用
+        run: node scripts/full-content/update-content.mjs
+      - name: 生成并发布今天内容（消耗API额度）
+        if: steps.approval.outputs.approved == 'true'
         env:
+          FULL_GENERATION_CONFIRMED: 'true'
+          FULL_GENERATION_DAY: ${{ steps.approval.outputs.day }}
           CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
           CONTENT_API_BASE_URL: ${{ secrets.CONTENT_API_BASE_URL }}
           CONTENT_MODEL: ${{ secrets.CONTENT_MODEL }}

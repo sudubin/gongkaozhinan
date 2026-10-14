@@ -6,13 +6,13 @@
 
 | 版本 | 内容与安装方式 | 下载 |
 | --- | --- | --- |
-| 浙江完整版 1.2（自动内容更新） | 保留浙江省情、浙江时政；预设完整版内容地址，联网自动合并新内容。每日计划六个方向最多共 30 条。 | [下载新版完整版 APK](https://github.com/sudubin/gongkaozhinan/releases/download/v1.2-full/gongkao-guide-zhejiang-full-1.2.apk) · [版本说明](docs/releases/v1.2-full.md) |
+| 浙江完整版 1.2（自动内容同步） | 保留浙江省情、浙江时政；联网自动合并已发布内容。新内容生成由仓库所有者当天确认，未确认不调用模型。 | [下载新版完整版 APK](https://github.com/sudubin/gongkaozhinan/releases/download/v1.2-full/gongkao-guide-zhejiang-full-1.2.apk) · [版本说明](docs/releases/v1.2-full.md) |
 | 浙江完整版 1.1（新增测试版） | 保留浙江省情、浙江时政；内置 106 条学习卡和 81 道原创练习。包名 `cn.gongkao.guide`，与原浙江版本签名相同，可作为原版升级包。 | [下载完整版 APK](https://github.com/sudubin/gongkaozhinan/releases/download/v1.1-full/gongkao-guide-zhejiang-full-1.1.apk) · [版本说明](docs/releases/v1.1-full.md) |
 | 通用开源版 1.0（保留） | 全国时政、常识、成语、申论和速算；内置 100 条学习卡和 75 道原创练习。独立包名 `cn.gongkao.guide.opensource`，可与完整版共存。 | [下载开源版 APK](https://github.com/sudubin/gongkaozhinan/releases/download/v1.0-open-source/gongkao-guide-open-source.apk) · [版本说明](docs/releases/v1.0-open-source.md) |
 
 两个安装包均为测试 APK，Android 7.0 及以上可安装；学习记录各自保存在本机，不会因安装另一个版本自动迁移。升级或卸载前建议先导出学习备份。也可从仓库的 [下载文件目录](downloads/) 获取安装包。
 
-**完整版状态：** 每日云端任务、独立公开内容地址和手机增量同步已部署；计划每天北京时间 07:17 更新，以[实际运行记录](https://github.com/sudubin/gongkaozhinan/actions/workflows/full-daily-content.yml)为准，来源不可用或校验失败时保留旧内容、可能少更新。会员和收费尚未接通。安装包没有内置维护者的 API key；公开下载不代表具备付费限制。开源源码、已有内容和历史 APK 保留，开源版旧日更停止，以后只更新完整版内容。
+**费用控制（2026-10-14）：** 每天自动生成已关闭。需要新增内容时，仓库所有者进入[今天生成控制台](https://github.com/sudubin/gongkaozhinan/actions/workflows/full-daily-content.yml)，点击 **Run workflow**，勾选“确认今天使用API额度生成新内容”，再点击运行。不勾选只检查，零模型调用；确认仅对这次运行的北京时间当天有效，隔天重跑旧任务不再授权。不需要重装App；App自动同步已有公开内容不消耗模型API额度。已有内容、全部旧APK及开源源码保留。收费/会员尚未接通，密钥不在APK内。
 
 **实测状态（2026-10-14）：** 浙江来源问题已通过新华网长三角频道的省内报道备用通路修复，无需另购服务器。10月11日至14日连续四次定时任务成功；当前完整版内容库累计 166 条学习卡、136 道原创练习，其中浙江时政 14 条、浙江省情 15 条。今天新增 7 条全国方向内容，浙江等方向因来源和去重未新增，不承诺各板块每天凑满。[查看本次运行](https://github.com/sudubin/gongkaozhinan/actions/runs/38498193221)。真实公开内容在 Chromium、WebKit 生产构建同步验证通过，原生手机安装仍需用户验证；旧内容、学习记录和费用上限保留。
 
@@ -38,7 +38,7 @@
 
 开源版已有公共内容库保留在原地址，不再定时新增。完整版使用独立的 `public/content/full/latest.json`，首次迁移保留全部已有 104 条并加入 6 条浙江基础内容，共 110 条，继承当天已用额度。新版 App 联网打开、恢复前台及定时检查时增量同步，保留收藏、笔记、复习和作答；不会静默安装 APK。
 
-完整版沿用仓库加密配置，默认每日六个方向各最多新增 5 条，每方向最多 3 次请求；不会读取或上传手机端密钥。详见[完整版自动更新说明](docs/full-content-automation.md)。生成内容只经过结构、引用和证据片段检查，不等于人工审校；所有 AI 题标记为练习题，不是真题。暂停时将仓库变量 `AUTO_CONTENT_ENABLED` 改为 `false`。
+完整版沿用仓库加密配置，仅当天手动确认后调用模型，六个方向各最多新增5条，每方向当天最多3次请求；重复点击继承当天数量和已用请求，不重置额度。确认后即使没有合格的新内容，模型请求也可能计费。不会读取或上传手机端密钥。详见[生成与同步说明](docs/full-content-automation.md)。结构、引用和证据检查不等于人工审校；AI题为原创练习，不是真题。`AUTO_CONTENT_ENABLED=false`仍可彻底暂停手动生成，将其恢复不会重新开启已删除的定时生成。
 
 ## 已实现
 

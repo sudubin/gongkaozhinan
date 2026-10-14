@@ -127,7 +127,16 @@ async function complete(config, module, region, count, sources, existing, today,
   try { value = JSON.parse(text.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "")); } catch { throw new Error("provider_invalid_json"); }
   return normalizeGenerated(value, module, sources, today, config.model, count, region);
 }
-export async function runUpdate({ config, today = localDay(), fetcher = fetch, read = readFile, write = writeFile, move = rename, sources: givenSources, report = () => {}, paths = contentPaths(), onPersist = async () => {} } = {}) {
+export function generationApprovalReason(approval, today) {
+  if (approval?.event !== "workflow_dispatch" || approval?.confirmed !== true) return "today_not_confirmed";
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(approval.day ?? "") || approval.day !== today) return "approval_expired";
+  return null;
+}
+export async function runUpdate({ config, today = localDay(), currentDay = localDay, approval, fetcher = fetch, read = readFile, write = writeFile, move = rename, sources: givenSources, report = () => {}, paths = contentPaths(), onPersist = async () => {} } = {}) {
+  const approvalStop = () => generationApprovalReason(approval, currentDay()) ?? (today !== currentDay() ? "approval_expired" : null);
+  const skipped = (reason, added = 0, failures = []) => ({ added, failures, alreadyComplete: false, budgetExhausted: false, skippedByApproval: true, approvalReason: reason });
+  const initialStop = approvalStop();
+  if (initialStop) return skipped(initialStop);
   const { feedPath, statePath } = paths;
   let parsed;
   try { parsed = new URL(config?.baseUrl ?? ""); } catch { throw new Error("missing_provider_configuration"); }
@@ -152,11 +161,17 @@ export async function runUpdate({ config, today = localDay(), fetcher = fetch, r
     // Three bounded attempts per module per day caps cost even when generation
     // yields duplicates. Re-running resumes only incomplete modules.
     while ((state.counts[key] ?? 0) < target && (state.attempts[key] ?? 0) < 3) {
+      const beforeReservation = approvalStop();
+      if (beforeReservation) return skipped(beforeReservation, added, failures);
       state.attempts[key] = (state.attempts[key] ?? 0) + 1;
       const saveState = async () => { const tmp = new URL("generation-state.json.tmp", statePath); await write(tmp, JSON.stringify(state, null, 2) + "\n"); await move(tmp, statePath); await onPersist(); };
       // Reserve the attempt before invoking a paid API, so retries do not
       // accidentally multiply costs after a crash.
       await saveState();
+      // A checkpoint may cross midnight: never spend tomorrow's credits using
+      // yesterday's confirmation, even if that leaves a conservative reservation.
+      const beforeRequest = approvalStop();
+      if (beforeRequest) return skipped(beforeRequest, added, failures);
       try {
         const count = Math.min(5, target - (state.counts[key] ?? 0));
         const entries = await complete(config, module, region, count, selectedSources, content.items.filter(item => item.module === module && item.region === region).map(item => item.title), today, fetcher);
@@ -182,8 +197,8 @@ export async function runUpdate({ config, today = localDay(), fetcher = fetch, r
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try {
     const paths = contentPaths(process.env.FULL_CONTENT_DIRECTORY);
-    const result = await runUpdate({ paths, onPersist: process.env.FULL_GIT_CHECKPOINTS === "true" ? gitCheckpoint(paths) : undefined, config: { baseUrl: (process.env.CONTENT_API_BASE_URL ?? "").replace(/\/$/, ""), apiKey: process.env.CONTENT_API_KEY, model: process.env.CONTENT_MODEL, dailyPerModule: Number(process.env.CONTENT_DAILY_PER_MODULE || 5) }, report: check => console.log(JSON.stringify({ sourceCheck: check })) });
+    const result = await runUpdate({ paths, approval: { event: process.env.GITHUB_EVENT_NAME, confirmed: process.env.FULL_GENERATION_CONFIRMED === "true", day: process.env.FULL_GENERATION_DAY }, onPersist: process.env.FULL_GIT_CHECKPOINTS === "true" ? gitCheckpoint(paths) : undefined, config: { baseUrl: (process.env.CONTENT_API_BASE_URL ?? "").replace(/\/$/, ""), apiKey: process.env.CONTENT_API_KEY, model: process.env.CONTENT_MODEL, dailyPerModule: Number(process.env.CONTENT_DAILY_PER_MODULE || 5) }, report: check => console.log(JSON.stringify({ sourceCheck: check })) });
     console.log(JSON.stringify(result));
-    if (result.failures.length || (!result.added && !result.alreadyComplete && !result.budgetExhausted)) process.exitCode = 1;
+    if (result.failures.length || (!result.skippedByApproval && !result.added && !result.alreadyComplete && !result.budgetExhausted)) process.exitCode = 1;
   } catch (error) { console.error(`自动更新失败（${safeFailureCode(error)}）：请检查加密 API 配置、官方来源连通性及已有内容包；旧内容不会被清空。`); process.exitCode = 1; }
 }
