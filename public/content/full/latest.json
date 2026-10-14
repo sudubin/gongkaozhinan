@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-14-bc21c49462b0d1785753a952",
+  "releaseId": "daily-2026-10-14-cda543bb523da1f01aec56eb",
   "createdAt": "2026-10-14",
   "reviewedAt": "2026-10-14",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -6504,6 +6504,114 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "concept": "居民消费价格指数",
+      "explanation": "度量居民生活消费品和服务价格水平随时间变动的相对数，综合反映购买价格水平的变动情况。",
+      "stableId": "auto-full-general-328b137b0a03f3c351f1ec4a",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-328b137b0a03f3c351f1ec4a",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "2026年9月居民消费价格（CPI）变动特征",
+      "topic": "宏观经济数据",
+      "keywords": [
+        "CPI",
+        "居民消费价格",
+        "食品价格"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-2231e58346894b2e0ab39736",
+          "title": "2026年9月份居民消费价格同比上涨0.9%",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261014_1965477.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-10-14",
+          "verifiedAt": "2026-10-14",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "2026 年 9 月份，全国居民消费价格同比上涨 0.9% 。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-14",
+      "validFrom": "2026-10-14",
+      "generatedAt": "2026-10-14",
+      "reviewedAt": "2026-10-14",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "工业生产者出厂价格指数",
+      "explanation": "反映工业企业产品第一次出售时的出厂价格的变化趋势和变动幅度。",
+      "stableId": "auto-full-general-60ae5d993d2473e26a3032f0",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-60ae5d993d2473e26a3032f0",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "工业生产者出厂价格（PPI）同比涨幅",
+      "topic": "宏观经济数据",
+      "keywords": [
+        "PPI",
+        "工业生产者出厂价格",
+        "生产资料"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-8a873fc7ddfc6186e4859334",
+          "title": "2026年9月份工业生产者出厂价格同比上涨5.0% 环比上涨1.2%",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261014_1965476.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-10-14",
+          "verifiedAt": "2026-10-14",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "2026 年 9 月份，全国工业生产者出厂价格同比上涨 5.0% ，环比上涨 1.2% 。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-14",
+      "validFrom": "2026-10-14",
+      "generatedAt": "2026-10-14",
+      "reviewedAt": "2026-10-14",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "残疾预防",
+      "explanation": "实行预防为主、防治结合的方针，推进关口前移、早期干预，有效减少和控制残疾发生发展。",
+      "stableId": "auto-full-general-2af7a22f80964cb5554eb305",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-2af7a22f80964cb5554eb305",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "国家残疾预防行动计划目标",
+      "topic": "社会民生政策",
+      "keywords": [
+        "残疾预防",
+        "健康中国",
+        "全生命周期"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-61c6a546069285d1c55e9b5e",
+          "title": "国务院关于《国家残疾预防行动计划（2026—2030年）》的批复_优抚安置_中国政府网",
+          "url": "https://www.gov.cn/zhengce/content/202610/content_7082737.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-08",
+          "verifiedAt": "2026-10-14",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "完善，全社会残疾预防意识显著增强，重点领域主要致残因素得到有效控制，残疾风险综合防控能力进一步提升。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-08",
+      "validFrom": "2026-10-14",
+      "generatedAt": "2026-10-14",
+      "reviewedAt": "2026-10-14",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -10830,7 +10938,106 @@
       "reviewedAt": "2026-10-14",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-328b137b0a03f3c351f1ec4a-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-328b137b0a03f3c351f1ec4a",
+      "module": "general",
+      "prompt": "2026年9月份，全国居民消费价格同比上涨多少？",
+      "options": [
+        {
+          "id": "A",
+          "text": "0.2%"
+        },
+        {
+          "id": "B",
+          "text": "0.9%"
+        },
+        {
+          "id": "C",
+          "text": "1.5%"
+        },
+        {
+          "id": "D",
+          "text": "1.7%"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料显示，2026年9月份，全国居民消费价格同比上涨0.9%。",
+      "sourceRefs": [
+        "source-2231e58346894b2e0ab39736"
+      ],
+      "reviewedAt": "2026-10-14",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-60ae5d993d2473e26a3032f0-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-60ae5d993d2473e26a3032f0",
+      "module": "general",
+      "prompt": "2026年9月份，全国工业生产者出厂价格同比上涨：",
+      "options": [
+        {
+          "id": "A",
+          "text": "2.3%"
+        },
+        {
+          "id": "B",
+          "text": "3.6%"
+        },
+        {
+          "id": "C",
+          "text": "5.0%"
+        },
+        {
+          "id": "D",
+          "text": "6.9%"
+        }
+      ],
+      "correctOptionId": "C",
+      "explanation": "材料指出，2026年9月份，全国工业生产者出厂价格同比上涨5.0%。",
+      "sourceRefs": [
+        "source-8a873fc7ddfc6186e4859334"
+      ],
+      "reviewedAt": "2026-10-14",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-2af7a22f80964cb5554eb305-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-2af7a22f80964cb5554eb305",
+      "module": "general",
+      "prompt": "《国家残疾预防行动计划（2026—2030年）》实施坚持的方针是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "治疗为主、防治结合"
+        },
+        {
+          "id": "B",
+          "text": "预防为主、防治结合"
+        },
+        {
+          "id": "C",
+          "text": "康复为主、预防为辅"
+        },
+        {
+          "id": "D",
+          "text": "政府主导、社会参与"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料明确，《行动计划》实施要坚持“预防为主、防治结合”的方针。",
+      "sourceRefs": [
+        "source-61c6a546069285d1c55e9b5e"
+      ],
+      "reviewedAt": "2026-10-14",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:c74bca5374d6dd5c318d4ad8861dc5ed46b75e866b811523c307d39a7b26788b"
+  "contentHash": "sha256:a9550c9ad74d9c7e85a867a2530173a7cc31b7cb1c99d2aba3608cb526fec911"
 }
