@@ -1,6 +1,6 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-14-cda543bb523da1f01aec56eb",
+  "releaseId": "daily-2026-10-14-2000bc678edf36cf173a15fd",
   "createdAt": "2026-10-14",
   "reviewedAt": "2026-10-14",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
@@ -6612,6 +6612,78 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "concept": "新质生产力",
+      "explanation": "根据《中共中央 国务院关于发展新质生产力的意见》，新质生产力以全要素生产率大幅提升为核心标志，推动技术革命性突破、生产要素创新性配置、产业深度转型升级。",
+      "stableId": "auto-full-general-0fadab7d7a78e373f2449ce1",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-0fadab7d7a78e373f2449ce1",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "新质生产力的核心标志与内涵",
+      "topic": "经济政策",
+      "keywords": [
+        "新质生产力",
+        "全要素生产率",
+        "高质量发展"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-ac8db81f43693ddaab0c44f4",
+          "title": "中共中央 国务院关于发展新质生产力的意见",
+          "url": "https://www.gov.cn/zhengce/202610/content_7082820.htm",
+          "publisher": "中国政府网",
+          "publishedAt": "2026-10-09",
+          "verifiedAt": "2026-10-14",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "、改革和发展、自主和开放的关系，统筹发展和安全，以科技创新为引领，以全要素生产率大幅提升为核心标志，推动技术革命性突破、生产要素"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-09",
+      "validFrom": "2026-10-14",
+      "generatedAt": "2026-10-14",
+      "reviewedAt": "2026-10-14",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
+    },
+    {
+      "concept": "采购经理指数（PMI）",
+      "explanation": "采购经理指数（PMI）是国际上通用的监测宏观经济走势的先行性指数。PMI高于50%反映经济总体较上月扩张，低于50%则反映收缩。2026年9月制造业PMI为50.1%，升至扩张区间。",
+      "stableId": "auto-full-general-f6a499df3db3e1ecff3f704f",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-f6a499df3db3e1ecff3f704f",
+      "module": "general",
+      "region": "not-applicable",
+      "title": "2026年9月制造业PMI运行特征",
+      "topic": "宏观经济",
+      "keywords": [
+        "采购经理指数",
+        "PMI",
+        "制造业景气度"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-e5c6d60f81bc7347e782eae3",
+          "title": "2026年9月中国采购经理指数运行情况",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-09-30",
+          "verifiedAt": "2026-10-14",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "50.1% ，比上月上升 0.3 个百分点，升至扩张区间。"
+        }
+      ],
+      "sourcePublishedAt": "2026-09-30",
+      "validFrom": "2026-10-14",
+      "generatedAt": "2026-10-14",
+      "reviewedAt": "2026-10-14",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -11037,7 +11109,73 @@
       "reviewedAt": "2026-10-14",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-0fadab7d7a78e373f2449ce1-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-0fadab7d7a78e373f2449ce1",
+      "module": "general",
+      "prompt": "根据2026年10月发布的《中共中央 国务院关于发展新质生产力的意见》，新质生产力的核心标志是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "劳动者数量的快速增加"
+        },
+        {
+          "id": "B",
+          "text": "全要素生产率的大幅提升"
+        },
+        {
+          "id": "C",
+          "text": "传统制造业规模的扩大"
+        },
+        {
+          "id": "D",
+          "text": "资源消耗强度的降低"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料明确指出，发展新质生产力“以全要素生产率大幅提升为核心标志”，而非单纯依靠劳动力数量或传统规模扩张。",
+      "sourceRefs": [
+        "source-ac8db81f43693ddaab0c44f4"
+      ],
+      "reviewedAt": "2026-10-14",
+      "generatedByAi": true,
+      "label": "practice"
+    },
+    {
+      "stableId": "auto-full-general-f6a499df3db3e1ecff3f704f-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-general-f6a499df3db3e1ecff3f704f",
+      "module": "general",
+      "prompt": "根据国家统计局2026年10月发布的数据，2026年9月份中国制造业采购经理指数（PMI）为50.1%，比上月上升0.3个百分点。关于该数据的解读，正确的是：",
+      "options": [
+        {
+          "id": "A",
+          "text": "制造业经济活动处于收缩区间"
+        },
+        {
+          "id": "B",
+          "text": "制造业经济活动处于扩张区间"
+        },
+        {
+          "id": "C",
+          "text": "非制造业商务活动指数也升至50.1%"
+        },
+        {
+          "id": "D",
+          "text": "小型企业PMI高于大型企业"
+        }
+      ],
+      "correctOptionId": "B",
+      "explanation": "材料指出PMI高于50%时反映经济总体较上月扩张。9月制造业PMI为50.1%，表明制造业生产活动扩张加快。选项C错误，非制造业商务活动指数为50.2%；选项D错误，材料显示大型企业PMI（50.6%）高于中、小型企业。",
+      "sourceRefs": [
+        "source-e5c6d60f81bc7347e782eae3"
+      ],
+      "reviewedAt": "2026-10-14",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:a9550c9ad74d9c7e85a867a2530173a7cc31b7cb1c99d2aba3608cb526fec911"
+  "contentHash": "sha256:963b7e4a70e09a7e5b6c0bda69c4eb13a887744cee705c4d93a768578c90a9a9"
 }
