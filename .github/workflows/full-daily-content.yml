@@ -9,7 +9,7 @@ on:
         default: false
   push:
     branches: [main]
-    # Deployment checks are free of model calls: only manual confirmation can generate.
+    # Deployment checks use the repository-layout tests and never call the model.
     paths: ['.github/workflows/full-daily-content.yml']
 permissions:
   contents: write

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fullSeedEntries, FULL_SEED_DATE as today } from "../../data/full-seed.mjs";
 import { createPackage, mergeEntries, verifiedPackage } from "./content-package.mjs";
 import { bootstrapFullContent } from "./bootstrap-content.mjs";
@@ -36,6 +36,8 @@ const fakeProvider = async (url, request) => {
   return { ok: true, json: async () => ({ choices: [{ finish_reason: "stop", message: { content: JSON.stringify({ entries: [generated(module, materials.sources[0])] }) } }] }) };
 };
 const approved = { event: "workflow_dispatch", confirmed: true, day: today };
+const localPublishedWorkflow = new URL("../../gongkao-frontend-open-source/.github/workflows/full-daily-content.yml", import.meta.url);
+const workflowUrl = existsSync(localPublishedWorkflow) ? localPublishedWorkflow : new URL("../../.github/workflows/full-daily-content.yml", import.meta.url);
 const run = (store, extra = {}) => runUpdate({ ...store, config, today, currentDay: () => today, approval: approved, sources: [national, regional], fetcher: fakeProvider, ...extra });
 
 test("no confirmation, push, schedule and expired confirmations skip every paid operation", async () => {
@@ -60,7 +62,6 @@ test("after a completed batch crosses midnight, no later module gets a paid requ
   assert.equal(JSON.parse(store.files.get("latest.json")).items.length, 107);
 });
 test("deployed workflow has no schedule and requires a same-day manual confirmation", () => {
-  const workflowUrl = new URL(import.meta.url.includes("gongkao-frontend-open-source/") ? "../../.github/workflows/full-daily-content.yml" : "../../gongkao-frontend-open-source/.github/workflows/full-daily-content.yml", import.meta.url);
   const workflow = readFileSync(workflowUrl, "utf8");
   assert.ok(!/^\s+(?:schedule|cron):/m.test(workflow));
   assert.ok(workflow.includes("default: false"));
@@ -69,8 +70,7 @@ test("deployed workflow has no schedule and requires a same-day manual confirmat
   assert.ok(workflow.includes("if: steps.approval.outputs.approved == 'true'"));
 });
 test("GitHub confirmation uses original creation day, not the rerun day", async () => {
-  const url = new URL(import.meta.url.includes("gongkao-frontend-open-source/") ? "../../.github/workflows/full-daily-content.yml" : "../../gongkao-frontend-open-source/.github/workflows/full-daily-content.yml", import.meta.url);
-  const block = readFileSync(url, "utf8").match(/          script: \|\n([\s\S]*?)\n      - uses:/)[1];
+  const block = readFileSync(workflowUrl, "utf8").match(/          script: \|\n([\s\S]*?)\n      - uses:/)[1];
   const script = block.split("\n").map(line => line.slice(12)).join("\n");
   const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
   const execute = new AsyncFunction("core", "context", "github", "process", "Date", script);
