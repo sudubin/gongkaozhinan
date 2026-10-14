@@ -1,8 +1,8 @@
 {
   "schemaVersion": "content-package-v1",
-  "releaseId": "daily-2026-10-13-ac5880bd63a3af185f6739b8",
-  "createdAt": "2026-10-13",
-  "reviewedAt": "2026-10-13",
+  "releaseId": "daily-2026-10-14-3bc4bc8088840aa580ef8dbd",
+  "createdAt": "2026-10-14",
+  "reviewedAt": "2026-10-14",
   "rightsNote": "公考指南原创 / AI 辅助学习摘要；自动结构检查不等于事实准确性保证，AI 练习不是考试真题。",
   "items": [
     {
@@ -6424,6 +6424,46 @@
       "status": "published",
       "examEvidence": [],
       "editorRecommended": false
+    },
+    {
+      "eventDate": "2026-10-14",
+      "summary": "国家统计局数据显示，2026年9月份全国居民消费价格（CPI）同比上涨0.9%。其中食品价格下降1.7%，非食品价格上涨1.5%。",
+      "examPoints": [
+        "CPI同比涨幅",
+        "食品与非食品价格变动"
+      ],
+      "stableId": "auto-full-affairs-099874126fd6b4f2bf56f749",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-099874126fd6b4f2bf56f749",
+      "module": "affairs",
+      "region": "national",
+      "title": "2026年9月份全国居民消费价格同比上涨0.9%",
+      "topic": "宏观经济数据",
+      "keywords": [
+        "CPI",
+        "物价",
+        "统计数据"
+      ],
+      "sourceRefs": [
+        {
+          "id": "source-2231e58346894b2e0ab39736",
+          "title": "2026年9月份居民消费价格同比上涨0.9%",
+          "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261014_1965477.html",
+          "publisher": "国家统计局",
+          "publishedAt": "2026-10-14",
+          "verifiedAt": "2026-10-14",
+          "rightsNote": "来源原文仅用于核对，发布原创学习摘要。",
+          "evidenceExcerpt": "2026 年 9 月份，全国居民消费价格同比上涨 0.9% 。"
+        }
+      ],
+      "sourcePublishedAt": "2026-10-14",
+      "validFrom": "2026-10-14",
+      "generatedAt": "2026-10-14",
+      "reviewedAt": "2026-10-14",
+      "rightsNote": "AI 自动生成（qwen3.7-flash），经结构、来源引用和证据片段检查；非人工逐条审校，使用前请核对来源。",
+      "status": "published",
+      "examEvidence": [],
+      "editorRecommended": false
     }
   ],
   "questions": [
@@ -10684,7 +10724,40 @@
       "reviewedAt": "2026-10-13",
       "generatedByAi": true,
       "label": "practice"
+    },
+    {
+      "stableId": "auto-full-affairs-099874126fd6b4f2bf56f749-practice",
+      "revision": 1,
+      "knowledgeId": "auto-full-affairs-099874126fd6b4f2bf56f749",
+      "module": "affairs",
+      "prompt": "根据2026年9月统计数据，当月全国居民消费价格中，哪一类价格同比下降了1.7%？",
+      "options": [
+        {
+          "id": "A",
+          "text": "食品价格"
+        },
+        {
+          "id": "B",
+          "text": "非食品价格"
+        },
+        {
+          "id": "C",
+          "text": "服务价格"
+        },
+        {
+          "id": "D",
+          "text": "消费品价格"
+        }
+      ],
+      "correctOptionId": "A",
+      "explanation": "材料显示，9月份食品价格下降1.7%，而非食品价格上涨1.5%，服务价格上涨0.8%，消费品价格上涨1.0%。",
+      "sourceRefs": [
+        "source-2231e58346894b2e0ab39736"
+      ],
+      "reviewedAt": "2026-10-14",
+      "generatedByAi": true,
+      "label": "practice"
     }
   ],
-  "contentHash": "sha256:fc6a883013c34a085dcb0d47f3a2dff94a48c6db6cba50b7cf34bc3100f78b74"
+  "contentHash": "sha256:da29f8dc12ded51d8b705d988fe9d939571f4227888be65460ab5e2e6b040e20"
 }
