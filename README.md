@@ -14,13 +14,15 @@
 
 **完整版状态：** 每日云端任务、独立公开内容地址和手机增量同步已部署；计划每天北京时间 07:17 更新，以[实际运行记录](https://github.com/sudubin/gongkaozhinan/actions/workflows/full-daily-content.yml)为准，来源不可用或校验失败时保留旧内容、可能少更新。会员和收费尚未接通。安装包没有内置维护者的 API key；公开下载不代表具备付费限制。开源源码、已有内容和历史 APK 保留，开源版旧日更停止，以后只更新完整版内容。
 
-**首次上线验证（2026-10-09）：** 手机从真实公开地址同步通过，目前完整版库为 110 条内容、85 道练习。但[首次生成验证](https://github.com/sudubin/gongkaozhinan/actions/runs/37903975844)失败：省政府官网云端连接不可用，备用新闻门户没有取得可用列表；浙江两个方向未调用模型、未新增内容。全国等方向继承今天已用完的调用额度，没有重置追求凑数。因此尚不能称“全链路日更验证成功”；定时任务会继续按计划尝试，需要解决浙江来源的稳定访问。
+**实测状态（2026-10-14）：** 浙江来源问题已通过新华网长三角频道的省内报道备用通路修复，无需另购服务器。10月11日至14日连续四次定时任务成功；当前完整版内容库累计 166 条学习卡、136 道原创练习，其中浙江时政 14 条、浙江省情 15 条。今天新增 7 条全国方向内容，浙江等方向因来源和去重未新增，不承诺各板块每天凑满。[查看本次运行](https://github.com/sudubin/gongkaozhinan/actions/runs/38498193221)。真实公开内容在 Chromium、WebKit 生产构建同步验证通过，原生手机安装仍需用户验证；旧内容、学习记录和费用上限保留。
+
+历史说明：10月9日[首次生成验证](https://github.com/sudubin/gongkaozhinan/actions/runs/37903975844)曾因浙江来源不可读失败，10月10日[修复验证](https://github.com/sudubin/gongkaozhinan/actions/runs/38019076047)成功，新增浙江时政和省情各 5 条；不重置当天额度，也不绕过网站校验。
 
 ## 浙江完整版界面
 
 | 浙江学习首页 | 完整版更新设置 |
 | --- | --- |
-| <img src="docs/images/zhejiang-full-1.2-home.png" alt="完整版 1.2 已同步公开内容，保留浙江时政和浙江省情" width="300" /> | <img src="docs/images/zhejiang-full-1.2-updates.png" alt="完整版 1.2 默认内容地址及已自动同步状态" width="300" /> |
+| <img src="docs/images/zhejiang-full-20261014-home.png" alt="完整版 1.2 已同步166条公开内容，保留浙江时政和浙江省情" width="300" /> | <img src="docs/images/zhejiang-full-20261014-updates.png" alt="完整版 1.2 默认内容地址及2026年10月14日同步状态" width="300" /> |
 
 ## 开源版界面预览
 
